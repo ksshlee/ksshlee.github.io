@@ -14,6 +14,7 @@
 		</h1>
 	</div>
 	<nav class="site-nav">
+		<!-- 네비게이션 바! -->
 		<ul>
 			{% if site.theme_settings.site_navigation_sort %}
 				{% assign site_pages = site.pages | sort: site.theme_settings.site_navigation_sort %}
@@ -29,10 +30,11 @@
 			</li>
 			{% endif %}
 			{% endfor %}
-			<!-- Social icons from Font Awesome, if enabled  -->
+			<!-- 여기에 인스타그램이나 페이스북 그런 아이콘들이 와용  -->
+			<hr>
 			{% include icons.html %}
 
-            <!-- Search bar -->
+            <!-- 검색창! -->
             {% if site.theme_settings.search %}
             <li>
             <form action="{{ site.baseurl }}/search.html" method="get">

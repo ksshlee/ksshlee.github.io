@@ -12,40 +12,76 @@
 		<h1 class="site-title">
 			<a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
 		</h1>
-	</div>
-	<nav class="site-nav">
-		<!-- 네비게이션 바! -->
-		<ul>
-			{% if site.theme_settings.site_navigation_sort %}
-				{% assign site_pages = site.pages | sort: site.theme_settings.site_navigation_sort %}
-			{% else %}
-				{% assign site_pages = site.pages %}
-			{% endif %}
-			{% for page in site_pages %}
-			{% if page.title and page.hide != true %}
-			<li>
-				<a class="page-link" href="{{ page.url | relative_url }}">
-					{{ page.title }}
-				</a>
-			</li>
-			{% endif %}
-			{% endfor %}
-			<!-- 여기에 인스타그램이나 페이스북 그런 아이콘들이 와용  -->
-			<hr>
-			{% include icons.html %}
+		<nav class="site-nav">
+				<ul>
+					{% for page in site.pages %}
+						{% if (page.title == 'About' or page.title =='tags') and page.hide != true %}
+							<li>
+								<a class="page-link" href="{{ page.url | relative_url }}">
+									{{ page.title }}
+								</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+					<!-- 여기에 인스타그램이나 페이스북 그런 아이콘들이 와용  -->
+					{% include icons.html %}
 
-            <!-- 검색창! -->
-            {% if site.theme_settings.search %}
-            <li>
-            <form action="{{ site.baseurl }}/search.html" method="get">
-                <input type="text" id="search-box" name="query" placeholder="Search" class="">
-                <button type="submit" class="">
-                    <i class="fa fa-fw fa-search"></i>
-                </button>
-            </form>
-            </li>
-            {% endif %}
-		</ul>
-	</nav>
+					<!-- Search bar -->
+					{% if site.theme_settings.search %}
+					<li>
+					<form action="{{ site.baseurl }}/search.html" method="get">
+						<input type="text" id="search-box" name="query" placeholder="Search" class="">
+						<button type="submit" class="">
+							<i class="fa fa-fw fa-search"></i>
+						</button>
+					</form>
+					</li>
+					{% endif %}
+				</ul>
+		</nav>
+	</div>
+
+
+	<!-- 카테고리 -->
+	<div class="site-category">
+			<ul class='cat1'>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Algorithm</a>
+					<ul>
+						<li><a href="/Algorithm/AL_Library">라이브러리</a></li>
+						<li><a href="/Algorithm/AL_Problem">문제풀이</a></li>					</ul>
+				</li>
+
+				<li><a href="/">Data Structure</a>
+					<ul>
+						<li><a href="/Data_Structure/DS_Library">라이브러리</a></li>
+						<li><a href="/Data_Structure/DS_USE">활용</a></li>
+					</ul>
+				</li>
+				<li><a href="/">Web</a>
+					<ul>
+						<li><a href="/Web/Front_End">Front_End</a></li>
+						<li><a href="/Web/Back_End">Back_End</a></li>
+					</ul>
+				</li>
+
+				<li><a href="/">Security</a>
+					<ul>
+						  <li><a href="/Security/Secure Coding">Secure Coding</a></li>
+					</ul>
+				</li>
+
+
+				<li><a href="/">Others</a>
+					<ul>
+						  <li><a href="/Others/Git">Git</a></li>
+						  <li><a href="/Others/Docker">Docker</a></li>
+						  <li><a href="/Others/Linux">Linux</a></li>
+						  <li><a href="/Others/ELK">ELK</a></li>
+					</ul>
+				</li>
+
+			</ul>
+		</div>
 
 </header>

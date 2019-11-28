@@ -129,3 +129,22 @@ img[align=left] {
 img[align=right] {
   margin-left: 3%;
 }
+
+// Post listing
+.category-title {
+  clear:left;
+  padding-top: $padding-small*1.5;
+  text-align:center;
+  color: green;
+}
+.posts-list {
+  @extend %padding-regular;
+  clear:left;
+  padding-top: $padding-small;
+  list-style: none;
+  li{
+    a{
+      font-weight: bold;
+    }
+  }
+}

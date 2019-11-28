@@ -17,8 +17,9 @@
 	<link rel="canonical" href="/about/">
 
 	<!-- RSS -->
-	<link rel="alternate" type="application/atom+xml" title="Dev_Hyuk"
-		href="/feed.xml" />
+	<!-- <link rel="alternate" type="application/atom+xml" title="Dev_Hyuk"
+		href="/feed.xml" /> -->
+	<link rel="alternate" type="application/atom+xml" title="Dev_Hyuk" href="/feed.xml" />
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -47,77 +48,55 @@
 		<h1 class="site-title">
 			<a href="/">Dev_Hyuk</a>
 		</h1>
-	</div>
-	<nav class="site-nav">
-		<!-- 네비게이션 바! -->
-		<ul>
-			
-			
-			
-			
-			
-			<li>
-				<a class="page-link" href="/category/Algorithm.html">
-					Algorithm
-				</a>
-			</li>
-			
-			
-			
-			<li>
-				<a class="page-link" href="/category/Backend.html">
-					Backend
-				</a>
-			</li>
-			
-			
-			
-			<li>
-				<a class="page-link" href="/category/Data_Structure.html">
-					Data_Structure
-				</a>
-			</li>
-			
-			
-			
-			<li>
-				<a class="page-link" href="/category/Project.html">
-					Project
-				</a>
-			</li>
-			
-			
-			
-			<li>
-				<a class="page-link" href="/category/Server.html">
-					Server
-				</a>
-			</li>
-			
-			
-			
-			<li>
-				<a class="page-link" href="/about/">
-					포토폴리오
-				</a>
-			</li>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			<!-- 여기에 인스타그램이나 페이스북 그런 아이콘들이 와용  -->
-			<hr>
-			
+		<nav class="site-nav">
+				<ul>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					<!-- 여기에 인스타그램이나 페이스북 그런 아이콘들이 와용  -->
+					
+<li>
+	<a href="/feed.xml" title="Follow RSS feed">
+		<i class="fas fa-fw fa-rss"></i>
+	</a>
+</li>
+
 
 
 <li>
@@ -186,10 +165,63 @@
 
 
 
-            <!-- 검색창! -->
-            
-		</ul>
-	</nav>
+					<!-- Search bar -->
+					
+					<li>
+					<form action="/search.html" method="get">
+						<input type="text" id="search-box" name="query" placeholder="Search" class="">
+						<button type="submit" class="">
+							<i class="fa fa-fw fa-search"></i>
+						</button>
+					</form>
+					</li>
+					
+				</ul>
+		</nav>
+	</div>
+
+
+	<!-- 카테고리 -->
+	<div class="site-category">
+			<ul class='cat1'>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Algorithm</a>
+					<ul>
+						<li><a href="/Algorithm/AL_Library">라이브러리</a></li>
+						<li><a href="/Algorithm/AL_Problem">문제풀이</a></li>					</ul>
+				</li>
+
+				<li><a href="/">Data Structure</a>
+					<ul>
+						<li><a href="/Data_Structure/DS_Library">라이브러리</a></li>
+						<li><a href="/Data_Structure/DS_USE">활용</a></li>
+					</ul>
+				</li>
+				<li><a href="/">Web</a>
+					<ul>
+						<li><a href="/Web/Front_End">Front_End</a></li>
+						<li><a href="/Web/Back_End">Back_End</a></li>
+					</ul>
+				</li>
+
+				<li><a href="/">Security</a>
+					<ul>
+						  <li><a href="/Security/Secure Coding">Secure Coding</a></li>
+					</ul>
+				</li>
+
+
+				<li><a href="/">Others</a>
+					<ul>
+						  <li><a href="/Others/Git">Git</a></li>
+						  <li><a href="/Others/Docker">Docker</a></li>
+						  <li><a href="/Others/Linux">Linux</a></li>
+						  <li><a href="/Others/ELK">ELK</a></li>
+					</ul>
+				</li>
+
+			</ul>
+		</div>
 
 </header>
 
@@ -197,7 +229,7 @@
       <article >
   <header style="background-image: url('/')">
     <h1 class="title">포토폴리오</h1>
-    
+      
   </header>
   <section class="post-content"><h1>이상혁<h1>
 <h3>주니어 개발자<h3>
@@ -278,6 +310,7 @@
 	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/ksshlee/ksshlee.github.io">ksshlee</a>
 </p>
 </footer>
+
 
 
   </body>

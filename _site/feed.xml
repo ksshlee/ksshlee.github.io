@@ -5,12 +5,12 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Thu, 28 Nov 2019 16:37:03 +0900</pubDate>
+    <pubDate>Fri, 29 Nov 2019 01:36:30 +0900</pubDate>
     
       <item>
         <title>test in algorithm</title>
-        <link>/algorithm/2019/11/26/test.html</link>
-        <guid isPermaLink="true">/algorithm/2019/11/26/test.html</guid>
+        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/11/26/test.html</link>
+        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/11/26/test.html</guid>
         <description>&lt;p&gt;im happy hapyy&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 Nov 2019 00:00:00 +0900</pubDate>
@@ -18,8 +18,8 @@
     
       <item>
         <title>how it looks</title>
-        <link>/algorithm/2019/11/19/okok.html</link>
-        <guid isPermaLink="true">/algorithm/2019/11/19/okok.html</guid>
+        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/11/19/okok.html</link>
+        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/11/19/okok.html</guid>
         <description>&lt;p&gt;okokok&lt;/p&gt;
 </description>
         <pubDate>Tue, 19 Nov 2019 00:00:00 +0900</pubDate>

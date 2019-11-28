@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 포토폴리오
-permalink: /about/
+permalink: /about
 # feature-img: "assets/img/sample_feature_img_2.png"
 ---
 

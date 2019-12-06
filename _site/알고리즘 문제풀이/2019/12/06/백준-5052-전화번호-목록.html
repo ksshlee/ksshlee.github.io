@@ -2,9 +2,9 @@
 <html class="no-js">
   <head>
 	<meta charset="utf-8">
-	<title>백준 1316 그룹 단어 체커 | Dev_Hyuk</title>
+	<title>백준 5052 전화번호 목록 | Dev_Hyuk</title>
 	<meta name="description"
-		content="문제그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다. 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aabbbccb는 b가 떨어져서 나...">
+		content="문제전화번호 목록이 주어진다. 이때, 이 목록이 일관성이 있는지 없는지를 구하는 프로그램을 작성하시오.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -22,7 +22,7 @@
 	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 
 	<!-- Canonical -->
-	<link rel="canonical" href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1316-%EA%B7%B8%EB%A3%B9-%EB%8B%A8%EC%96%B4-%EC%B2%B4%EC%BB%A4.html">
+	<link rel="canonical" href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/06/%EB%B0%B1%EC%A4%80-5052-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EB%AA%A9%EB%A1%9D.html">
 
 	<!-- RSS -->
 	<!-- <link rel="alternate" type="application/atom+xml" title="Dev_Hyuk"
@@ -133,101 +133,104 @@
     <div class="content">
       <article >
   <header style="background-image: url('/')">
-    <h1 class="title">백준 1316 그룹 단어 체커</h1>
+    <h1 class="title">백준 5052 전화번호 목록</h1>
     
     <p class="meta">
-      December 4, 2019
+      December 6, 2019
       
     </p>
   </header>
   <section class="post-content"><h2 id="문제">문제</h2>
-<p>그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다. 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aabbbccb는 b가 떨어져서 나타나기 때문에 그룹 단어가 아니다.</p>
+<p>전화번호 목록이 주어진다. 이때, 이 목록이 일관성이 있는지 없는지를 구하는 프로그램을 작성하시오.</p>
 
-<p>단어 N개를 입력으로 받아 그룹 단어의 개수를 출력하는 프로그램을 작성하시오.</p>
+<p>전화번호 목록이 일관성을 유지하려면, 한 번호가 다른 번호의 접두어인 경우가 없어야 한다.</p>
+
+<p>예를 들어, 전화번호 목록이 아래와 같은 경우를 생각해보자</p>
+<ul>
+<li>긴급전화: 911</li>
+<li>상근: 97 625 999</li>
+<li>선영: 91 12 54 26</li>
+</ul>
+<p>이 경우에 선영이에게 전화를 걸 수 있는 방법이 없다. 전화기를 들고 선영이 번호의 처음 세 자리를 누르는 순간 바로 긴급전화가 걸리기 때문이다. 따라서, 이 목록은 일관성이 없는 목록이다.</p>
 
 <h2 id="입력">입력</h2>
-<p>첫째 줄에 단어의 개수 N이 들어온다. N은 100보다 작거나 같은 자연수이다. 둘째 줄부터 N개의 줄에 단어가 들어온다. 단어는 알파벳 소문자로만 되어있고 중복되지 않으며, 길이는 최대 100이다.</p>
+<p>첫째 줄에 테스트 케이스의 개수 t가 주어진다. (1 ≤ t ≤ 50) 각 테스트 케이스의 첫째 줄에는 전화번호의 수 n이 주어진다. (1 ≤ n ≤ 10000) 다음 n개의 줄에는 목록에 포함되어 있는 전화번호가 하나씩 주어진다. 전화번호의 길이는 길어야 10자리이며, 목록에 있는 두 전화번호가 같은 경우는 없다.</p>
 
 <h2 id="출력">출력</h2>
-<p>첫째 줄에 그룹 단어의 개수를 출력한다.</p>
+<p>각 테스트 케이스에 대해서, 일관성 있는 목록인 경우에는 YES, 아닌 경우에는 NO를 출력한다.</p>
 
 <blockquote>
   <h3>예제 입력 1</h3>
 </blockquote>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">3
-happy
-new
-year</code></pre></figure>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+3
+911
+97625999
+91125426
+5
+113
+12340
+123440
+12345
+98346
+</code></pre></div></div>
 
 <blockquote>
   <h3>예제 출력 1</h3>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
-</code></pre></div></div>
-<blockquote>
-  <h3>예제 입력 2</h3>
-</blockquote>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">4
-aba
-abab
-abcabc
-a</code></pre></figure>
-
-<blockquote>
-  <h3>예제 출력 2</h3>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NO
+YES
 </code></pre></div></div>
 <p><br /><br /></p>
 
 <h2 id="간단한-구현-계획">간단한 구현 계획</h2>
-<p><img src="/assets/img/al_prob/baekjoon1316.jpg" alt="구현계획" /></p>
+<p><img src="/assets/img/al_prob/baekjoon5052.jpg" alt="구현계획" /></p>
 
 <p><br /><br /></p>
 
 <h2 id="풀이-with-python">풀이 with python</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#baekjoon 1316 그룹 단어 체커
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">input</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+<span class="n">testcase</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="c1">#테스트케이스
 </span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-
-<span class="n">count</span><span class="o">=</span><span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span><span class="c1">#사용자가 원하는 만큼 반복
-</span>    <span class="n">check</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">test</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#단어 입력받고
-</span>    <span class="n">flag</span><span class="o">=</span><span class="s">""</span>
-    <span class="n">notword</span><span class="o">=</span><span class="bp">False</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">test</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">flag</span><span class="o">!=</span><span class="n">j</span><span class="p">:</span> <span class="c1">#전 단어와 같지 않으면 flag값을 현재로 바꿈
-</span>            <span class="n">flag</span><span class="o">=</span><span class="n">j</span>
-            <span class="n">getnum</span> <span class="o">=</span> <span class="n">check</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">getnum</span><span class="o">!=</span><span class="bp">None</span><span class="p">:</span>
-                <span class="n">notword</span><span class="o">=</span><span class="bp">True</span>
-                <span class="k">break</span>
-            <span class="n">check</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+    <span class="n">flag</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#비교 대상
+</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">flag</span> <span class="ow">in</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)]:</span><span class="c1">#처음부터 flag값의 길이까지 비교
+</span>            <span class="k">return</span> <span class="s">"NO"</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">check</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
-    
-    <span class="k">if</span> <span class="n">notword</span><span class="o">==</span><span class="bp">False</span><span class="p">:</span>
-        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="n">flag</span><span class="o">=</span><span class="n">i</span><span class="c1">#flag 값 교체
+</span>
+    <span class="k">return</span> <span class="s">"YES"</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+<span class="n">ans</span><span class="o">=</span><span class="p">[]</span>
 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">testcase</span><span class="p">):</span>
+    <span class="n">result</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">numofphone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="c1">#전화번호수
+</span>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numofphone</span><span class="p">):</span>
+        <span class="n">phonenum</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="c1">#전화번호 입력받음
+</span>        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phonenum</span><span class="p">)</span><span class="c1">#길이, 번호 순으로 result에 저장
+</span>    <span class="n">result</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span><span class="c1">#길이순서로 정렬
+</span>
+    <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">solution</span><span class="p">(</span><span class="n">result</span><span class="p">))</span><span class="c1">#solution 결과를 ans에 푸시!
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ans</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div></div>
 <p><br /><br /></p>
 
-<h2 id="새로-알게된-기법">새로 알게된 기법</h2>
-<h3>NULL</h3>
+<h2 id="느낀점">느낀점</h2>
+<h3><strong>함.수.화</strong></h3>
 
 <p><br /><br /></p>
 
 <h2 id="어려웠던점">어려웠던점</h2>
-<p>요번 문제도 딱히 없었다. for문과 if문만 잘 쓰면 충분히 풀 수 있는 문제다.</p>
+<p>처음 풀었을 땐 시간초과가 떴다. 처음엔 모든 값들 다 비교를 해줬다. 하지만 생각해보니 정렬을 해주고 ex[911,9113,9114] 가 되면 어차피 바로 다음꺼에서 NO가 뜨니깐 다 할 필요없이 종료 시키면 된다는걸 꺠달았다. 이상 없을 때 다음값을 flag로 두고 계속해서 넘어가는 코드를 짰더니 통과가 됬다. 이번 문제에서 함수화의 중요성과 정렬의 중요성을 느꼈다.</p>
 </section>
   
 <footer>
@@ -237,7 +240,7 @@ a</code></pre></figure>
     
     <a class="tag" href="/tags#%EB%B0%B1%EC%A4%80">#백준</a>
     
-    <a class="tag" href="/tags#%EB%B0%B1%EC%A4%801316">#백준1316</a>
+    <a class="tag" href="/tags#%EB%B0%B1%EC%A4%805052">#백준5052</a>
     
   </div>
 </footer>
@@ -253,18 +256,11 @@ a</code></pre></figure>
   
   <div id="previous-post" class="post-nav-post">
       <p>Previous post</p>
-      <a href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1181-%EB%8B%A8%EC%96%B4-%EC%A0%95%EB%A0%AC.html">
-        백준 1181 단어 정렬
+      <a href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1316-%EA%B7%B8%EB%A3%B9-%EB%8B%A8%EC%96%B4-%EC%B2%B4%EC%BB%A4.html">
+        백준 1316 그룹 단어 체커
       </a>
   </div>
   
-  
-  <div id="next-post" class="post-nav-post">
-      <p>Next post</p>
-      <a href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/06/%EB%B0%B1%EC%A4%80-5052-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EB%AA%A9%EB%A1%9D.html">
-        백준 5052 전화번호 목록
-      </a>
-  </div>
   
 </div>
 

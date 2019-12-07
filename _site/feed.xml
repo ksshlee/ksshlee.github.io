@@ -5,7 +5,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Sat, 07 Dec 2019 15:17:24 +0900</pubDate>
+    <pubDate>Sat, 07 Dec 2019 15:27:26 +0900</pubDate>
     
       <item>
         <title>백준 1213 팰린드롬 만들기</title>
@@ -139,6 +139,7 @@
 
 &lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
 &lt;h3&gt;&lt;strong&gt;반.례.찾.는.훈.련&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;python으로 코드를 짯지만 뭔가 너무 긴것 같다. 다른 답안의 코드들과 비교했을때 너무 길다. python의 장점을 활용하여 최대한 간결하게 간결하면서도 완벽하게 짜보는걸 연습하자. 다른 사람들의 코드를 많이 보자!&lt;/p&gt;
 </description>
         <pubDate>Sat, 07 Dec 2019 00:00:00 +0900</pubDate>
       </item>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>백준 7785 회사에 있는 사람 | Dev_Hyuk</title>
+	<meta name="description"
+		content="문제상근이는 세계적인 소프트웨어 회사 기글에서 일한다. 이 회사의 가장 큰 특징은 자유로운 출퇴근 시간이다. 따라서, 직원들은 반드시 9시부터 6시까지 회사에 있지 않아도 된다.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/assets/css/syntax.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/07/%EB%B0%B1%EC%A4%80-7785-%ED%9A%8C%EC%82%AC%EC%97%90-%EC%9E%88%EB%8A%94-%EC%82%AC%EB%9E%8C.html">
+
+	<!-- RSS -->
+	<!-- <link rel="alternate" type="application/atom+xml" title="Dev_Hyuk"
+		href="/feed.xml" /> -->
+	<link rel="alternate" type="application/atom+xml" title="Dev_Hyuk" href="/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet"
+		type="text/css">
+	
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+		integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
+		integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"
+		crossorigin="anonymous"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+  <body>
+    <header class="site-header">
+	<div class="branding">
+			<div style="float: right;">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+							<a class="navbar-brand" href="/about">
+								<img src="/assets/img/avatar.png" width="30" height="30" class="d-inline-block align-top" alt="">
+								Dev_Hyuk
+							</a>
+							<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+							  <span class="navbar-toggler-icon"></span>
+							</button>
+						
+							<div class="navbar-collapse collapse" id="navbarsExample09" style>
+							  <ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+								  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Algorithm</a>
+										<div class="dropdown-menu">
+										  <a class="dropdown-item" href="/Algorithm/AL_Library">라이브러리</a>
+										  <a class="dropdown-item" href="/Algorithm/AL_Problem">문제풀이</a>
+										</div>
+									  </li>
+						  
+						  
+									  <li class="nav-item dropdown">
+										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Structure</a>
+										  <div class="dropdown-menu">
+											<a class="dropdown-item" href="/Data_Structure/DS_Library">라이브러리</a>
+											<a class="dropdown-item" href="/Data_Structure/DS_USE">활용</a>
+										  </div>
+									  </li>
+						  
+						  
+									  <li class="nav-item dropdown">
+										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Web</a>
+										  <div class="dropdown-menu">
+											  <a class="dropdown-item" href="/Web/Front_End">프론트 엔드</a>
+											  <a class="dropdown-item" href="/Web/Back_End">백 엔드</a>
+										  </div>
+									  </li>
+						  
+						  
+									  <!-- 추후 시큐어코딩 공부시작하면 -->
+									  <!-- <li class="nav-item dropdown">
+									  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Security</a>
+									  <div class="dropdown-menu">
+										  <a class="dropdown-item" href="/Security/Secure Coding">시큐어 코딩</a>
+										  <div class="dropdown-divider"></div>
+										  <a class="dropdown-item" href="#">Separated link</a>
+									  </div>
+									  </li> -->
+						  
+									  <li class="nav-item dropdown">
+											  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Others</a>
+											  <div class="dropdown-menu">
+												  <a class="dropdown-item" href="/Others/Git">Git</a>
+												  <a class="dropdown-item" href="/Others/Docker">Docker</a>
+												  <a class="dropdown-item" href="/Others/Linux">Linux</a>
+												  <a class="dropdown-item" href="/Others/Elk">Elk</a>
+											  </div>
+									  </li>
+						  
+									  <li class="nav-item">
+										  <a class="nav-link active" href="/about">About me</a>
+									  </li>
+								</ul>
+							</div>
+					</nav>
+				</div>
+				
+	</div>
+
+
+</header>
+
+    <div class="content">
+      <article >
+  <header style="background-image: url('/')">
+    <h1 class="title">백준 7785 회사에 있는 사람</h1>
+    
+    <p class="meta">
+      December 7, 2019
+      
+    </p>
+  </header>
+  <section class="post-content"><h2 id="문제">문제</h2>
+<p>상근이는 세계적인 소프트웨어 회사 기글에서 일한다. 이 회사의 가장 큰 특징은 자유로운 출퇴근 시간이다. 따라서, 직원들은 반드시 9시부터 6시까지 회사에 있지 않아도 된다.</p>
+
+<p>각 직원은 자기가 원할 때 출근할 수 있고, 아무때나 퇴근할 수 있다.</p>
+
+<p>상근이는 모든 사람의 출입카드 시스템의 로그를 가지고 있다. 이 로그는 어떤 사람이 회사에 들어왔는지, 나갔는지가 기록되어져 있다. 로그가 주어졌을 때, 현재 회사에 있는 모든 사람을 구하는 프로그램을 작성하시오.</p>
+
+<h2 id="입력">입력</h2>
+<p>첫째 줄에 로그에 기록된 출입 기록의 수 n이 주어진다. (2 ≤ n ≤ 106) 다음 n개의 줄에는 출입 기록이 순서대로 주어지며, 각 사람의 이름이 주어지고 “enter”나 “leave”가 주어진다. “enter”인 경우는 출근, “leave”인 경우는 퇴근이다.</p>
+
+<p>회사에는 동명이인이 없으며, 대소문자가 다른 경우에는 다른 이름이다. 사람들의 이름은 알파벳 대소문자로 구성된 5글자 이하의 문자열이다.</p>
+
+<h2 id="출력">출력</h2>
+<p>현재 회사에 있는 사람의 이름을 사전 순의 역순으로 한 줄에 한 명씩 출력한다.</p>
+
+<blockquote>
+  <h3>예제 입력 1</h3>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+Baha enter
+Askar enter
+Baha leave
+Artem enter
+</code></pre></div></div>
+
+<blockquote>
+  <h3>예제 출력 1</h3>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Askar
+Artem
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<h2 id="간단한-구현-계획">간단한 구현 계획</h2>
+<p><img src="/assets/img/al_prob/baekjoon7785.jpg" alt="구현계획" /></p>
+
+<p><br /><br /></p>
+
+<h2 id="풀이-with-python">풀이 with python</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#input 속도 가속을 위해서
+</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">input</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+
+<span class="n">working</span><span class="o">=</span><span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
+    <span class="n">text</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'enter'</span><span class="p">:</span>
+        <span class="n">working</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">=</span><span class="bp">True</span>
+    <span class="k">elif</span> <span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'leave'</span><span class="p">:</span>
+        <span class="n">working</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">=</span><span class="bp">False</span>
+
+<span class="n">ans</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="c1">#True인 애들만 모음
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">working</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">working</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="bp">True</span><span class="p">:</span>
+        <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1">#내림차순 정렬
+</span><span class="n">ans</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ans</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><br /><br /></p>
+
+<h2 id="python-skill">Python Skill</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">input</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+
+</code></pre></div></div>
+<p>위에 코드 처럼하면 input 속도가 많이 향상된다고 한다.
+이유는 <a href="https://www.acmicpc.net/board/view/855" target="_blank">링크</a>에서 확인해보자.<br />
+앞으로 그냥 input()보다는 위 코드처럼 선언하고 사용하는 습관을 들이자.</p>
+
+<p><br /><br /></p>
+
+<h2 id="느낀-점">느낀 점</h2>
+<p>이번 문제는 생각보다 어렵지 않았다. 이렇게 dict으로 true와 false를 응용하여 풀어서 쉽게 풀 수 있었다. 비슷한 유형의 문제들도 이렇게 풀면 될것 같다.</p>
+</section>
+  
+<footer>
+  <div class="tags">
+    
+    <a class="tag" href="/tags#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98+%EB%AC%B8%EC%A0%9C">#알고리즘 문제</a>
+    
+    <a class="tag" href="/tags#%EB%B0%B1%EC%A4%80">#백준</a>
+    
+    <a class="tag" href="/tags#%EB%B0%B1%EC%A4%807785">#백준7785</a>
+    
+  </div>
+</footer>
+
+
+</article>
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+  <div id="previous-post" class="post-nav-post">
+      <p>Previous post</p>
+      <a href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/07/%EB%B0%B1%EC%A4%80-1213-%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0.html">
+        백준 1213 팰린드롬 만들기
+      </a>
+  </div>
+  
+  
+</div>
+
+
+
+    </div>
+    
+<script src="/assets/js/katex_init.js"></script>
+
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/ksshlee/ksshlee.github.io">ksshlee</a>
+</p>
+</footer>
+
+
+
+  </body>
+</html>

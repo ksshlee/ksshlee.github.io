@@ -44,7 +44,8 @@ theme_settings:
 
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  #댓글 창 disable 하고 싶으면 ksshlee 이거 지우면 되용
+  disqus_shortname: 'ksshlee' 
   katex: true # Enable if using math markup
   search: true # Enable the search feature
 

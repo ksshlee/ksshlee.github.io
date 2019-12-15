@@ -44,7 +44,7 @@ permalink: /about
 </p>
 <br>
 <br>
-<h4>대외 활동</h4>
+<!-- <h4>대외 활동</h4>
 <hr>
 <p>
     <h5>-SUA 7기</h5>
@@ -59,9 +59,9 @@ permalink: /about
 <p>
     <h5>-OWASP 코리아 챕처</h5>
     <h5>프로젝트 분과</h5>
-</p>
+<!-- </p>
 <br>
-<br>
+<br> -->
 <h4>수상 내역</h4>
 <hr>
 <br>

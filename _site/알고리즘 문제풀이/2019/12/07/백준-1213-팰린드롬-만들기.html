@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>백준 1213 팰린드롬 만들기 | Dev_Hyuk</title>
 	<meta name="description"
-		content="문제임한수와 임문빈은 서로 사랑하는 사이이다.">
+		content="문제">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -35,7 +35,7 @@
 
 	<!-- Google Fonts -->
 	
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet"
+	<link href="//fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet"
 		type="text/css">
 	
 
@@ -141,6 +141,8 @@
     </p>
   </header>
   <section class="post-content"><h2 id="문제">문제</h2>
+<hr />
+
 <p>임한수와 임문빈은 서로 사랑하는 사이이다.</p>
 
 <p>임한수는 세상에서 팰린드롬인 문자열을 너무 좋아하기 때문에, 둘의 백일을 기념해서 임문빈은 팰린드롬을 선물해주려고 한다.</p>
@@ -150,9 +152,13 @@
 <p>임문빈을 도와 임한수의 영어 이름을 팰린드롬으로 바꾸는 프로그램을 작성하시오.</p>
 
 <h2 id="입력">입력</h2>
+<hr />
+
 <p>첫째 줄에 임한수의 영어 이름이 있다. 알파벳 대문자로만 된 최대 50글자이다.</p>
 
 <h2 id="출력">출력</h2>
+<hr />
+
 <p>첫째 줄에 문제의 정답을 출력한다. 만약 불가능할 때는 “I’m Sorry Hansoo”를 출력한다. 정답이 여러 개일 경우에는 사전순으로 앞서는 것을 출력한다.</p>
 
 <blockquote>
@@ -171,6 +177,8 @@
 <p><br /><br /></p>
 
 <h2 id="간단한-구현-계획">간단한 구현 계획</h2>
+<hr />
+
 <p><img src="/assets/img/al_prob/baekjoon1213_1.jpg" alt="구현계획" /></p>
 
 <p><img src="/assets/img/al_prob/baekjoon1213_2.jpg" alt="검증방법" /></p>
@@ -178,6 +186,7 @@
 <p><br /><br /></p>
 
 <h2 id="풀이-with-python">풀이 with python</h2>
+<hr />
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
     <span class="n">flag</span> <span class="o">=</span> <span class="n">letter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#알파벳 변하는걸 확인
@@ -244,6 +253,8 @@
 <p><br /><br /></p>
 
 <h2 id="python-skill">Python Skill</h2>
+<hr />
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'b'</span><span class="p">,</span><span class="s">'c'</span><span class="p">]</span>
 <span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -255,6 +266,8 @@
 <br /><br /></p>
 
 <h2 id="어려웠던점">어려웠던점</h2>
+<hr />
+
 <p>
 입력 : AAABB<br />
 출력 : BAAAB<br />
@@ -267,6 +280,8 @@
 <p><br /><br /></p>
 
 <h2 id="느낀점">느낀점</h2>
+<hr />
+
 <h3><strong>반.례.찾.는.훈.련</strong></h3>
 <p>python으로 코드를 짯지만 뭔가 너무 긴것 같다. 다른 답안의 코드들과 비교했을때 너무 길다. python의 장점을 활용하여 최대한 간결하게 간결하면서도 완벽하게 짜보는걸 연습하자. 다른 사람들의 코드를 많이 보자!</p>
 </section>

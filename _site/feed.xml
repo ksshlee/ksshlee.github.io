@@ -5,13 +5,206 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Thu, 19 Dec 2019 17:52:28 +0900</pubDate>
+    <pubDate>Sat, 28 Dec 2019 03:21:47 +0900</pubDate>
+    
+      <item>
+        <title>Java 웹 개발 환경 구축</title>
+        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html</link>
+        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html</guid>
+        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h6&gt;&lt;a href=&quot;#jdk_install&quot;&gt;JDK 설치&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#eclipse_install&quot;&gt;Eclipse 설치&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#tomcat_install&quot;&gt;Tomcat 설치&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jdk_install&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jdk-설치&quot;&gt;JDK 설치&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;우선 Eclipse에서 자바를 개발을 하려면 개발 환경을 구상해야 된다. 개발 환경을 구상하는 첫번째 단추는 JDK를 설치하는 것이다. &lt;a href=&quot;https://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;오라클 홈페이지&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/jdk_install_1.png&quot; alt=&quot;jdk홈페이지&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java SE(Java Platform Standard Edition)
+    &lt;ul&gt;
+      &lt;li&gt;가장 일반적으로 사용된다.&lt;/li&gt;
+      &lt;li&gt;JDBC나 기본적인 기능이 모두 포함되어 Android 개발을 할 때 주로 SE를 사용한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Java EE(Java Platform EnterPrise Edition)
+    &lt;ul&gt;
+      &lt;li&gt;서버측 개발을 위한 플랫폼이다.&lt;/li&gt;
+      &lt;li&gt;기존 SE에서 서버에서 동작하는 &lt;strong&gt;분산 멀티미디어&lt;/strong&gt;를 제공하는 기능을 추가했다.&lt;/li&gt;
+      &lt;li&gt;기존 SE의 기능이 포함된다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Java ME(Java Platform Micro Edition)
+    &lt;ul&gt;
+      &lt;li&gt;임베디드를 위한 자바 플랫폼이다.&lt;/li&gt;
+      &lt;li&gt;휴대전화, PDA, 세탑 박스에서 자바를 지원하기 위해 만들어진 플랫폼이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;서버 개발 환경을 구축하므로 EE를 설치하는게 맞지만, 우선은 간단한 웹 서버를 하므로 Java SE를 설치하도록 하자. 추후에 Java EE를 설치하자&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/jdk_install_2.png&quot; alt=&quot;jdk설치&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Accept 를 한후 각자 OS에 맞는 버전을 설치하고 계속 다음을 눌러준다.&lt;/p&gt;
+
+&lt;p&gt;설치가 완료가 되면 자바 환경 변수를 설정해주자.&lt;/p&gt;
+
+&lt;p&gt;터미널에 아래와 같이 입력을 해준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/java_env_1.png&quot; alt=&quot;java환경변수설정&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면 jdk-13.0.1.jdk 폴더를 확인할 수 있다. 폴더를 확인한 후&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//bash 쉘이면&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;vi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bash_profile&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//zsh 쉘이면&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;vi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;zshrc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;에 접속하여&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/java_env_2.png&quot; alt=&quot;java환경변수설정&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;JavaVirtualMachines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jdk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;13.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jdk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Contents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;**jdk-13.0.1.jdk &amp;lt;= 이부분은 사람마다 다를 수 있다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;vim에서 이렇게 입력후 esc -&amp;gt; :wq!를 입력 한다. (저장 후 종료)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/java_version.png&quot; alt=&quot;java버전확인&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 뜨면 성공!😊&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;eclipse_install&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;eclipse-설치&quot;&gt;Eclipse 설치&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;그 다음 Eclipse를 설치를 해보자 설치는 &lt;a href=&quot;https://www.eclipse.org&quot;&gt;Eclipse 홈페이지&lt;/a&gt;에서 할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;여기서 파일을 다운로드 받고 설치 파일 실행!
+&lt;img src=&quot;/assets/img/back_end/2019_12_27/eclipse_install_1.png&quot; alt=&quot;eclipse설치&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eclipse IDE for Enterprise Java Developers 버전을 설치해준다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이유 : 웹 개발을 위해서!!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/eclipse_install_2.png&quot; alt=&quot;eclipse설치2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;install을 누른후 쭉 쭉 설치를 해 준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/eclipse.png&quot; alt=&quot;eclipse&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이렇게 정상적으로 실행이 되면 성공.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;tomcat_install&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tomcat-설치&quot;&gt;TomCat 설치&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h5&gt;- Apache Tomcat이란?&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;세계에서 가장 많이 사용되는 WAS(Web Application Server).&lt;/li&gt;
+  &lt;li&gt;자바로 작성된 웹 애플리케이션은 WAS가 있어야 동작.&lt;/li&gt;
+  &lt;li&gt;오픈소스로 누구나 무료로 사용 가능.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;그럼 설치를 시작 해볼까용&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;http://tomcat.apache.org/&quot;&gt;Tomcat 홈페이지&lt;/a&gt;에 접속하여 Tomcat 9버전 설치&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_1.png&quot; alt=&quot;tomcat&quot; /&gt;
+Tomcat 9을 클릭.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_2.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;mac은 tar.gz 다운로드 후 압축해제&lt;/li&gt;
+  &lt;li&gt;윈도우는 zip 일꺼야 아마두~&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;맥북 사용자 기준&lt;/h5&gt;
+
+&lt;p&gt;1&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Downloads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tomcat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;9.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위에 명령어를 순서대로 입력해준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_3.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면 이렇게 파일이 이동된 것을 확인 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;2&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/*.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;쉘 확장자(.sh)를 가진 파일들에게 실행권한을 준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_4.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;쉘 확장자(.sh)파일 권한 부분에 -x 가 있다면 성공.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;실행!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_5.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;localhost:8080 로 접속 했을때 위와 같이 뜨면 Tomcat 설치 return &lt;strong&gt;True!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
+</description>
+        <pubDate>Fri, 27 Dec 2019 00:00:00 +0900</pubDate>
+      </item>
     
       <item>
         <title>2019년도 카카오 코딩테스트 오픈 채팅방</title>
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/18/2019%EB%85%84-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-1%EB%B2%88%EB%AC%B8%EC%A0%9C.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/18/2019%EB%85%84-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-1%EB%B2%88%EB%AC%B8%EC%A0%9C.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다.
 신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다. 채팅방에 누군가 들어오면 다음 메시지가 출력된다.
 [닉네임]님이 들어왔습니다.
@@ -47,6 +240,8 @@ Prodo님이 들어왔습니다.
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42888&quot;&gt;문제링크&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;제한사항&quot;&gt;제한사항&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;ul&gt;
     &lt;li&gt;record는 다음과 같은 문자열이 담긴 배열이며, 길이는 1 이상 100,000 이하이다.&lt;/li&gt;
     &lt;li&gt;array의 각 원소는 1 이상 100 이하입니다.&lt;/li&gt;
@@ -71,11 +266,14 @@ Prodo님이 들어왔습니다.
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;간단히 구현 할 수 있어서 스킵!&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
@@ -104,6 +302,8 @@ Prodo님이 들어왔습니다.
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;좀더-나은-풀이&quot;&gt;좀더 나은 풀이&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
@@ -122,6 +322,8 @@ Prodo님이 들어왔습니다.
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;카카오 2019년도 1번문제는 생각보다 많이 쉬웠다. 하지만 3번 4번 점점 갈수록 많이 어려워진다. 기본적인거 공부 빨리 끝내고 트리, 그래프 문제들도 풀어봐야겠다.&lt;/p&gt;
 </description>
         <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
@@ -132,6 +334,8 @@ Prodo님이 들어왔습니다.
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;상근이는 문자열에 폭발 문자열을 심어 놓았다. 폭발 문자열이 폭발하면 그 문자는 문자열에서 사라지며, 남은 문자열은 합쳐지게 된다.&lt;/p&gt;
 
 &lt;p&gt;폭발은 다음과 같은 과정으로 진행된다.&lt;/p&gt;
@@ -146,6 +350,8 @@ Prodo님이 들어왔습니다.
 &lt;p&gt;폭발 문자열은 같은 문자를 두 개 이상 포함하지 않는다.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 문자열이 주어진다. 문자열의 길이는 1보다 크거나 같고, 1,000,000보다 작거나 같다.&lt;/p&gt;
 
 &lt;p&gt;둘째 줄에 폭발 문자열이 주어진다. 길이는 1보다 크거나 같고, 36보다 작거나 같다.&lt;/p&gt;
@@ -153,6 +359,8 @@ Prodo님이 들어왔습니다.
 &lt;p&gt;두 문자열은 모두 알파벳 소문자와 대문자, 숫자 0, 1, …, 9로만 이루어져 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 모든 폭발이 끝난 후 남은 문자열을 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -187,6 +395,7 @@ C4
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -229,11 +438,15 @@ C4
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;구동원리&quot;&gt;구동원리&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon9935.gif&quot; alt=&quot;구현계획&quot; /&gt;
 이런식으로 구동이 된다.
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;유용한-기법&quot;&gt;유용한 기법&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -242,12 +455,16 @@ C4
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;/p&gt;
 &lt;p&gt;우선 앞에서 부터 비교를 할려고 했다. 하지만 bomb이 12ab고 text는 112ab 일때 이때 정말 어떻게 구현할지 고민을 많이 했다. 항상 앞에서 비교를 하자 이 틀 때문에 문제를 어렵게 생각했고 dict을 이용해서 index값을 value로 넣자,, 등 정말 너무 어렵게 풀려고 했다. 하지만 뒤에서 부터 검사하면 정말 쉽게 풀 수 있는 문제였다. 이렇게 스택과 bomb을 비교할때 어떻게 구현하지가 가장 어려웠다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;요 근래 풀었던 문제중에서 가장 어려었던 문제였다. 가장 쉽고 기본적인 구조 스택을 사용하는데 간단한 원리이며 간단한 기술을 사용하는데도 생각해내기엔 다소 어려웠다. 이걸 dict으로 풀려했던 내 모습을 반성하게 된다. &lt;h5&gt;&lt;strong&gt;쉽고 간단하지만 생각해내기 어려운 기술&lt;/strong&gt;&lt;/h5&gt;들을 이런 문제들을 많이 풀면서 생각해내기 쉽게 만들어야겠다.그리고 너무 어렵게 풀려고 하지말고 쉽게 쉽게 풀려고 하자!&lt;/p&gt;
 </description>
         <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
@@ -258,12 +475,18 @@ C4
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-1764-%EB%93%A3%EB%B3%B4%EC%9E%A1.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-1764-%EB%93%A3%EB%B3%B4%EC%9E%A1.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;김진영이 듣도 못한 사람의 명단과, 보도 못한 사람의 명단이 주어질 때, 듣도 보도 못한 사람의 명단을 구하는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 듣도 못한 사람의 수 N, 보도 못한 사람의 수 M이 주어진다. 이어서 둘째 줄부터 N개의 줄에 걸쳐 듣도 못한 사람의 이름과, N+2째 줄부터 보도 못한 사람의 이름이 순서대로 주어진다. 이름은 띄어쓰기 없이 영어 소문자로만 이루어지며, 그 길이는 20 이하이다. N, M은 500,000 이하의 자연수이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;듣보잡의 수와 그 명단을 사전순으로 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -292,6 +515,7 @@ ohhenrie
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;dict을 이용하면 쉽게 풀 수 있는 문제라 말로 설명&lt;/p&gt;
 
@@ -307,6 +531,7 @@ value : true
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;testa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -340,6 +565,8 @@ value : true
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;dict의 대단함을 느꼈다. 요번 문제는 dict을 이용하여 쉽게 풀 수 있었다. 패스!&lt;/p&gt;
 </description>
         <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
@@ -350,6 +577,8 @@ value : true
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/10/%EB%B0%B1%EC%A4%80-Java-vs-C++.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/10/%EB%B0%B1%EC%A4%80-Java-vs-C++.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;Java 예찬론자 김동규와 C++ 옹호가 김동혁은 서로 어떤 프로그래밍 언어가 최고인지 몇 시간동안 토론을 하곤 했다. 동규는 Java가 명확하고 에러가 적은 프로그램을 만든다고 주장했고, 동혁이는 Java는 프로그램이 느리고, 긴 소스 코드를 갖는 점과 제네릭 배열의 인스턴스화의 무능력을 비웃었다.&lt;/p&gt;
 
 &lt;p&gt;또, 김동규와 김동혁은 변수 이름을 짓는 방식도 서로 달랐다. Java에서는 변수의 이름이 여러 단어로 이루어져있을 때, 다음과 같은 방법으로 변수명을 짓는다.&lt;/p&gt;
@@ -367,9 +596,13 @@ value : true
 &lt;p&gt;재원이가 만들려고 한 프로그램을 대신 만들어보자.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 변수명이 주어진다. 영어 알파벳과 밑줄(‘_‘)로만 이루어져 있고, 길이는 100을 넘지 않는다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;입력으로 주어진 변수명이 Java형식이면, C++형식으로 출력하고, C++형식이라면 Java형식으로 출력한다. 둘 다 아니라면 “Error!”를 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -389,6 +622,8 @@ value : true
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon3613.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;우선 위의 경우대로 하면 실패가 뜬다. 그이유는 &lt;strong&gt;“__”&lt;/strong&gt;을 확인을 안해줬다. 이와 같이 이런 사소한 예외 사항도 잘 고려 해야겠다.&lt;/p&gt;
@@ -396,6 +631,7 @@ value : true
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#java로 변환
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tojava&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -452,6 +688,8 @@ value : true
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;python-skill&quot;&gt;Python Skill&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# A -&amp;gt; a
 &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# B -&amp;gt; b
 &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 97
@@ -464,6 +702,8 @@ a - z = 97~122&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon3613_1.png&quot; alt=&quot;틀린거&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;문제 자체의 난이도는 높은것 같지 않다. 다만 예외 사항이 생각보다 많아서 정답률이 낮은 것 같다. 2번의 실패 후 성공! 문제를 푸는데 있어서 이러한 예외 사항을 꼼꼼히 잘 따져야겠다. 그리고 파이썬 for문 간편하게!&lt;/p&gt;
 </description>
@@ -475,6 +715,8 @@ a - z = 97~122&lt;/h3&gt;
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/08/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-K%EB%B2%88%EC%A7%B8%EC%88%98.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/08/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-K%EB%B2%88%EC%A7%B8%EC%88%98.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.
 예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면&lt;/p&gt;
 &lt;ol&gt;
@@ -485,6 +727,8 @@ a - z = 97~122&lt;/h3&gt;
 &lt;p&gt;배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.&lt;/p&gt;
 
 &lt;h2 id=&quot;제한사항&quot;&gt;제한사항&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;ul&gt;
     &lt;li&gt;array의 길이는 1 이상 100 이하입니다.&lt;/li&gt;
     &lt;li&gt;array의 각 원소는 1 이상 100 이하입니다.&lt;/li&gt;
@@ -511,11 +755,14 @@ command : [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;요번 문제는 정말 쉬워서 계획없이 바로 코드를 짰다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commands&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
@@ -535,6 +782,8 @@ command : [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;고급-개발자의-풀이&quot;&gt;고급 개발자의 풀이&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commands&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commands&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 
@@ -543,6 +792,8 @@ command : [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;파이썬의 장점인 for문의 요약, map,  lambda식 많이 정말 많이 부족한것  같다. 파이썬을 쓰면 파이썬답게 간단하게  코드짜는 연습 우선 for문부터 간단하게 짜는 연습하고 lambda, map등 파이썬의 여러 장점을 이용하여 문제를 간단하게 푸는 연습을 하자.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Dec 2019 00:00:00 +0900</pubDate>
@@ -553,6 +804,8 @@ command : [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/07/%EB%B0%B1%EC%A4%80-7785-%ED%9A%8C%EC%82%AC%EC%97%90-%EC%9E%88%EB%8A%94-%EC%82%AC%EB%9E%8C.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/07/%EB%B0%B1%EC%A4%80-7785-%ED%9A%8C%EC%82%AC%EC%97%90-%EC%9E%88%EB%8A%94-%EC%82%AC%EB%9E%8C.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;상근이는 세계적인 소프트웨어 회사 기글에서 일한다. 이 회사의 가장 큰 특징은 자유로운 출퇴근 시간이다. 따라서, 직원들은 반드시 9시부터 6시까지 회사에 있지 않아도 된다.&lt;/p&gt;
 
 &lt;p&gt;각 직원은 자기가 원할 때 출근할 수 있고, 아무때나 퇴근할 수 있다.&lt;/p&gt;
@@ -560,11 +813,15 @@ command : [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 &lt;p&gt;상근이는 모든 사람의 출입카드 시스템의 로그를 가지고 있다. 이 로그는 어떤 사람이 회사에 들어왔는지, 나갔는지가 기록되어져 있다. 로그가 주어졌을 때, 현재 회사에 있는 모든 사람을 구하는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 로그에 기록된 출입 기록의 수 n이 주어진다. (2 ≤ n ≤ 106) 다음 n개의 줄에는 출입 기록이 순서대로 주어지며, 각 사람의 이름이 주어지고 “enter”나 “leave”가 주어진다. “enter”인 경우는 출근, “leave”인 경우는 퇴근이다.&lt;/p&gt;
 
 &lt;p&gt;회사에는 동명이인이 없으며, 대소문자가 다른 경우에는 다른 이름이다. 사람들의 이름은 알파벳 대소문자로 구성된 5글자 이하의 문자열이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;현재 회사에 있는 사람의 이름을 사전 순의 역순으로 한 줄에 한 명씩 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -589,11 +846,14 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon7785.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#input 속도 가속을 위해서
 &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
@@ -625,6 +885,8 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;python-skill&quot;&gt;Python Skill&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;
 
@@ -636,6 +898,8 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;이번 문제는 생각보다 어렵지 않았다. 이렇게 dict으로 true와 false를 응용하여 풀어서 쉽게 풀 수 있었다. 비슷한 유형의 문제들도 이렇게 풀면 될것 같다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 07 Dec 2019 00:00:00 +0900</pubDate>
@@ -646,6 +910,8 @@ Artem
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/07/%EB%B0%B1%EC%A4%80-1213-%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/07/%EB%B0%B1%EC%A4%80-1213-%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;임한수와 임문빈은 서로 사랑하는 사이이다.&lt;/p&gt;
 
 &lt;p&gt;임한수는 세상에서 팰린드롬인 문자열을 너무 좋아하기 때문에, 둘의 백일을 기념해서 임문빈은 팰린드롬을 선물해주려고 한다.&lt;/p&gt;
@@ -655,9 +921,13 @@ Artem
 &lt;p&gt;임문빈을 도와 임한수의 영어 이름을 팰린드롬으로 바꾸는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 임한수의 영어 이름이 있다. 알파벳 대문자로만 된 최대 50글자이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 문제의 정답을 출력한다. 만약 불가능할 때는 “I’m Sorry Hansoo”를 출력한다. 정답이 여러 개일 경우에는 사전순으로 앞서는 것을 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -676,6 +946,8 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon1213_1.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon1213_2.jpg&quot; alt=&quot;검증방법&quot; /&gt;&lt;/p&gt;
@@ -683,6 +955,7 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#알파벳 변하는걸 확인
@@ -749,6 +1022,8 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;python-skill&quot;&gt;Python Skill&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[::&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -760,6 +1035,8 @@ Artem
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;
 입력 : AAABB&lt;br /&gt;
 출력 : BAAAB&lt;br /&gt;
@@ -772,6 +1049,8 @@ Artem
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;h3&gt;&lt;strong&gt;반.례.찾.는.훈.련&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;python으로 코드를 짯지만 뭔가 너무 긴것 같다. 다른 답안의 코드들과 비교했을때 너무 길다. python의 장점을 활용하여 최대한 간결하게 간결하면서도 완벽하게 짜보는걸 연습하자. 다른 사람들의 코드를 많이 보자!&lt;/p&gt;
 </description>
@@ -783,6 +1062,8 @@ Artem
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/06/%EB%B0%B1%EC%A4%80-5052-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EB%AA%A9%EB%A1%9D.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/06/%EB%B0%B1%EC%A4%80-5052-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EB%AA%A9%EB%A1%9D.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;전화번호 목록이 주어진다. 이때, 이 목록이 일관성이 있는지 없는지를 구하는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;p&gt;전화번호 목록이 일관성을 유지하려면, 한 번호가 다른 번호의 접두어인 경우가 없어야 한다.&lt;/p&gt;
@@ -796,9 +1077,13 @@ Artem
 &lt;p&gt;이 경우에 선영이에게 전화를 걸 수 있는 방법이 없다. 전화기를 들고 선영이 번호의 처음 세 자리를 누르는 순간 바로 긴급전화가 걸리기 때문이다. 따라서, 이 목록은 일관성이 없는 목록이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 테스트 케이스의 개수 t가 주어진다. (1 ≤ t ≤ 50) 각 테스트 케이스의 첫째 줄에는 전화번호의 수 n이 주어진다. (1 ≤ n ≤ 10000) 다음 n개의 줄에는 목록에 포함되어 있는 전화번호가 하나씩 주어진다. 전화번호의 길이는 길어야 10자리이며, 목록에 있는 두 전화번호가 같은 경우는 없다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;각 테스트 케이스에 대해서, 일관성 있는 목록인 경우에는 YES, 아닌 경우에는 NO를 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -828,11 +1113,14 @@ YES
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon5052.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;
@@ -867,11 +1155,15 @@ YES
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;h3&gt;&lt;strong&gt;함.수.화&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;처음 풀었을 땐 시간초과가 떴다. 처음엔 모든 값들 다 비교를 해줬다. 하지만 생각해보니 정렬을 해주고 ex[911,9113,9114] 가 되면 어차피 바로 다음꺼에서 NO가 뜨니깐 다 할 필요없이 종료 시키면 된다는걸 꺠달았다. 이상 없을 때 다음값을 flag로 두고 계속해서 넘어가는 코드를 짰더니 통과가 됬다. 이번 문제에서 함수화의 중요성과 정렬의 중요성을 느꼈다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Dec 2019 00:00:00 +0900</pubDate>
@@ -882,14 +1174,20 @@ YES
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1316-%EA%B7%B8%EB%A3%B9-%EB%8B%A8%EC%96%B4-%EC%B2%B4%EC%BB%A4.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1316-%EA%B7%B8%EB%A3%B9-%EB%8B%A8%EC%96%B4-%EC%B2%B4%EC%BB%A4.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다. 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aabbbccb는 b가 떨어져서 나타나기 때문에 그룹 단어가 아니다.&lt;/p&gt;
 
 &lt;p&gt;단어 N개를 입력으로 받아 그룹 단어의 개수를 출력하는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 단어의 개수 N이 들어온다. N은 100보다 작거나 같은 자연수이다. 둘째 줄부터 N개의 줄에 단어가 들어온다. 단어는 알파벳 소문자로만 되어있고 중복되지 않으며, 길이는 최대 100이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 그룹 단어의 개수를 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -926,11 +1224,14 @@ a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon1316.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#baekjoon 1316 그룹 단어 체커
 &lt;/span&gt;
@@ -963,11 +1264,15 @@ a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;새로-알게된-기법&quot;&gt;새로 알게된 기법&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;h3&gt;NULL&lt;/h3&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;요번 문제도 딱히 없었다. for문과 if문만 잘 쓰면 충분히 풀 수 있는 문제다.&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Dec 2019 00:00:00 +0900</pubDate>
@@ -978,6 +1283,8 @@ a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1181-%EB%8B%A8%EC%96%B4-%EC%A0%95%EB%A0%AC.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/04/%EB%B0%B1%EC%A4%80-1181-%EB%8B%A8%EC%96%B4-%EC%A0%95%EB%A0%AC.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;알파벳 소문자로 이루어진 N개의 단어가 들어오면 아래와 같은 조건에 따라 정렬하는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -986,9 +1293,13 @@ a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 단어의 개수 N이 주어진다. (1≤N≤20,000) 둘째 줄부터 N개의 줄에 걸쳐 알파벳 소문자로 이루어진 단어가 한 줄에 하나씩 주어진다. 주어지는 문자열의 길이는 50을 넘지 않는다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;조건에 따라 정렬하여 단어들을 출력한다. 단, 같은 단어가 여러 번 입력된 경우에는 한 번씩만 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1029,11 +1340,14 @@ hesitate
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon1181.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;letter_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 
@@ -1075,11 +1389,15 @@ hesitate
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;새로-알게된--기법&quot;&gt;새로 알게된  기법&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;h3&gt;NULL&lt;/h3&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;어려웠던 점은 없었다. python 이라서 많이 쉽게 풀 수 있는 문제였던 것 같다.&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Dec 2019 00:00:00 +0900</pubDate>
@@ -1090,13 +1408,19 @@ hesitate
         <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/03/%EB%B0%B1%EC%A4%80-10814-%EB%82%98%EC%9D%B4%EC%88%9C-%EC%A0%95%EB%A0%AC.html</link>
         <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/03/%EB%B0%B1%EC%A4%80-10814-%EB%82%98%EC%9D%B4%EC%88%9C-%EC%A0%95%EB%A0%AC.html</guid>
         <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;온라인 저지에 가입한 사람들의 나이와 이름이 가입한 순서대로 주어진다. 이때, 회원들을 나이가 증가하는 순으로, 나이가 같으면 먼저 가입한 사람이 앞에 오는 순서로 정렬하는 프로그램을 작성하시오.&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄에 회원의 수 N이 주어진다. (1&amp;lt;= N &amp;lt;=100,000)
 둘째 줄부터 N개의 줄에는 각 회원의 나이와 이름이 공백으로 구분되어 주어진다. 나이는 1보다 크거나 같으며, 200보다 작거나 같은 정수이고, 이름은 알파벳 대소문자로 이루어져 있고, 길이가 100보다 작거나 같은 문자열이다. 입력은 가입한 순서로 주어진다.&lt;/p&gt;
 
 &lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;첫째 줄부터 총 N개의 줄에 걸쳐 온라인 저지 회원을 나이 순, 나이가 같으면 가입한 순으로 한 줄에 한 명씩 나이와 이름을 공백으로 구분해 출력한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1119,6 +1443,8 @@ hesitate
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon10814.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;글씨가 많이 지저분하다.. 글씨체 연습좀 해야겠다.&lt;/p&gt;
@@ -1126,6 +1452,7 @@ hesitate
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
@@ -1166,6 +1493,8 @@ hesitate
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;새로-알게된-기법&quot;&gt;새로 알게된 기법&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;h3&gt;python dictionary sort&lt;/h3&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -1177,6 +1506,8 @@ hesitate
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
+&lt;hr /&gt;
+
 &lt;p&gt;어려웠던 점은 딱히 없었다. 위에 방법 말고도 리스트 자체를 딕셔너리에 넣어서 푸는 방법도 있다. 그럼 패스!&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 Dec 2019 00:00:00 +0900</pubDate>

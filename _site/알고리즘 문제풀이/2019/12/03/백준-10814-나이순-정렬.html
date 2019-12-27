@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>백준 10814 나이순 정렬 | Dev_Hyuk</title>
 	<meta name="description"
-		content="문제온라인 저지에 가입한 사람들의 나이와 이름이 가입한 순서대로 주어진다. 이때, 회원들을 나이가 증가하는 순으로, 나이가 같으면 먼저 가입한 사람이 앞에 오는 순서로 정렬하는 프로그램을 작성하시오.">
+		content="문제">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -35,7 +35,7 @@
 
 	<!-- Google Fonts -->
 	
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet"
+	<link href="//fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet"
 		type="text/css">
 	
 
@@ -141,13 +141,19 @@
     </p>
   </header>
   <section class="post-content"><h2 id="문제">문제</h2>
+<hr />
+
 <p>온라인 저지에 가입한 사람들의 나이와 이름이 가입한 순서대로 주어진다. 이때, 회원들을 나이가 증가하는 순으로, 나이가 같으면 먼저 가입한 사람이 앞에 오는 순서로 정렬하는 프로그램을 작성하시오.</p>
 
 <h2 id="입력">입력</h2>
+<hr />
+
 <p>첫째 줄에 회원의 수 N이 주어진다. (1&lt;= N &lt;=100,000)
 둘째 줄부터 N개의 줄에는 각 회원의 나이와 이름이 공백으로 구분되어 주어진다. 나이는 1보다 크거나 같으며, 200보다 작거나 같은 정수이고, 이름은 알파벳 대소문자로 이루어져 있고, 길이가 100보다 작거나 같은 문자열이다. 입력은 가입한 순서로 주어진다.</p>
 
 <h2 id="출력">출력</h2>
+<hr />
+
 <p>첫째 줄부터 총 N개의 줄에 걸쳐 온라인 저지 회원을 나이 순, 나이가 같으면 가입한 순으로 한 줄에 한 명씩 나이와 이름을 공백으로 구분해 출력한다.</p>
 
 <blockquote>
@@ -170,6 +176,8 @@
 <p><br /><br /></p>
 
 <h2 id="간단한-구현-계획">간단한 구현 계획</h2>
+<hr />
+
 <p><img src="/assets/img/al_prob/baekjoon10814.jpg" alt="구현계획" /></p>
 
 <p>글씨가 많이 지저분하다.. 글씨체 연습좀 해야겠다.</p>
@@ -177,6 +185,7 @@
 <p><br /><br /></p>
 
 <h2 id="풀이-with-python">풀이 with python</h2>
+<hr />
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loop</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">result</span><span class="o">=</span><span class="p">{}</span>
@@ -217,6 +226,8 @@
 <p><br /><br /></p>
 
 <h2 id="새로-알게된-기법">새로 알게된 기법</h2>
+<hr />
+
 <h3>python dictionary sort</h3>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -228,6 +239,8 @@
 <p><br /><br /></p>
 
 <h2 id="어려웠던점">어려웠던점</h2>
+<hr />
+
 <p>어려웠던 점은 딱히 없었다. 위에 방법 말고도 리스트 자체를 딕셔너리에 넣어서 푸는 방법도 있다. 그럼 패스!</p>
 </section>
   

@@ -35,7 +35,7 @@
 
 	<!-- Google Fonts -->
 	
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet"
+	<link href="//fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet"
 		type="text/css">
 	
 
@@ -141,6 +141,8 @@
     </p>
   </header>
   <section class="post-content"><h2 id="문제">문제</h2>
+<hr />
+
 <p>상근이는 문자열에 폭발 문자열을 심어 놓았다. 폭발 문자열이 폭발하면 그 문자는 문자열에서 사라지며, 남은 문자열은 합쳐지게 된다.</p>
 
 <p>폭발은 다음과 같은 과정으로 진행된다.</p>
@@ -155,6 +157,8 @@
 <p>폭발 문자열은 같은 문자를 두 개 이상 포함하지 않는다.</p>
 
 <h2 id="입력">입력</h2>
+<hr />
+
 <p>첫째 줄에 문자열이 주어진다. 문자열의 길이는 1보다 크거나 같고, 1,000,000보다 작거나 같다.</p>
 
 <p>둘째 줄에 폭발 문자열이 주어진다. 길이는 1보다 크거나 같고, 36보다 작거나 같다.</p>
@@ -162,6 +166,8 @@
 <p>두 문자열은 모두 알파벳 소문자와 대문자, 숫자 0, 1, …, 9로만 이루어져 있다.</p>
 
 <h2 id="출력">출력</h2>
+<hr />
+
 <p>첫째 줄에 모든 폭발이 끝난 후 남은 문자열을 출력한다.</p>
 
 <blockquote>
@@ -196,6 +202,7 @@ C4
 <p><br /><br /></p>
 
 <h2 id="풀이-with-python">풀이 with python</h2>
+<hr />
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span>
 <span class="n">bomb</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span>
@@ -238,11 +245,15 @@ C4
 <p><br /><br /></p>
 
 <h2 id="구동원리">구동원리</h2>
+<hr />
+
 <p><img src="/assets/img/al_prob/baekjoon9935.gif" alt="구현계획" />
 이런식으로 구동이 된다.
 <br /><br /></p>
 
 <h2 id="유용한-기법">유용한 기법</h2>
+<hr />
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">bomb</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">ans</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">bomb</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
 </code></pre></div></div>
@@ -251,12 +262,16 @@ C4
 <p><br /><br /></p>
 
 <h2 id="어려웠던점">어려웠던점</h2>
+<hr />
+
 <p></p>
 <p>우선 앞에서 부터 비교를 할려고 했다. 하지만 bomb이 12ab고 text는 112ab 일때 이때 정말 어떻게 구현할지 고민을 많이 했다. 항상 앞에서 비교를 하자 이 틀 때문에 문제를 어렵게 생각했고 dict을 이용해서 index값을 value로 넣자,, 등 정말 너무 어렵게 풀려고 했다. 하지만 뒤에서 부터 검사하면 정말 쉽게 풀 수 있는 문제였다. 이렇게 스택과 bomb을 비교할때 어떻게 구현하지가 가장 어려웠다.</p>
 
 <p><br /><br /></p>
 
 <h2 id="느낀점">느낀점</h2>
+<hr />
+
 <p>요 근래 풀었던 문제중에서 가장 어려었던 문제였다. 가장 쉽고 기본적인 구조 스택을 사용하는데 간단한 원리이며 간단한 기술을 사용하는데도 생각해내기엔 다소 어려웠다. 이걸 dict으로 풀려했던 내 모습을 반성하게 된다. <h5><strong>쉽고 간단하지만 생각해내기 어려운 기술</strong></h5>들을 이런 문제들을 많이 풀면서 생각해내기 쉽게 만들어야겠다.그리고 너무 어렵게 풀려고 하지말고 쉽게 쉽게 풀려고 하자!</p>
 </section>
   

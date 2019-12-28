@@ -24,9 +24,17 @@ layout: default
       </header>
       <div class="excerpt">
         {{ post.excerpt }}
-        <a class="button" href="{{ post.url | relative_url }}">
+        <!-- 원래 이거 -->
+        <!-- <a class="button" href="{{ post.url | relative_url }}">
           {{ site.theme_settings.str_continue_reading }}
-        </a>
+        </a> -->
+        <!-- 실험용 -->
+        <div class="button-container-1">
+          <span class="mas"></span>
+        <button id='work' type="button" name="Hover" onclick = "location.href='{{ post.url | relative_url }}'">Continue</button>
+        </div>
+        <!-- 여기까지 -->
+
       </div>
     </div>
     {% endfor %}
@@ -35,16 +43,31 @@ layout: default
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button" >
+    <!-- 원래 -->
+    <!-- <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button" >
       <i class="fa fa-chevron-left"></i>
       {{ site.theme_settings.str_previous_page }}
-    </a>
+    </a> -->
+
+    <!-- 실험용 -->
+    <div class="button-container-2">
+      <span class="mas"></span>
+    <button type="button" name="Hover" onclick = "location.href='{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}'">previous</button>
+    </div>
+
     {% endif %}
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button" >
+    <!-- 원래 -->
+    <!-- <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button" >
       {{ site.theme_settings.str_next_page }}
       <i class="fa fa-chevron-right"></i>
-    </a>
+    </a> -->
+
+    <!-- 실험용 -->
+    <div class="button-container-2">
+      <span class="mas"></span>
+    <button type="button" name="Hover" onclick = "location.href='{{ paginator.next_page_path | relative_url | replace: '//', '/' }}'">next</button>
+    </div>
     {% endif %}
   </div>
   {% endif %}

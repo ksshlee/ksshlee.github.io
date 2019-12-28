@@ -5,7 +5,233 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Sat, 28 Dec 2019 03:21:47 +0900</pubDate>
+    <pubDate>Sat, 28 Dec 2019 16:25:22 +0900</pubDate>
+    
+      <item>
+        <title>Eclipse, Tomcat 연동</title>
+        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/28/Eclipse.html</link>
+        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/28/Eclipse.html</guid>
+        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h6&gt;&lt;a href=&quot;#make_wp&quot;&gt;Eclipse로 web project 만들기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#servlet&quot;&gt;Servlet 등록후 구동&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#https_method&quot;&gt;https 메소드들&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#error&quot;&gt;실행중 에러목록&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;make_wp&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;eclipse로-web-project-만들기&quot;&gt;Eclipse로 web project 만들기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;우선 Eclipse를 실행 시켜보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/eclipse_1.png&quot; alt=&quot;eclipase&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;저 창을 닫고 Create a new project를 눌러준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/eclipse_2.png&quot; alt=&quot;eclipase&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;여기서 Dynamic Web Project 선택&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/eclipse_3.png&quot; alt=&quot;eclipase&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;여기서 가장 중요한건 Target runtime에서 New Runtime을 설정해줘야 하는것이다. New Runtime을 눌러보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/eclipse_4.png&quot; alt=&quot;eclipase&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그럼 이렇게 창이 뜨는데 설치한 Tomcat 버전에 맞게 체크 후 Next&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/eclipse_5.png&quot; alt=&quot;eclipase&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Browse로 저번에 설치해준 Tomcat의 directory 누른후 Open! 후 Finish&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로젝트 이름은 자유롭게! 저는 first_web_project로 하겠습니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/eclipse_6.png&quot; alt=&quot;eclipase&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;새로운 프로젝트 생성 완료!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;servlet&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;servlet-등록후-구동&quot;&gt;Servlet 등록후 구동&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h5&gt;- Servlet 이란?&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;url 요청을 처리하는 프로그램&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;new 로 Servlet을 하나 생성한다.
+&lt;img src=&quot;/assets/img/back_end/2019_12_28/servlet_2.png&quot; alt=&quot;servlet&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;package 이름과 클래스 이름을 자유롭게 생성을 해준다. (단 Java Class 규칙에 의해서 대문자로 구분!)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/java_web_1.png&quot; alt=&quot;java_web&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;간단하게 설명하자면 doGet 메소드는 Get으로 오는 요청들을 받아주는 메소드고 doPost는 Post로 오는 요청들을 받아주는 메소드 이다. 그밖에도 doPut 등등 많지만 일단 지금은 doGet만 사용해보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;https_method&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h5&gt;⭐️http 메서드⭐️&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GET
+    &lt;ul&gt;
+      &lt;li&gt;요청된 resource를 조회한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;POST
+    &lt;ul&gt;
+      &lt;li&gt;요청된 resource를 새롭게 추가한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PUT
+    &lt;ul&gt;
+      &lt;li&gt;요청된 resource를 수정한다. (내용 갱신)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DELETE
+    &lt;ul&gt;
+      &lt;li&gt;요청된 resource를 삭제한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;examples&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.PrintWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.annotation.WebServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServletResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/**
+ * Servlet implementation class FirstTest
+ */&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@WebServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/FirstTest&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirstTest&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HttpServlet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serialVersionUID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+       
+    &lt;span class=&quot;cm&quot;&gt;/**
+     * @see HttpServlet#HttpServlet()
+     */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FirstTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated constructor stub&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;cm&quot;&gt;/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doGet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/html;charset=UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;PrintWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;h1&amp;gt;나는야 상혁!&amp;lt;/h1&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;간단하게 정리하자면 나는야 상혁! 이라는 내용을 h1으로 감싼 글을 response로 보내준다. 근데 이 내용은 html형식이고 UTF-8형태로 되어 있다. 라는 뜻!&lt;/p&gt;
+
+&lt;p&gt;실행은 FirstTest.java 에서 Run as 1 Run on Server로 실행을 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/error_1.png&quot; alt=&quot;error&quot; /&gt;
+만약 이런 오류가 뜬다면 &lt;a href=&quot;#error_1&quot;&gt;여기&lt;/a&gt;로 이동!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/success_1.png&quot; alt=&quot;success&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 간단하게 정말 간단하게 eclipse와 tomcat을 연동해서 원하는 문자 웹사이트에 띄우기 성공!&lt;/p&gt;
+
+&lt;p&gt;다음 포스팅에선 이렇게 간단한거보단 조금 더 심화된 내용을 다뤄보자!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;error&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;요류-목록&quot;&gt;요류 목록&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;span id=&quot;error_1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/error_1.png&quot; alt=&quot;error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;오류 내용을 해석해보면 8080,8009 포트가 이미 사용중이다.. 라는 내용이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/error_reason_1.png&quot; alt=&quot;error_reason&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;보면 8080포트에서 저번에 설치한 톰캣이 구동중이다.. 그럼 localhost:8080에 접속해보자&lt;/p&gt;
+
+&lt;p&gt;해결 방법은 2가지가 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;톰캣 종료&lt;/li&gt;
+  &lt;li&gt;포트 변경&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;우린 1번을 사용하여 해결 해 보겠다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tomcat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;9.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;해당 디렉토리로 접속&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/to_shutdown.png&quot; alt=&quot;shut_down&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;저기서 shutdown.sh 파일을 실행시켜주면 된다.&lt;/p&gt;
+
+&lt;p&gt;명령어는&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/shutdown_result.png&quot; alt=&quot;shutdown_result&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면 shutdown이 성공적으로 실행된것을 확인 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
+</description>
+        <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
+      </item>
     
       <item>
         <title>Java 웹 개발 환경 구축</title>

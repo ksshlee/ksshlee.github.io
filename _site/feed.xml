@@ -5,7 +5,201 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Mon, 30 Dec 2019 17:48:11 +0900</pubDate>
+    <pubDate>Tue, 31 Dec 2019 00:24:16 +0900</pubDate>
+    
+      <item>
+        <title>자료구조-그래프(Graph)</title>
+        <link>/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/30/graph.html</link>
+        <guid isPermaLink="true">/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/30/graph.html</guid>
+        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;#what_is_graph&quot;&gt;그래프란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#graph_word&quot;&gt;그래프 용어&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#graph_characteristic&quot;&gt;그래프의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#differ_tree_graph&quot;&gt;그래프, 트리의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#graph_type&quot;&gt;그래프 종류&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#how_to_make_graph&quot;&gt;그래프 구현&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#graph_search&quot;&gt;그래프 탐색&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;what_is_graph&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프란&quot;&gt;그래프란?&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그래프는 노드(Node,Vertex)와 간선(Edge,Arc)으로 나타내는 자료구조이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/graph_1.png&quot; alt=&quot;graph&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그래프는 연결되어 있는 Node 간의 관계를 표현한 자료구조이다.
+    &lt;ul&gt;
+      &lt;li&gt;Ex) 지도, 지하철 노선도, 선수과목, 가족 관계도, 회사 관계도 등&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;graph_word&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프-용어&quot;&gt;그래프 용어&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;정점&lt;/strong&gt; : Node 혹은 Vertex&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;간선&lt;/strong&gt; : Edge 혹은 Arc&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;인접 정점&lt;/strong&gt; : 간선으로 연결되어 있는 주변 정점&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;정점의 차수&lt;/strong&gt; : 무방향 그래프에서 1개의 정점에 인접한 정점의 수
+    &lt;ul&gt;
+      &lt;li&gt;모든 정점의 차수 = 간선 * 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;진입 차수&lt;/strong&gt; : 방향 그래프에서 다른 정점에서 오는 간선의 수&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;진출 차수&lt;/strong&gt; : 방향 그래프에서 다른 정점으로 향하는 간선의 수&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;graph_characteristic&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프의-특징&quot;&gt;그래프의 특징&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;node간의 여러개의 Edge가 존재할 수 있다.&lt;/li&gt;
+  &lt;li&gt;루트,부모-자식 관계의 개념이 없다.&lt;/li&gt;
+  &lt;li&gt;순회는 DFS,BFS로 이루어진다.&lt;/li&gt;
+  &lt;li&gt;순환, 혹은 비순환이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;differ_tree_graph&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프-트리의-차이&quot;&gt;그래프, 트리의 차이&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/graph_vs_tree.png&quot; alt=&quot;graphvstree&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;graph_type&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프의-종류&quot;&gt;그래프의 종류&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h4&gt;1.방향그래프 무방향 그래프 (Directed Graph, Undirected Graph)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/direct_undirect.png&quot; alt=&quot;direct_undirect&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;무방향 그래프
+    &lt;ul&gt;
+      &lt;li&gt;두 노드간 양 방향으로 이동 가능&lt;/li&gt;
+      &lt;li&gt;두 노드를 각각 A,B라 했을때 (A,B)와 (B,A)는 &lt;strong&gt;같은&lt;/strong&gt; 표현이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;방향 그래프
+    &lt;ul&gt;
+      &lt;li&gt;두 노드간 한 방향으로 이동 가능&lt;/li&gt;
+      &lt;li&gt;두 노드를 각각 A,B라 했을때 (A,B)와 (B,A)는 &lt;strong&gt;다른&lt;/strong&gt; 표현이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;2. 가중치 그래프(Weighted Graph)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/weighted_graph.png&quot; alt=&quot;weighted_graph&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;가중치 그래프
+    &lt;ul&gt;
+      &lt;li&gt;간선에 값이 할당된 그래프&lt;/li&gt;
+      &lt;li&gt;‘네트워크(Network)’라고도 불린다.&lt;/li&gt;
+      &lt;li&gt;출발지-목적지 에서의 신호등, 차량 정체 등에서 활용&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;3. 완전 그래프(Complete Graph)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/complete_graph.png&quot; alt=&quot;complete_graph&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모든 노드가 서로 연결되어 있는 그래프&lt;/li&gt;
+  &lt;li&gt;노드가 n이면 간선의 수 : n*(n-1)/2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;how_to_make_graph&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프-구현&quot;&gt;그래프 구현&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;구현 자체는 너무 쉽다. linkedlist 혹은 array를 활용하여 연결된 리스트를 저장해주면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/graph_2.png&quot; alt=&quot;graph_2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위의 그래프를 파이썬의 dict을 이용하여 구현 해보겠다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;정말 간단하게 구현 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;graph_search&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그래프-탐색&quot;&gt;그래프 탐색&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h4&gt;1. 깊이 우선 탐색 (Depth First Search(DFS)) &lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;자세한 내용은 &lt;a href=&quot;#&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;2. 너비 우선 탐색 (Breadth First Search(BFS)) &lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;자세한 내용은 &lt;a href=&quot;#&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;https://kamang-it.tistory.com/entry/AlgorithmData-StructureGraph%EA%B7%B8%EB%9E%98%ED%94%84%EC%9D%B4%EB%A1%A0%EA%B3%BC-%EA%B7%B8%EB%9E%98%ED%94%84-%EA%B5%AC%ED%98%84&lt;/p&gt;
+
+&lt;p&gt;https://www.zerocho.com/category/Algorithm/post/584b9033580277001862f16c&lt;/p&gt;
+
+&lt;p&gt;https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
+      </item>
     
       <item>
         <title>Eclipse, Tomcat 연동</title>

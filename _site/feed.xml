@@ -5,7 +5,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Tue, 31 Dec 2019 19:44:42 +0900</pubDate>
+    <pubDate>Tue, 31 Dec 2019 19:47:15 +0900</pubDate>
     
       <item>
         <title>⭐️Python pop()에 관하여, Queue 사용법⭐️</title>
@@ -520,7 +520,7 @@
 
 &lt;h4&gt;1. 깊이 우선 탐색 (Depth First Search(DFS)) &lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;자세한 내용은 &lt;a href=&quot;#&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -528,7 +528,7 @@
 
 &lt;h4&gt;2. 너비 우선 탐색 (Breadth First Search(BFS)) &lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;자세한 내용은 &lt;a href=&quot;#&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;

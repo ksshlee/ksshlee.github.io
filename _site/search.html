@@ -155,6 +155,17 @@
       }
       ,
     
+      "ec-95-8c-ea-b3-a0-eb-a6-ac-ec-a6-98-20-eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac-2019-12-31-dfs-bfs-html": {
+        "title": "BFS 너비 우선 탐색, DFS 깊이 우선 탐색",
+        "tags": "DFS, BFS, search, 너비 우선 탐색, 깊이 우선 탐색",
+        "date": "December 31, 2019",
+        "author": "",
+        "category": "",
+        "content": "목차    BFS 너비 우선 탐색    BFS 구현 코드    BFS 수행 원리    DFS 깊이 우선 탐색    DFS 구현 코드    DFS 수행 원리BFS(Breadth First Search) 너비 우선 탐색BFS는 그래프에서 사용되는 탐색 기법중 하나다.Queue 자료구조를 사용한다.  BFS 수행 방법  시작 정점 방문한다  정점의 인접 정점중에서 방문하지 않은 정점은 Queue에 저장한다.  Queue를 dequeue하여 그값이 시작 정점이 되고 1을 반복한다.  Queue가 Null이 되면 종료한다.BFS 구현 코드def bfs(graph,start):    visit = {}    q = queue.Queue()    q.put(start)        #q가 존재할때    while q.qsize()&gt;0:        node = q.get()        # 만약 현재 노드의 방문 기록이 없다면 추가        if visit.get(node) == None:            visit[node]=True                # 해당 노드의 인접 노드 큐에 추가        for x in graph[node]:            if visit.get(x) == None:                q.put(x)             ans=[x for x in visit]    return ansBFS 수행 원리 Dequeue는 Queue의 맨앞에 있는 노드를 제거하고 해당 노드를 visit에 추가한다. Dequeue된 노드에 인접 노드가 방문되지 않았다면 Queue에 추가한다. 출력은 다르게 나올 수 있다. 만약 리스트에 B보다 G가 먼저 있다면 G -&gt; B순으로 탐색을 한다.DFS(Depth First Search) 깊이 우선 탐색DFS는 그래프에서 사용되는 탐색 기법중 하나다.Stack 자료구조를 사용한다.  BFS 수행 방법  시작 정점 방문한다  정점의 인접 정점중에서 방문하지 않은 정점은 Stack에 저장한다.  Stack을 pop하여 그 값이 시작 정점이 되고 1을 반복한다.  Stack이 Null이 되면 종료한다.DFS 구현 코드def dfs(graph,start):    visit = {}    s = [start]    #s가 존재할때    while s:        node = s.pop()        if visit.get(node) == None:            visit[node]=True                for x in graph[node]:            if visit.get(x) == None:                s.append(x)            ans = [x for x in visit]    return ansDFS 수행 원리  DFS는 Stack을 이용한다.  Stack이기 때문에 B,G중 맨위에 있는 G를 pop하기 때문에 오른쪽부터 탐색을 시작한다.  만약 왼쪽부터 탐색을 추가하고 싶다면 Stack에 push하는 순서를 바꾸면 된다.참고https://blog.ilkyu.kr/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89Breadth-First-Search%EA%B3%BC-%EA%B5%AC%ED%98%84-%EB%B0%A9%EB%B2%95https://kingpodo.tistory.com/48혹시 제가 잘못 알고 있는 부분이나 궁금하신게 있다면 댓글을 남겨주세요! ",
+        "url": "//%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html"
+      }
+      ,
+    
       "ec-9e-90-eb-a3-8c-ea-b5-ac-ec-a1-b0-20-eb-9d-bc-ec-9d-b4-eb-b8-8c-eb-9f-ac-eb-a6-ac-2019-12-30-graph-html": {
         "title": "자료구조-그래프(Graph)",
         "tags": "자료구조, 그래프, Graph",

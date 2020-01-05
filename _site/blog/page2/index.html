@@ -50,7 +50,7 @@
 	<div class="branding">
 			<div style="float: right;">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-							<a class="navbar-brand" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">
+							<a class="navbar-brand" target="_blank" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">
 								<img src="/assets/img/avatar.png" width="30" height="30" class="d-inline-block align-top" alt="">
 								Dev_Hyuk
 							</a>
@@ -76,7 +76,7 @@
 										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Structure</a>
 										  <div class="dropdown-menu">
 											<a class="dropdown-item" href="/Data_Structure/DS_Library">라이브러리</a>
-											<a class="dropdown-item" href="/Data_Structure/DS_USE">활용</a>
+											<!-- <a class="dropdown-item" href="/Data_Structure/DS_USE">활용</a> -->
 										  </div>
 									  </li>
 						  
@@ -84,7 +84,7 @@
 									  <li class="nav-item dropdown">
 										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Web</a>
 										  <div class="dropdown-menu">
-											  <a class="dropdown-item" href="/Web/Front_End">프론트 엔드</a>
+											  <!-- <a class="dropdown-item" href="/Web/Front_End">프론트 엔드</a> -->
 											  <a class="dropdown-item" href="/Web/Back_End">백 엔드</a>
 										  </div>
 									  </li>
@@ -115,7 +115,7 @@
 									  </li>
 						  
 									  <li class="nav-item">
-										  <a class="nav-link active" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">About me</a>
+										  <a class="nav-link active" target="_blank" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">About me</a>
 									  </li>
 								</ul>
 							</div>
@@ -143,6 +143,40 @@
   </div>
   
   <div class="posts">
+    
+    <div class="post-teaser">
+      <header>
+        <h1>
+          <a class="post-link" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html">
+            Java 웹 개발 환경 구축
+          </a>
+        </h1>
+        <p class="meta">
+          December 27, 2019
+        </p>
+      </header>
+      <div class="excerpt">
+        <h2 id="목차">목차</h2>
+<hr />
+
+<h6><a href="#jdk_install">JDK 설치</a></h6>
+<h6><a href="#eclipse_install">Eclipse 설치</a></h6>
+<h6><a href="#tomcat_install">Tomcat 설치</a></h6>
+
+
+        <!-- 원래 이거 -->
+        <!-- <a class="button" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html">
+          Continue reading
+        </a> -->
+        <!-- 실험용 -->
+        <div class="button-container-1">
+          <span class="mas"></span>
+        <button id='work' type="button" name="Hover" onclick = "location.href='/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html'">Continue</button>
+        </div>
+        <!-- 여기까지 -->
+
+      </div>
+    </div>
     
     <div class="post-teaser">
       <header>
@@ -271,45 +305,6 @@
         <div class="button-container-1">
           <span class="mas"></span>
         <button id='work' type="button" name="Hover" onclick = "location.href='/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/10/%EB%B0%B1%EC%A4%80-Java-vs-C++.html'">Continue</button>
-        </div>
-        <!-- 여기까지 -->
-
-      </div>
-    </div>
-    
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/08/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-K%EB%B2%88%EC%A7%B8%EC%88%98.html">
-            프로그래머스 K번째 수
-          </a>
-        </h1>
-        <p class="meta">
-          December 8, 2019
-        </p>
-      </header>
-      <div class="excerpt">
-        <h2 id="문제">문제</h2>
-<hr />
-
-<p>배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.
-예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면</p>
-<ol>
-    <li>array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.</li>
-    <li>1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.</li>
-    <li>2에서 나온 배열의 3번째 숫자는 5입니다.</li>
-</ol>
-<p>배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.</p>
-
-
-        <!-- 원래 이거 -->
-        <!-- <a class="button" href="/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/08/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-K%EB%B2%88%EC%A7%B8%EC%88%98.html">
-          Continue reading
-        </a> -->
-        <!-- 실험용 -->
-        <div class="button-container-1">
-          <span class="mas"></span>
-        <button id='work' type="button" name="Hover" onclick = "location.href='/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/08/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-K%EB%B2%88%EC%A7%B8%EC%88%98.html'">Continue</button>
         </div>
         <!-- 여기까지 -->
 

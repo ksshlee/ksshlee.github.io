@@ -50,7 +50,7 @@
 	<div class="branding">
 			<div style="float: right;">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-							<a class="navbar-brand" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">
+							<a class="navbar-brand" target="_blank" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">
 								<img src="/assets/img/avatar.png" width="30" height="30" class="d-inline-block align-top" alt="">
 								Dev_Hyuk
 							</a>
@@ -76,7 +76,7 @@
 										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Structure</a>
 										  <div class="dropdown-menu">
 											<a class="dropdown-item" href="/Data_Structure/DS_Library">라이브러리</a>
-											<a class="dropdown-item" href="/Data_Structure/DS_USE">활용</a>
+											<!-- <a class="dropdown-item" href="/Data_Structure/DS_USE">활용</a> -->
 										  </div>
 									  </li>
 						  
@@ -84,7 +84,7 @@
 									  <li class="nav-item dropdown">
 										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Web</a>
 										  <div class="dropdown-menu">
-											  <a class="dropdown-item" href="/Web/Front_End">프론트 엔드</a>
+											  <!-- <a class="dropdown-item" href="/Web/Front_End">프론트 엔드</a> -->
 											  <a class="dropdown-item" href="/Web/Back_End">백 엔드</a>
 										  </div>
 									  </li>
@@ -115,7 +115,7 @@
 									  </li>
 						  
 									  <li class="nav-item">
-										  <a class="nav-link active" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">About me</a>
+										  <a class="nav-link active" target="_blank" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">About me</a>
 									  </li>
 								</ul>
 							</div>
@@ -143,6 +143,17 @@
 
 <script>
   window.store = {
+    
+      "ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-b0-8d-20tips-2020-01-03-json-ed-8c-8c-ec-8b-b1-ed-95-98-ea-b8-b0-html": {
+        "title": "JSON파일 파싱",
+        "tags": "json, 파싱, Java, Python",
+        "date": "January 3, 2020",
+        "author": "",
+        "category": "",
+        "content": "목차    JSON 이란?    JSON 파싱 with Python    JSON 파일 만들기 Python    Java로 JSON파싱 환경 설정하기    JSON 파싱하기 with JavaJSON (JavaScript Object NOtation) 이란?JSON은 간단하게 말해 사람이 읽고 쓰기에 용이하고, 기계가 분석하고 생성함에도 용이한 문자 기반의 데이터 포맷이다.원래는 JavaScript 언어로부터 파생되었다.JSON은 프로그래밍 언어와 운영체제에서 독립적이다.JSON 객체   JSON 객체는 중괄호({})로 둘러 쌓아서 표현한다.{    \"name\" : \"이상혁\",    \"age\" : 24,    \"hobby\" : \"programming\",    \"job\" : \"student\"}  객체 안에 객체도 가능하다.{    \"name\" : \"이상혁\",    \"age\" : 24,    \"hobby\" : \"programming\",    \"job\" : \"student\",    \"father\" : {        \"name\" : \"이00\"    },    \"mother\" : {        \"name\" : \"김00\"    },    \"sister\" : {        \"name\" : \"이00\"    },    \"skill\" : [\"Java\",\"Python\",\"Git\"]    }JSON 배열   JSON 배열은 대괄호([])로 둘러 쌓아서 표현한다.\"skills\":[    {\"name\" : \"Java\", \"level\" : 2},    {\"name\" : \"Python\", \"level\" : 3},    {\"name\" : \"JavaScript\", \"level\" : 2}]or\"skills\":[    \"Java\",    \"Python\",    \"JavaScript\"]JSON 파싱 with Python*파이썬에서 JSON 파싱은 너무 간단한 작업이다.JSON은 아래의 예시로 하겠다.{    \"name\" : \"이상혁\",    \"age\" : 24,    \"hobby\" : \"programming\",    \"job\" : \"student\",    \"father\" : {        \"name\" : \"이00\"    },    \"mother\" : {        \"name\" : \"김00\"    },    \"sister\" : {        \"name\" : \"이00\"    },    \"skill\" : [\"Java\",\"Python\",\"Git\"]    }  Python 파싱 코드import jsonwith open('json파일의 위치') as json_file:    json_data = json.load(json_file)    json_value = json_data['key값']    print(json_value)간단하게 JSON파일은 python으로 파싱할시 dict형태로 파싱이 된다.그러면 dict에서 값을 읽어오는것처럼 사용하면 된다.Example  skill의 2번째 값을 구하고 싶다json_value = json_data['skill'][1]  이런식으로 간단하게 파싱을 할 수 있다.JSON파일 만들기 Python  Python으로 Json 파일 생성역시 가능하다.import jsonprofile = dict()profile[\"name\"] = \"Sang Hyuk Lee\"profile[\"age\"] = 24profile[\"hobby\"] = [\"soccer\",\"programming\"]with open('./test.json', 'a') as json_file:    json.dump(profile,json_file,indent=\"\\t\")이렇게 하면 JSON파일이 생성이 된다. 마지막 indent=\"\\t\"를 안해주게 되면 위의 내용들이 한줄에 출력되므로 꼭 써주자⭐️주의할 점이 JSON파일은 항상 \"\" 큰따옴표다. 그러므로 항상 큰따옴표로 사용하자//indent=\"\\t\"를 했을 시{\t\"name\": \"Sang Hyuk Lee\",\t\"age\": 24,\t\"hobby\": [\t\t\"soccer\",\t\t\"programming\"\t]}//indent=\"\\t\"를 안했을 시{\"name\": \"Sang Hyuk Lee\", \"age\": 24, \"hobby\": [\"soccer\", \"programming\"]}JSON 파싱 with Java (GSON 설치하기)Java로도 역시 파싱은 가능하다 하지만 기본적으로 java에서 json을 파싱하기 위한 라이브러리는 없으므로 외부에서 가져와야한다. gson을 활용하여 파싱을 해보겠다.여기를 눌러 메이븐 저장소에 접속해준다.여기서 검색창에 gson을 검색하여 첫번째 있는걸 다운로드 해준다. 버전은 왠만하면 최신중에서 Usages가 많은 걸로 한다. 다운로드 완료후 해당 jar 파일을 eclipse에서 외부 라이브러리에 추가를 해준다. 방법은 여기JSON 파싱하기 with Javaimport com.google.gson.JsonArray;import com.google.gson.JsonObject;import com.google.gson.JsonParser;public class JsonParse {\tpublic static void main(String[] args) {\t\tString json=\"{        \\\"name\\\" : \\\"이상혁\\\",         \\\"age\\\" : 24,         \\\"hobby\\\" : \\\"programming\\\",         \\\"job\\\" : \\\"student\\\",         \\\"father\\\" : { \\\"name\\\" : \\\"이00\\\" },         \\\"mother\\\" : { \\\"name\\\" : \\\"김00\\\" },         \\\"sister\\\" : { \\\"name\\\" : \\\"이00\\\" },         \\\"skill\\\" : [\\\"Java\\\",\\\"Python\\\",\\\"Git\\\"]}\";\t\t\t\t\t\tJsonParser jsonParser = new JsonParser();\t\t\t\tJsonObject jsonObject = (JsonObject) jsonParser.parse(json);\t\t\t\tSystem.out.println(jsonObject.get(\"skill\"));\t\tSystem.out.println(jsonObject.get(\"name\"));\t}}  이런식으로 추출이 가능하다. 물론 skill 출력이 가능하다.import com.google.gson.JsonArray;import com.google.gson.JsonObject;import com.google.gson.JsonParser;public class JsonParse {\tpublic static void main(String[] args) {\t\tString json=\"{        \\\"name\\\" : \\\"이상혁\\\",         \\\"age\\\" : 24,         \\\"hobby\\\" : \\\"programming\\\",        \\\"job\\\" : \\\"student\\\",         \\\"father\\\" : { \\\"name\\\" : \\\"이00\\\" },         \\\"mother\\\" : { \\\"name\\\" : \\\"김00\\\" },         \\\"sister\\\" : { \\\"name\\\" : \\\"이00\\\" },         \\\"skill\\\" : [\\\"Java\\\",\\\"Python\\\",\\\"Git\\\"]}\";\t\t\t\t\t\tJsonParser jsonParser = new JsonParser();\t\t\t\tJsonObject jsonObject = (JsonObject) jsonParser.parse(json);\t\t\t\tSystem.out.println(jsonObject.get(\"skill\").getAsJsonArray().get(1));\t\t\t}}  만약 저위에 skill 에서 특정 배열의 위치를 빼고 싶으면 .getAsJsonArray().get(위치); 를 해서 특정 값만 추출도 가능하다.⭐️해당 key값이 객체면 getAsJsonObject 배열 이면 getAsJsonarray 로 추출하면 된다. 배열의 특수번째면 .get(“추출하고 싶은 번째”) 로 추출을 하면 된다.Example{    \"name\" : \"이상혁\",    \"age\" : 24,    \"hobby\" : \"programming\",    \"job\" : \"student\",    \"father\" : {        \"name\" : \"이00\"    },    \"mother\" : {        \"name\" : \"김00\"    },    \"sister\" : {        \"name\" : \"이00\"    },    \"skill\" : [\"Java\",\"Python\",\"Git\"]    }위에서 skill 을 추출하고 싶다 근데 skill은 객체 안에 감싸져 있으므로 skill을 꺼내기 위해선 .getAsJsonObject() 이다skill 안에서 Java를 꺼내고 싶다. Java는 배열 안에 감싸져 있으므로 .getAsJsonArray() 하고 .get(\"번째\") 로 추출을 한다.하지만 위에 코드 예시에선 이미 jsonObject를 선언하고 skill을 추출을 하기 때문에 .getAsJsonObject()는 생략을 한 것이다.출처https://www.json.org/json-ko.htmlhttps://calyfactory.github.io/%EC%A0%9C%EC%9D%B4%EC%8A%A8%ED%8C%8C%EC%8B%B1/https://opentutorials.org/course/1375/6844http://tcpschool.com/json/json_basic_structurehttps://dpdpwl.tistory.com/60https://blog.azulpintor.io/entry/java-extract-value-for-jason-string-by-gson",
+        "url": "//%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20tips/2020/01/03/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0.html"
+      }
+      ,
     
       "ed-94-84-eb-a1-9c-ea-b7-b8-eb-9e-98-eb-b0-8d-20tips-2019-12-31-python-queue-eb-aa-a8-eb-93-88-html": {
         "title": "⭐️Python pop()에 관하여, Queue 사용법⭐️",

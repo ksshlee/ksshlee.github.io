@@ -5,10 +5,311 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Wed, 08 Jan 2020 23:35:31 +0900</pubDate>
+    <pubDate>Thu, 09 Jan 2020 02:52:40 +0900</pubDate>
     
       <item>
-        <title>MySQL 설치, 실행, 종료</title>
+        <title>MySQL DDL 기본 사용법</title>
+        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html</link>
+        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html</guid>
+        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h6&gt;&lt;a href=&quot;#ddl&quot;&gt;DDL&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#make_db&quot;&gt;Database 생성하기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#find_db_and_use&quot;&gt;Database 조회하고, 사용하기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#del_db&quot;&gt;Database 삭제하기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#table&quot;&gt;Table&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#make_table&quot;&gt;Table 생성하기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#del_table&quot;&gt;Table 삭제하기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#modify_table&quot;&gt;Table 수정하기&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;&lt;a href=&quot;#make_table_zero&quot;&gt;Table 초기화&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;ddl&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ddl-data-definition-language&quot;&gt;DDL (Data Definition Language)&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;데이터 정의어&lt;/li&gt;
+  &lt;li&gt;데이터들은 변경이 불가능하다.&lt;/li&gt;
+  &lt;li&gt;Database, table을 생성, 수정, 삭제할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/ddl_commnad.png&quot; alt=&quot;ddl_commnad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;make_db&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;database-생성하기&quot;&gt;Database 생성하기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Databse를 생성하는 명령어의 구조&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATABASE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사실 대문자 소문자 상관없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/create_db.png&quot; alt=&quot;create_db&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Profile이라는 이름을 갖는 DB 생성&lt;/li&gt;
+  &lt;li&gt;Qeury OK, 이런 문구가 뜬다면 성공했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/data_struct.png&quot; alt=&quot;data_struct&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그러면 MySQL 안에 Profile이라는 이름을 갖은 Profile이 생성된 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;find_db_and_use&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;database-조회하고-사용하기&quot;&gt;Database 조회하고, 사용하기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;현재 서버에 생성되어 있는 DB를 조회하고 싶다면 다음 명령어를 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SHOW&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;databases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/show_db.png&quot; alt=&quot;show_db&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그러면 이렇게 현재 존재하는 DB들을 볼수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/data_struct_2.png&quot; alt=&quot;data_struct_2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;현재 DB 현황을 표현한 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;USE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;명령어를 통하여 해당 db를 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/use_db.png&quot; alt=&quot;use_db&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/insert_db.png&quot; alt=&quot;insert_db&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그러면 Profile이라는 DB를 사용한다라는 뜻이 되고 그림으로 위와 같이 표현할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;del_db&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;database-삭제하기&quot;&gt;Database 삭제하기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Databse를 삭제하는 명령어 구조&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATABASE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;IF EXISTS는 제거해도 된다.&lt;/li&gt;
+  &lt;li&gt;이 문구가 없다면 오류가 발생하여 오류를 보기 싫은 분들은 IF EXITST 를 추가해주도록 하자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/drop_error.png&quot; alt=&quot;drop_error&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용했을 때와 사용하지 않았을 때의 차이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table&quot;&gt;Table&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/what_is_table.png&quot; alt=&quot;what_is_table&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;테이블을 간단하게 묘사한 그림이다.&lt;/li&gt;
+  &lt;li&gt;빨간색으로 감싸진 부분들을 컬럼(column)이라고 생각하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;colname1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datatype&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;colname2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datatype&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;PRIMARY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KEY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다음과 같은 명령어로 테이블을 생성할 수 있다.&lt;/li&gt;
+  &lt;li&gt;[]안에 감싸진 것은 옵션이다. 사용해도 되고 안해도 지장이 없다.&lt;/li&gt;
+  &lt;li&gt;colname 은 컬럼명을 적어준다.&lt;/li&gt;
+  &lt;li&gt;datatype은 해당 컬럼에서 사용할 자료형을 선택하는 것이다.&lt;/li&gt;
+  &lt;li&gt;[ NULL NOT NULL] 은 해당 컬럼을 null값을 허용하는지를 선택한다. 빈값 허용은 NULL 반대는 NOT NULL이다. (단 해당 컬럼이 primary key 면 NOT NULL 이 default 이다.)&lt;/li&gt;
+  &lt;li&gt;[ DEFAULT] 키워드와 함께 입력하지 않았을때의 초기값을 설정해줄 수 있다.&lt;/li&gt;
+  &lt;li&gt;[ AUTO_INCREMENT] 따로 입력하지 않으면 자동으로 값이 1씩 증가하게 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;datatype&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;숫자
+&lt;img src=&quot;/assets/img/back_end/2020_01_09/num_datatype.png&quot; alt=&quot;num_datatype&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;문자
+&lt;img src=&quot;/assets/img/back_end/2020_01_09/char_datatype.png&quot; alt=&quot;char_datatype&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;make_table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table-생성하기&quot;&gt;Table 생성하기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/table.png&quot; alt=&quot;table&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/table_1.png&quot; alt=&quot;table_1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pID, name, age 는 필수로 입력해야 하는 값이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/table_2.png&quot; alt=&quot;table_2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Profile DB에 profile이라는 table을 생성한것을 표현했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;del_table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table-삭제하기&quot;&gt;Table 삭제하기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;IF EXISTS는 옵션이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;modify_table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table-수정하기&quot;&gt;Table 수정하기&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;새로운 컬럼 추가&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;profile&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/new_col.png&quot; alt=&quot;new_col&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;height라는 칼럼이 추가된 것을 확인할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;컬럼 구조 수정&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODIFY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Profile&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODIFY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pID&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PRIMARY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/modify_col.png&quot; alt=&quot;modify_col&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pID 컬럼에 Key에 PRI 즉 pID값이 Primary key로 수정된것을 확인할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;컬럼 삭제&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Profile&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/del_col.png&quot; alt=&quot;del_col&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;height 컬럼이 삭제된 것을 확인할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;make_table_zero&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table-초기화&quot;&gt;Table 초기화&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;TRUNCATE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUNCATE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;profile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;테이블 설정(정의)는 남겨놓고 모든 데이터를 삭제하는 명령어 입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;https://victorydntmd.tistory.com/136&lt;/p&gt;
+
+&lt;p&gt;https://server-talk.tistory.com/159&lt;/p&gt;
+
+&lt;p&gt;https://www.fun-coding.org/mysql_basic3.html
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
+</description>
+        <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
+      </item>
+    
+      <item>
+        <title>MySQL 설치, 실행, 종료, 접속 방법</title>
         <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html</link>
         <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html</guid>
         <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
@@ -150,6 +451,11 @@
 &lt;ul&gt;
   &lt;li&gt;마지막 명령어로 제대로 종료되었는지 확인할수 있다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql-접속방법&quot;&gt;MySQL 접속방법&lt;/h2&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -2356,118 +2662,6 @@ Artem
 &lt;p&gt;python으로 코드를 짯지만 뭔가 너무 긴것 같다. 다른 답안의 코드들과 비교했을때 너무 길다. python의 장점을 활용하여 최대한 간결하게 간결하면서도 완벽하게 짜보는걸 연습하자. 다른 사람들의 코드를 많이 보자!&lt;/p&gt;
 </description>
         <pubDate>Sat, 07 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>백준 5052 전화번호 목록</title>
-        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/06/%EB%B0%B1%EC%A4%80-5052-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EB%AA%A9%EB%A1%9D.html</link>
-        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/06/%EB%B0%B1%EC%A4%80-5052-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EB%AA%A9%EB%A1%9D.html</guid>
-        <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;전화번호 목록이 주어진다. 이때, 이 목록이 일관성이 있는지 없는지를 구하는 프로그램을 작성하시오.&lt;/p&gt;
-
-&lt;p&gt;전화번호 목록이 일관성을 유지하려면, 한 번호가 다른 번호의 접두어인 경우가 없어야 한다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 전화번호 목록이 아래와 같은 경우를 생각해보자&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;긴급전화: 911&lt;/li&gt;
-&lt;li&gt;상근: 97 625 999&lt;/li&gt;
-&lt;li&gt;선영: 91 12 54 26&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이 경우에 선영이에게 전화를 걸 수 있는 방법이 없다. 전화기를 들고 선영이 번호의 처음 세 자리를 누르는 순간 바로 긴급전화가 걸리기 때문이다. 따라서, 이 목록은 일관성이 없는 목록이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;첫째 줄에 테스트 케이스의 개수 t가 주어진다. (1 ≤ t ≤ 50) 각 테스트 케이스의 첫째 줄에는 전화번호의 수 n이 주어진다. (1 ≤ n ≤ 10000) 다음 n개의 줄에는 목록에 포함되어 있는 전화번호가 하나씩 주어진다. 전화번호의 길이는 길어야 10자리이며, 목록에 있는 두 전화번호가 같은 경우는 없다.&lt;/p&gt;
-
-&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;각 테스트 케이스에 대해서, 일관성 있는 목록인 경우에는 YES, 아닌 경우에는 NO를 출력한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 입력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2
-3
-911
-97625999
-91125426
-5
-113
-12340
-123440
-12345
-98346
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 출력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NO
-YES
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon5052.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;testcase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#테스트케이스
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#비교 대상
-&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#처음부터 flag값의 길이까지 비교
-&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;NO&quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#flag 값 교체
-&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YES&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testcase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;numofphone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#전화번호수
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numofphone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;phonenum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rstrip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#전화번호 입력받음
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phonenum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#길이, 번호 순으로 result에 저장
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#길이순서로 정렬
-&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#solution 결과를 ans에 푸시!
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h3&gt;&lt;strong&gt;함.수.화&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;처음 풀었을 땐 시간초과가 떴다. 처음엔 모든 값들 다 비교를 해줬다. 하지만 생각해보니 정렬을 해주고 ex[911,9113,9114] 가 되면 어차피 바로 다음꺼에서 NO가 뜨니깐 다 할 필요없이 종료 시키면 된다는걸 꺠달았다. 이상 없을 때 다음값을 flag로 두고 계속해서 넘어가는 코드를 짰더니 통과가 됬다. 이번 문제에서 함수화의 중요성과 정렬의 중요성을 느꼈다.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 06 Dec 2019 00:00:00 +0900</pubDate>
       </item>
     
   </channel>

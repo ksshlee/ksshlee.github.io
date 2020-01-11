@@ -5,7 +5,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>Hyuk의 기술블로그</description>
-    <pubDate>Thu, 09 Jan 2020 02:52:40 +0900</pubDate>
+    <pubDate>Sat, 11 Jan 2020 19:24:40 +0900</pubDate>
     
       <item>
         <title>MySQL DDL 기본 사용법</title>
@@ -67,7 +67,7 @@
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/data_struct.png&quot; alt=&quot;data_struct&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;그러면 MySQL 안에 Profile이라는 이름을 갖은 Profile이 생성된 것이다.&lt;/li&gt;
+  &lt;li&gt;그러면 MySQL 서버 안에 Profile이라는 이름을 갖은 DB가 생성된 것이다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -104,12 +104,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/use_db.png&quot; alt=&quot;use_db&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/insert_db.png&quot; alt=&quot;insert_db&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;그러면 Profile이라는 DB를 사용한다라는 뜻이 되고 그림으로 위와 같이 표현할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -193,12 +187,6 @@
 
 &lt;ul&gt;
   &lt;li&gt;pID, name, age 는 필수로 입력해야 하는 값이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/table_2.png&quot; alt=&quot;table_2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Profile DB에 profile이라는 table을 생성한것을 표현했다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -309,7 +297,7 @@
       </item>
     
       <item>
-        <title>MySQL 설치, 실행, 종료, 접속 방법</title>
+        <title>MySQL 설치, 기본 사용법</title>
         <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html</link>
         <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html</guid>
         <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
@@ -318,7 +306,7 @@
 &lt;h6&gt;&lt;a href=&quot;#SQL&quot;&gt;SQL 이란?&lt;/a&gt;&lt;/h6&gt;
 &lt;h6&gt;&lt;a href=&quot;#install_mysql&quot;&gt;Mac에서 MySQL 설치하기&lt;/a&gt;&lt;/h6&gt;
 &lt;h6&gt;&lt;a href=&quot;#how_to_use&quot;&gt;MySQL 간단 사용법&lt;/a&gt;&lt;/h6&gt;
-
+&lt;h6&gt;&lt;a href=&quot;#enter_db&quot;&gt;MySQL 로그인,로그아웃&lt;/a&gt;&lt;/h6&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span id=&quot;SQL&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -454,8 +442,80 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;mysql-접속방법&quot;&gt;MySQL 접속방법&lt;/h2&gt;
+&lt;p&gt;&lt;span id=&quot;enter_db&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql-로그인로그아웃&quot;&gt;MySQL 로그인,로그아웃&lt;/h2&gt;
 &lt;hr /&gt;
+
+&lt;h5&gt;접속&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uroot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enter&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;명령어로 로그인 수 있다.&lt;/li&gt;
+  &lt;li&gt;하지만 현재는 최초접속할 때에만 그렇다 추후 DCL을 통하여 여러계정으로 로그인이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_08/enter_db.png&quot; alt=&quot;enter_db&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;종료&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;exit이란 명령어로 로그아웃 할수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql-기본명령어&quot;&gt;MySQL 기본명령어&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h5&gt;DB 조회&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SHOW&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;databases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_08/show_db.png&quot; alt=&quot;show_db&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;DB 사용&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;USE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;TABLE 조회&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SHOW&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;현재 있는 Table을 조회할때&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_08/show_tb.png&quot; alt=&quot;show_tb&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;해당 테이블을 좀더 자세하게 확인하고 싶을때&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_08/desc_tb.png&quot; alt=&quot;desc_tb&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 

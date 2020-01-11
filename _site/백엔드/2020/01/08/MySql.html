@@ -2,9 +2,9 @@
 <html class="no-js">
   <head>
 	<meta charset="utf-8">
-	<title>MySQL 설치, 실행, 종료, 접속 방법 | Dev_Hyuk</title>
+	<title>MySQL 설치, 기본 사용법 | Dev_Hyuk</title>
 	<meta name="description"
-		content="목차SQL 이란?Mac에서 MySQL 설치하기MySQL 간단 사용법">
+		content="목차SQL 이란?Mac에서 MySQL 설치하기MySQL 간단 사용법MySQL 로그인,로그아웃">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -137,7 +137,7 @@
     <div class="content">
       <article >
   <header style="background-image: url('/')">
-    <h1 class="title">MySQL 설치, 실행, 종료, 접속 방법</h1>
+    <h1 class="title">MySQL 설치, 기본 사용법</h1>
     
     <p class="meta">
       January 8, 2020
@@ -150,7 +150,7 @@
 <h6><a href="#SQL">SQL 이란?</a></h6>
 <h6><a href="#install_mysql">Mac에서 MySQL 설치하기</a></h6>
 <h6><a href="#how_to_use">MySQL 간단 사용법</a></h6>
-
+<h6><a href="#enter_db">MySQL 로그인,로그아웃</a></h6>
 <p><br /><br /></p>
 
 <p><span id="SQL"></span></p>
@@ -286,8 +286,80 @@
 
 <p><br /><br /></p>
 
-<h2 id="mysql-접속방법">MySQL 접속방법</h2>
+<p><span id="enter_db"></span></p>
+
+<h2 id="mysql-로그인로그아웃">MySQL 로그인,로그아웃</h2>
 <hr />
+
+<h5>접속</h5>
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span>
+
+<span class="n">password</span> <span class="p">:</span> <span class="n">enter</span>
+</code></pre></div></div>
+<ul>
+  <li>명령어로 로그인 수 있다.</li>
+  <li>하지만 현재는 최초접속할 때에만 그렇다 추후 DCL을 통하여 여러계정으로 로그인이 가능하다.</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/enter_db.png" alt="enter_db" /></p>
+
+<p><br /></p>
+
+<h5>종료</h5>
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
+</code></pre></div></div>
+<ul>
+  <li>exit이란 명령어로 로그아웃 할수 있다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="mysql-기본명령어">MySQL 기본명령어</h2>
+<hr />
+
+<h5>DB 조회</h5>
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SHOW</span> <span class="n">databases</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/back_end/2020_01_08/show_db.png" alt="show_db" /></p>
+
+<p><br /></p>
+
+<h5>DB 사용</h5>
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">USE</span> <span class="n">dbname</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h5>TABLE 조회</h5>
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SHOW</span> <span class="n">tables</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>현재 있는 Table을 조회할때</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/show_tb.png" alt="show_tb" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">desc</span> <span class="n">tbname</span><span class="p">;</span>
+</code></pre></div></div>
+<ul>
+  <li>해당 테이블을 좀더 자세하게 확인하고 싶을때</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/desc_tb.png" alt="desc_tb" /></p>
+
+<p><br /></p>
 
 <p><br /><br /></p>
 
@@ -375,8 +447,6 @@
 	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/ksshlee/ksshlee.github.io">ksshlee</a>
 </p>
 </footer>
-
-
 
   </body>
 </html>

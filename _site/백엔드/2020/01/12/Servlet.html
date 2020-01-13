@@ -2,9 +2,9 @@
 <html class="no-js">
   <head>
 	<meta charset="utf-8">
-	<title>MySQL 설치, 기본 사용법 | Dev_Hyuk</title>
+	<title>Servlet 이란? | Dev_Hyuk</title>
 	<meta name="description"
-		content="목차SQL 이란?Mac에서 MySQL 설치하기MySQL 간단 사용법MySQL 로그인,로그아웃">
+		content="목차Servlet 이란?Servlet 만들기Servlet Lifcycle(생명주기)Servlet Lifecycle 테스트">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -23,7 +23,7 @@
 	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 
 	<!-- Canonical -->
-	<link rel="canonical" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html">
+	<link rel="canonical" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/12/Servlet.html">
 
 	<!-- RSS -->
 	<!-- <link rel="alternate" type="application/atom+xml" title="Dev_Hyuk"
@@ -138,238 +138,180 @@
     <div class="content">
       <article >
   <header style="background-image: url('/')">
-    <h1 class="title">MySQL 설치, 기본 사용법</h1>
+    <h1 class="title">Servlet 이란?</h1>
     
     <p class="meta">
-      January 8, 2020
+      January 12, 2020
       
     </p>
   </header>
   <section class="post-content"><h2 id="목차">목차</h2>
 <hr />
 
-<h6><a href="#SQL">SQL 이란?</a></h6>
-<h6><a href="#install_mysql">Mac에서 MySQL 설치하기</a></h6>
-<h6><a href="#how_to_use">MySQL 간단 사용법</a></h6>
-<h6><a href="#enter_db">MySQL 로그인,로그아웃</a></h6>
-<p><br /><br /></p>
-
-<p><span id="SQL"></span></p>
-
-<h2 id="sqlstructured-query-language-이란">SQL(Structured Query Language) 이란?</h2>
-<hr />
-
-<ul>
-  <li>SQL은 관계형 데이터베이스 관리 시스템의 데이터를 관리하기 위해 설계된 프로그래밍 언어이다.</li>
-  <li>SQL로 데이터베이스에 질의를 보낼 수 있다.</li>
-  <li>데이터베이스로부터 데이터를 조회,수정,삭제 할 수 있다.</li>
-  <li>새로운 데이터베이스를 생성할 수 있다.</li>
-</ul>
+<h6><a href="#servlet">Servlet 이란?</a></h6>
+<h6><a href="#make_servlet">Servlet 만들기</a></h6>
+<h6><a href="#servlet_lifecycle">Servlet Lifcycle(생명주기)</a></h6>
+<h6><a href="#lctest">Servlet Lifecycle 테스트</a></h6>
+<h6><a href="#"></a></h6>
+<h6><a href="#"></a></h6>
 
 <p><br /><br /></p>
 
-<p><span id="install_mysql"></span></p>
+<p><span id="servlet"></span></p>
 
-<h2 id="-mac에서-mysql-설치하기">💻 Mac에서 MySQL 설치하기</h2>
+<h2 id="servlet-이란">Servlet 이란?</h2>
 <hr />
 
 <ul>
-  <li>우선 HomeBrew가 있다면 MySQL 설치는 정말 쉽다.</li>
+  <li>WAS에 동작하는 JAVA 클래스</li>
+  <li>HttpsServlet 클래스를 상속받는다.</li>
+  <li>MVC에서 C인 Controller 역할</li>
+  <li>node js 로 치면 router 느낌.</li>
+  <li>Http요청을 처리해주는 클래스</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>
-</code></pre></div></div>
+<p><br /></p>
 
-<p><img src="/assets/img/back_end/2020_01_08/install_mysql.png" alt="install_mysql" /></p>
+<p><img src="/assets/img/back_end/2020_01_12_servlet/servlet1.gif" alt="servlet1" /></p>
 
 <ul>
-  <li>이렇게 실행하고 오류가 없었다면 정상적으로 설치가 된 것이다.</li>
+  <li>HTTP Request를 받으면 HttpServletRequest와 HttpServletResponse 객체를 생성합니다.</li>
+  <li>Response 응답후 두 객체는 소멸됩니다.</li>
 </ul>
+
+<p><br /></p>
+
+<h5>⭐️Servlet은 Client의 요청을 받아 처리후 응답을 하는 기술⭐️</h5>
 
 <p><br /><br /></p>
 
-<p><span id="how_to_use"></span></p>
+<p><span id="make_servlet"></span></p>
 
-<h2 id="mysql-간단-사용법">MySQL 간단 사용법</h2>
+<h2 id="servlet-만들기">Servlet 만들기</h2>
 <hr />
 
 <ul>
-  <li>
-    <h4>MySQL 실행하기<h4>
-
-</h4></h4>
-  </li>
-</ul>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span><span class="o">.</span><span class="n">server</span> <span class="n">start</span>
-</code></pre></div></div>
-<p><img src="/assets/img/back_end/2020_01_08/mysql_start.png" alt="mysql_start" /></p>
-
-<ul>
-  <li>이런 창이 뜬다면 실행 성공 너무 간단하다.</li>
-</ul>
-
-<p><br /></p>
-
-<ul>
-  <li>
-    <h4>MySQL 종료하기</h4>
+  <li>Servlet파일 만들기
+    <ol>
+      <li>Dynamic Web Project 생성하기</li>
+      <li>Java Resources 우 클릭</li>
+      <li>New -&gt; Servlet 선택</li>
+      <li>Class 이름 지정등 옵션 선택후 생성</li>
+    </ol>
   </li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span><span class="o">.</span><span class="n">server</span> <span class="n">stop</span>
-</code></pre></div></div>
-
+<p><img src="/assets/img/back_end/2020_01_12_servlet/servlet2.png" alt="servlet2" /></p>
 <ul>
-  <li>명령어로 MySQL을 종료시킬 수 있다.</li>
+  <li>URL에 /Servlet으로 요청이 들어오면 해당 Servlet을 실행시킨다.</li>
+  <li>Edit을 통하여 원하는 URL 매핑을 바꿀수 있다.</li>
 </ul>
 
-<p><br /></p>
-
+<p><img src="/assets/img/back_end/2020_01_12_servlet/servlet4.png" alt="servlet4" /></p>
 <ul>
-  <li>
-    <h4>MySQL 데몬 실행하기</h4>
-  </li>
-</ul>
-
-<h6>데몬 실행이란?</h6>
-
-<ul>
-  <li>처음 가동될 때 실행되는 백그라운드 프로세스의 일종</li>
-  <li>
-    <p>메모리에 상주하다가 요청이 오면 대응 할 수 있게 항상 대기 중인 프로세스</p>
-  </li>
-  <li>데몬으로 실행하기</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">services</span> <span class="n">start</span> <span class="n">mysql</span>
-
-<span class="n">brew</span> <span class="n">services</span> <span class="nb">list</span>
-</code></pre></div></div>
-
-<ul>
-  <li>brew services list는 현재 데몬으로 구동중인 서비스들 목록을 확인 할 수 있는 명령어이다.</li>
-</ul>
-
-<p><img src="/assets/img/back_end/2020_01_08/damon_start.png" alt="damon_start" /></p>
-
-<p><br /></p>
-
-<ul>
-  <li>
-    <h4>MySQL 데몬 재시작하기</h4>
-  </li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">services</span> <span class="n">restart</span> <span class="n">mysql</span>
-</code></pre></div></div>
-
-<ul>
-  <li>위의 명령어를 통하여 재실행이 가능하다.</li>
-</ul>
-
-<p><br /></p>
-
-<ul>
-  <li>
-    <h4>MySQL 데몬 종료하기</h4>
-  </li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">services</span> <span class="n">stop</span> <span class="n">mysql</span>
-
-
-<span class="n">brew</span> <span class="n">services</span> <span class="nb">list</span>
-</code></pre></div></div>
-
-<ul>
-  <li>마지막 명령어로 제대로 종료되었는지 확인할수 있다.</li>
+  <li>doGet은 GET메소드로 요청이 왔을때 doPost POST메소드로 요청이 왔을때 해당 메소드를 실행한다.</li>
+  <li>꼭 doGet, doPost가 아니더라도 다양한 메소드를 만들수 있다.</li>
 </ul>
 
 <p><br /><br /></p>
 
-<p><span id="enter_db"></span></p>
+<p><span id="servlet_lifecycle"></span></p>
 
-<h2 id="mysql-로그인로그아웃">MySQL 로그인,로그아웃</h2>
+<h2 id="servlet-lifcycle생명주기">Servlet Lifcycle(생명주기)</h2>
 <hr />
 
-<h5>접속</h5>
-<hr />
+<p><img src="/assets/img/back_end/2020_01_12_servlet/servlet_lifecycle1.png" alt="servlet_lifecycle1" /></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span>
-
-<span class="n">password</span> <span class="p">:</span> <span class="n">enter</span>
-</code></pre></div></div>
 <ul>
-  <li>명령어로 로그인 수 있다.</li>
-  <li>하지만 현재는 최초접속할 때에만 그렇다 추후 DCL을 통하여 여러계정으로 로그인이 가능하다.</li>
+  <li>해당 서블릿이 메모리에 없다면 init()을 실행한다.</li>
+  <li>만약 메모리에 있다면 init()을 생략한다.</li>
+  <li>service() 메소드를 실행한다. (페이지 새로고침을 하면 service()메소드만 실행이된다.)</li>
+  <li>WAS가 종료되거나, 해당 Servlet에 수정이 있을 경우 destroy()메소드가 실행된다.</li>
 </ul>
 
-<p><img src="/assets/img/back_end/2020_01_08/enter_db.png" alt="enter_db" /></p>
+<p>Tips.</p>
 
-<p><br /></p>
-
-<h5>종료</h5>
-<hr />
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
-</code></pre></div></div>
 <ul>
-  <li>exit이란 명령어로 로그아웃 할수 있다.</li>
+  <li>매 메소드에서 반복적으로 실행되는 것들을 init() 메소드에 넣는다.<br />
+ex) response.setContentType(“text/html;charset=utf-8”);</li>
 </ul>
 
 <p><br /><br /></p>
 
-<h2 id="mysql-기본명령어">MySQL 기본명령어</h2>
+<p><span id="lctest"></span></p>
+
+<h2 id="servlet-lifecycle-test">Servlet Lifecycle test</h2>
 <hr />
 
-<h5>DB 조회</h5>
-<hr />
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">servlet</span><span class="o">;</span>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SHOW</span> <span class="n">databases</span><span class="p">;</span>
-</code></pre></div></div>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletConfig</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.annotation.WebServlet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServlet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
 
-<p><img src="/assets/img/back_end/2020_01_08/show_db.png" alt="show_db" /></p>
 
-<p><br /></p>
+<span class="nd">@WebServlet</span><span class="o">(</span><span class="s">"/test"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Servlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
+       
+    
+    <span class="kd">public</span> <span class="nf">Servlet</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">();</span>
+    <span class="o">}</span>
 
-<h5>DB 사용</h5>
-<hr />
+	
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="nc">ServletConfig</span> <span class="n">config</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"init() called"</span><span class="o">);</span>
+	<span class="o">}</span>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">USE</span> <span class="n">dbname</span><span class="p">;</span>
-</code></pre></div></div>
+	
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">destroy</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"destroy() called"</span><span class="o">);</span>
+	<span class="o">}</span>
 
-<p><br /></p>
+	
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">service</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"service() called"</span><span class="o">);</span>
+	<span class="o">}</span>
 
-<h5>TABLE 조회</h5>
-<hr />
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SHOW</span> <span class="n">tables</span><span class="p">;</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <ul>
-  <li>현재 있는 Table을 조회할때</li>
+  <li>위의 코드를 Servlet에 작성후 실행을 해보자</li>
 </ul>
 
-<p><img src="/assets/img/back_end/2020_01_08/show_tb.png" alt="show_tb" /></p>
+<pre><code class="language-query">init() called
+service() called
+</code></pre>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">desc</span> <span class="n">tbname</span><span class="p">;</span>
-</code></pre></div></div>
 <ul>
-  <li>해당 테이블을 좀더 자세하게 확인하고 싶을때</li>
+  <li>콘솔창에 이렇게 뜬것을 확인할 수 있다.</li>
+  <li>해당 Servlet은 최초 실행이므로 init()으로 메모리에 적재를 시키면서 service()를 같이 호출한다.</li>
+  <li>F5와 같이 페이지 새로고침을 하면 service()만 호출되는것을 확인할 수 있다.</li>
+  <li>코드에서 일부분만 수정후 새로고침을 해보자</li>
 </ul>
 
-<p><img src="/assets/img/back_end/2020_01_08/desc_tb.png" alt="desc_tb" /></p>
-
-<p><br /></p>
+<pre><code class="language-query">destroy() called
+</code></pre>
+<ul>
+  <li>destroy 메소드가 실행이 되었다는것을 확인할 수 있다.</li>
+  <li>이렇게 Servlet이 수정되거나,WAS가 종료될때 destroy()가 실행되면서 메모리에서 해당 Servlet을 삭제한다.</li>
+  <li>destroy()후 새로고침이나 재시작을 하면 init()부터 호출되는것을 확인할 수 있다.</li>
+</ul>
 
 <p><br /><br /></p>
 
 <h2 id="출처">출처</h2>
 <hr />
 
-<p>https://m.blog.naver.com/PostView.nhn?blogId=angkeloss&amp;logNo=220070830538&amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F</p>
+<p>https://gmlwjd9405.github.io/2018/10/28/servlet.html</p>
 
-<p>https://ourcstory.tistory.com/30</p>
+<p>https://mangkyu.tistory.com/14</p>
 
 <p><br /><br /></p>
 
@@ -381,17 +323,13 @@
 <footer>
   <div class="tags">
     
-    <a class="tag" href="/tags#Mysql">#Mysql</a>
-    
-    <a class="tag" href="/tags#MySQL">#MySQL</a>
-    
-    <a class="tag" href="/tags#SQL">#SQL</a>
-    
-    <a class="tag" href="/tags#DB">#DB</a>
-    
-    <a class="tag" href="/tags#database">#database</a>
-    
     <a class="tag" href="/tags#backend">#backend</a>
+    
+    <a class="tag" href="/tags#servlet">#servlet</a>
+    
+    <a class="tag" href="/tags#jsp">#jsp</a>
+    
+    <a class="tag" href="/tags#servlet+life+cycle">#servlet life cycle</a>
     
   </div>
 </footer>
@@ -421,18 +359,11 @@
   
   <div id="previous-post" class="post-nav-post">
       <p>Previous post</p>
-      <a href="/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20tips/2020/01/03/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0.html">
-        JSON파일 파싱
+      <a href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/11/MySQL-DML.html">
+        MySQL DML 기본 사용법
       </a>
   </div>
   
-  
-  <div id="next-post" class="post-nav-post">
-      <p>Next post</p>
-      <a href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQL-DCL.html">
-        MySQL DCL 기본 사용법
-      </a>
-  </div>
   
 </div>
 

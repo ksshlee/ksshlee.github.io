@@ -1,365 +1,626 @@
-<!DOCTYPE html>
-<html class="no-js">
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
   <head>
-	<meta charset="utf-8">
-	<title> Dev_Hyuk</title>
-	<meta name="description"
-		content="Hyuk의 기술블로그">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<link href="http://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css" rel="stylesheet" type="text/css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	
-	<!-- syntax.css -->
-	<link rel="stylesheet" href="/assets/css/syntax.css">
-
-	<!--Favicon-->
-	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-
-	<!-- Canonical -->
-	<link rel="canonical" href="/">
-
-	<!-- RSS -->
-	<!-- <link rel="alternate" type="application/atom+xml" title="Dev_Hyuk"
-		href="/feed.xml" /> -->
-	<link rel="alternate" type="application/atom+xml" title="Dev_Hyuk" href="/feed.xml" />
-
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-	<!-- Google Fonts -->
-	
-	<link href="//fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet"
-		type="text/css">
-	
-
-	<!-- KaTeX -->
-	
-
-	<!-- Google Analytics -->
-	
-</head>
-  <body>
-    <header class="site-header">
-	<div class="branding">
-			<div style="float: right;">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-							<a class="navbar-brand" target="_blank" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">
-								<img src="/assets/img/avatar.png" width="30" height="30" class="d-inline-block align-top" alt="">
-								Dev_Hyuk
-							</a>
-							<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-							  <span class="navbar-toggler-icon"></span>
-							</button>
-						
-							<div class="navbar-collapse collapse" id="navbarsExample09" style>
-							  <ul class="navbar-nav mr-auto">
-								<li class="nav-item active">
-								  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Algorithm</a>
-										<div class="dropdown-menu">
-										  <a class="dropdown-item" href="/Algorithm/AL_Library">라이브러리</a>
-										  <a class="dropdown-item" href="/Algorithm/AL_Problem">문제풀이</a>
-										</div>
-									  </li>
-						  
-						  
-									  <li class="nav-item dropdown">
-										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Structure</a>
-										  <div class="dropdown-menu">
-											<a class="dropdown-item" href="/Data_Structure/DS_Library">라이브러리</a>
-											<!-- <a class="dropdown-item" href="/Data_Structure/DS_USE">활용</a> -->
-										  </div>
-									  </li>
-						  
-						  
-									  <li class="nav-item dropdown">
-										  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Web</a>
-										  <div class="dropdown-menu">
-											  <!-- <a class="dropdown-item" href="/Web/Front_End">프론트 엔드</a> -->
-											  <a class="dropdown-item" href="/Web/Back_End">백 엔드</a>
-										  </div>
-									  </li>
-						  
-						  
-									  <!-- 추후 시큐어코딩 공부시작하면 -->
-									  <!-- <li class="nav-item dropdown">
-									  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Security</a>
-									  <div class="dropdown-menu">
-										  <a class="dropdown-item" href="/Security/Secure Coding">시큐어 코딩</a>
-										  <div class="dropdown-divider"></div>
-										  <a class="dropdown-item" href="#">Separated link</a>
-									  </div>
-									  </li> -->
-						  
-									  <!-- <li class="nav-item dropdown">
-											  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Others</a>
-											  <div class="dropdown-menu">
-												  <a class="dropdown-item" href="/Others/Git">Git</a>
-												  <a class="dropdown-item" href="/Others/Docker">Docker</a>
-												  <a class="dropdown-item" href="/Others/Linux">Linux</a>
-												  <a class="dropdown-item" href="/Others/Elk">Elk</a>
-											  </div>
-									  </li> -->
-
-									  <li class="nav-item">
-										<a class="nav-link active" href="/Programming_Tips">Programming Tips</a>
-									  </li>
-						  
-									  <li class="nav-item">
-										  <a class="nav-link active" target="_blank" href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477">About me</a>
-									  </li>
-								</ul>
-							</div>
-					</nav>
-				</div>
-				
-	</div>
+<!-- begin _includes/seo.html --><title>Posts by Category - Hyuk의 기술블로그</title>
+<meta name="description" content="Hyuk의 기술블로그 입니다! ">
 
 
-</header>
+  <meta name="author" content="이상혁 (Sang Hyuk Lee)">
 
-    <div class="content">
-      <div class="home">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Hyuk의 기술블로그">
+<meta property="og:title" content="Hyuk의 기술블로그">
+<meta property="og:url" content="http://localhost:4000/">
+
+
+  <meta property="og:description" content="Hyuk의 기술블로그 입니다! ">
+
+
+
+
+
+
+
+
+
+
+
   
-  <div class="call-out"
-  style="background-image: url('/')">
-    <!--원본  -->
-  <!-- Hyuk의 기술블로그
- -->
 
-  <!-- 실험용 -->
-    <div class="page">
-      <button class="fun-btn">Hyuk의 기술 블로그</button>
+  
+
+
+<link rel="canonical" href="http://localhost:4000/">
+
+
+
+  <link rel="next" href="http://localhost:4000/page2/">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Hyuk의 기술블로그",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Hyuk의 기술블로그 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--home">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hyuk의 기술블로그
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477" >About me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Category</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
     </div>
   </div>
-  
-  <div class="posts">
-    
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/12/Servlet.html">
-            Servlet 이란?
-          </a>
-        </h1>
-        <p class="meta">
-          January 12, 2020
-        </p>
-      </header>
-      <div class="excerpt">
-        <h2 id="목차">목차</h2>
-<hr />
-
-<h6><a href="#servlet">Servlet 이란?</a></h6>
-<h6><a href="#make_servlet">Servlet 만들기</a></h6>
-<h6><a href="#servlet_lifecycle">Servlet Lifcycle(생명주기)</a></h6>
-<h6><a href="#lctest">Servlet Lifecycle 테스트</a></h6>
-<h6><a href="#"></a></h6>
-<h6><a href="#"></a></h6>
-
-
-        <!-- 원래 이거 -->
-        <!-- <a class="button" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/12/Servlet.html">
-          Continue reading
-        </a> -->
-        <!-- 실험용 -->
-        <div class="button-container-1">
-          <span class="mas"></span>
-        <button id='work' type="button" name="Hover" onclick = "location.href='/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/12/Servlet.html'">Continue</button>
-        </div>
-        <!-- 여기까지 -->
-
-      </div>
-    </div>
-    
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/11/MySQL-DML.html">
-            MySQL DML 기본 사용법
-          </a>
-        </h1>
-        <p class="meta">
-          January 11, 2020
-        </p>
-      </header>
-      <div class="excerpt">
-        <h2 id="목차">목차</h2>
-<hr />
-
-<h6><a href="#DML">DML</a></h6>
-<h6><a href="#select_basic">SELECT(기본)</a></h6>
-<h6><a href="#select_where">SELECT(WHERE 절)</a></h6>
-<h6><a href="#INSERT">INSERT</a></h6>
-<h6><a href="#UPDATE">UPDATE</a></h6>
-<h6><a href="#DELETE">DELETE</a></h6>
-
-
-        <!-- 원래 이거 -->
-        <!-- <a class="button" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/11/MySQL-DML.html">
-          Continue reading
-        </a> -->
-        <!-- 실험용 -->
-        <div class="button-container-1">
-          <span class="mas"></span>
-        <button id='work' type="button" name="Hover" onclick = "location.href='/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/11/MySQL-DML.html'">Continue</button>
-        </div>
-        <!-- 여기까지 -->
-
-      </div>
-    </div>
-    
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html">
-            MySQL DDL 기본 사용법
-          </a>
-        </h1>
-        <p class="meta">
-          January 9, 2020
-        </p>
-      </header>
-      <div class="excerpt">
-        <h2 id="목차">목차</h2>
-<hr />
-
-<h6><a href="#ddl">DDL</a></h6>
-<h6><a href="#make_db">Database 생성하기</a></h6>
-<h6><a href="#find_db_and_use">Database 조회하고, 사용하기</a></h6>
-<h6><a href="#del_db">Database 삭제하기</a></h6>
-<h6><a href="#table">Table</a></h6>
-<h6><a href="#make_table">Table 생성하기</a></h6>
-<h6><a href="#del_table">Table 삭제하기</a></h6>
-<h6><a href="#modify_table">Table 수정하기</a></h6>
-<h6><a href="#make_table_zero">Table 초기화</a></h6>
-
-
-        <!-- 원래 이거 -->
-        <!-- <a class="button" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html">
-          Continue reading
-        </a> -->
-        <!-- 실험용 -->
-        <div class="button-container-1">
-          <span class="mas"></span>
-        <button id='work' type="button" name="Hover" onclick = "location.href='/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html'">Continue</button>
-        </div>
-        <!-- 여기까지 -->
-
-      </div>
-    </div>
-    
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQL-DCL.html">
-            MySQL DCL 기본 사용법
-          </a>
-        </h1>
-        <p class="meta">
-          January 9, 2020
-        </p>
-      </header>
-      <div class="excerpt">
-        <h2 id="목차">목차</h2>
-<hr />
-
-<h6><a href="#DCL">DCL</a></h6>
-<h6><a href="#user_c_d_u">사용자 추가, 삭제, 비밀번호 변경</a></h6>
-<h6><a href="#grant">GRANT (권한 부여)</a></h6>
-<h6><a href="#revoke">REVOKE (권한 해제)</a></h6>
-
-
-        <!-- 원래 이거 -->
-        <!-- <a class="button" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQL-DCL.html">
-          Continue reading
-        </a> -->
-        <!-- 실험용 -->
-        <div class="button-container-1">
-          <span class="mas"></span>
-        <button id='work' type="button" name="Hover" onclick = "location.href='/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQL-DCL.html'">Continue</button>
-        </div>
-        <!-- 여기까지 -->
-
-      </div>
-    </div>
-    
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html">
-            MySQL 설치, 기본 사용법
-          </a>
-        </h1>
-        <p class="meta">
-          January 8, 2020
-        </p>
-      </header>
-      <div class="excerpt">
-        <h2 id="목차">목차</h2>
-<hr />
-
-<h6><a href="#SQL">SQL 이란?</a></h6>
-<h6><a href="#install_mysql">Mac에서 MySQL 설치하기</a></h6>
-<h6><a href="#how_to_use">MySQL 간단 사용법</a></h6>
-<h6><a href="#enter_db">MySQL 로그인,로그아웃</a></h6>
-<p><br /><br /></p>
-
-
-        <!-- 원래 이거 -->
-        <!-- <a class="button" href="/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html">
-          Continue reading
-        </a> -->
-        <!-- 실험용 -->
-        <div class="button-container-1">
-          <span class="mas"></span>
-        <button id='work' type="button" name="Hover" onclick = "location.href='/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html'">Continue</button>
-        </div>
-        <!-- 여기까지 -->
-
-      </div>
-    </div>
-    
-  </div>
-
-  
-  <div class="pagination">
-    
-    
-    <!-- 원래 -->
-    <!-- <a href="/blog/page2" class="button" >
-      Next
-      <i class="fa fa-chevron-right"></i>
-    </a> -->
-
-    <!-- 실험용 -->
-    <div class="button-container-2">
-      <span class="mas"></span>
-    <button type="button" name="Hover" onclick = "location.href='/blog/page2'">next</button>
-    </div>
-    
-  </div>
-  
 </div>
 
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/bio-photo.jpg" alt="이상혁 (Sang Hyuk Lee)" itemprop="image">
+      
     </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">이상혁 (Sang Hyuk Lee)</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Junior Developer</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Yongin/Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://ksshlee.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/ksshlee" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:ksshlee@gmail.com">
+            <meta itemprop="email" content="ksshlee@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
+    
     
 
+<h3 class="archive__subtitle">최근 포스트</h3>
 
-<footer class="site-footer">
-	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/ksshlee/ksshlee.github.io">ksshlee</a>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/backend/Servlet/" rel="permalink">Servlet 이란?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
 </p>
-</footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Servlet 이란?
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQL-DML/" rel="permalink">MySQL DML
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DML(Data Manipulation Language)
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQLDDL/" rel="permalink">MySQL DDL
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DDL (Data Definition Language)
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQL-DCL/" rel="permalink">MySQL DCL
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DCL(Data Control Language)
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/db/backend/MySql/" rel="permalink">MySQL 설치, 기본 사용법
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">SQL(Structured Query Language) 이란?
+</p>
+  </article>
+</div>
+
+
+
+
+<nav class="pagination">
+  
+  <ul>
+    
+    
+    <li><a href="#" class="disabled"><span aria-hidden="true">이전</span></a></li>
+    
+
+    
+    
+      <li><a href="#" class="disabled current">1</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+        
+        
+        
+        <li><a href="/page2/">2</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page3/">3</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page4/">4</a></li>
+      
+    
+
+    
+    
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
+
+    
+      <li><a href="/page5/">5</a></li>
+    
+
+    
+    
+      <li><a href="/page2/">다음</a></li>
+    
+  </ul>
+</nav>
+
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/ksshlee" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Hyuk의 기술블로그. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'GA0GNDBUGF',
+  apiKey: '8469a51e88cd63467dd78125a6f496cc',
+  indexName: 'dev_hyuk',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+
+
 
   </body>
 </html>

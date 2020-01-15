@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "About me"
+    url: https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477
+  - title: "Tags"
+    url: /tags/
+  - title: "Category"
+    url: /categories/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/

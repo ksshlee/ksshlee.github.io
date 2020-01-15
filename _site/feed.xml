@@ -1,32 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dev_Hyuk</title>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>http://localhost:4000/</link>
-    <description>Hyuk의 기술블로그</description>
-    <pubDate>Mon, 13 Jan 2020 16:19:42 +0900</pubDate>
-    
-      <item>
-        <title>Servlet 이란?</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/12/Servlet.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/12/Servlet.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h6&gt;&lt;a href=&quot;#servlet&quot;&gt;Servlet 이란?&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#make_servlet&quot;&gt;Servlet 만들기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#servlet_lifecycle&quot;&gt;Servlet Lifcycle(생명주기)&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#lctest&quot;&gt;Servlet Lifecycle 테스트&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/h6&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;servlet&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;servlet-이란&quot;&gt;Servlet 이란?&lt;/h2&gt;
-&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-16T02:01:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hyuk의 기술블로그</title><subtitle>Hyuk의 기술블로그 입니다!</subtitle><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><entry><title type="html">Servlet 이란?</title><link href="http://localhost:4000/backend/Servlet/" rel="alternate" type="text/html" title="Servlet 이란?" /><published>2020-01-12T00:00:00+09:00</published><updated>2020-01-12T00:00:00+09:00</updated><id>http://localhost:4000/backend/Servlet</id><content type="html" xml:base="http://localhost:4000/backend/Servlet/">&lt;h2 id=&quot;servlet-이란&quot;&gt;Servlet 이란?&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;WAS에 동작하는 JAVA 클래스&lt;/li&gt;
@@ -47,14 +19,13 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;⭐️Servlet은 Client의 요청을 받아 처리후 응답을 하는 기술⭐️&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Servlet은 Client의 요청을 받아 처리후 응답을 하는 기술&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;make_servlet&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;servlet-만들기&quot;&gt;Servlet 만들기&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Servlet파일 만들기
@@ -81,10 +52,7 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;servlet_lifecycle&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;servlet-lifcycle생명주기&quot;&gt;Servlet Lifcycle(생명주기)&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_12_servlet/servlet_lifecycle1.png&quot; alt=&quot;servlet_lifecycle1&quot; /&gt;&lt;/p&gt;
 
@@ -104,10 +72,7 @@ ex) response.setContentType(“text/html;charset=utf-8”);&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;lctest&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;servlet-lifecycle-test&quot;&gt;Servlet Lifecycle test&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
@@ -173,41 +138,14 @@ service() called
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://gmlwjd9405.github.io/2018/10/28/servlet.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/10/28/servlet.html&quot;&gt;https://gmlwjd9405.github.io/2018/10/28/servlet.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://mangkyu.tistory.com/14&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Sun, 12 Jan 2020 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>MySQL DML 기본 사용법</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/11/MySQL-DML.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/11/MySQL-DML.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h6&gt;&lt;a href=&quot;#DML&quot;&gt;DML&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#select_basic&quot;&gt;SELECT(기본)&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#select_where&quot;&gt;SELECT(WHERE 절)&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#INSERT&quot;&gt;INSERT&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#UPDATE&quot;&gt;UPDATE&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#DELETE&quot;&gt;DELETE&lt;/a&gt;&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&quot;https://mangkyu.tistory.com/14&quot;&gt;https://mangkyu.tistory.com/14&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;DML&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dmldata-manipulation-language&quot;&gt;DML(Data Manipulation Language)&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="Servlet" /><category term="Web" /><category term="BackEnd" /><summary type="html">Servlet 이란?</summary></entry><entry><title type="html">MySQL DML</title><link href="http://localhost:4000/mysql/db/backend/MySQL-DML/" rel="alternate" type="text/html" title="MySQL DML" /><published>2020-01-11T00:00:00+09:00</published><updated>2020-01-11T00:00:00+09:00</updated><id>http://localhost:4000/mysql/db/backend/MySQL%20DML</id><content type="html" xml:base="http://localhost:4000/mysql/db/backend/MySQL-DML/">&lt;h2 id=&quot;dmldata-manipulation-language&quot;&gt;DML(Data Manipulation Language)&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;데이터 조작어&lt;/li&gt;
@@ -219,10 +157,7 @@ service() called
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;select_basic&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;select-기본&quot;&gt;SELECT (기본)&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -241,8 +176,7 @@ service() called
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;DISTINCT&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;distinct&quot;&gt;DISTINCT&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DISTINCT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -262,8 +196,7 @@ service() called
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;ALIAS&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;alias&quot;&gt;ALIAS&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changed_col_name&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -283,8 +216,7 @@ service() called
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;CONCAT&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;concat&quot;&gt;CONCAT&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frist_col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'-'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second_col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -299,8 +231,7 @@ service() called
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;ORDER BY&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;order-by&quot;&gt;ORDER BY&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -332,10 +263,7 @@ service() called
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;select_where&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;select-where-절&quot;&gt;SELECT (WHERE 절)&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;WHERE 절은 조건문이라고 보면 된다.&lt;/li&gt;
@@ -391,8 +319,9 @@ EX) SELECT * FROM tbname WHERE age BETWEEN 20 AND 30;&lt;/li&gt;
   &lt;li&gt;25 이하인 값을 출력한 결과다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;
-⭐️&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;️&quot;&gt;⭐️&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;like&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -416,10 +345,7 @@ EX) SELECT * FROM tbname WHERE age BETWEEN 20 AND 30;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;INSERT&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;insert&quot;&gt;INSERT&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INTO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VALUES&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -446,10 +372,7 @@ EX) SELECT * FROM tbname WHERE age BETWEEN 20 AND 30;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;UPDATE&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;update&quot;&gt;UPDATE&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;UPDATE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'changed_value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -490,10 +413,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;DELETE&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;delete&quot;&gt;DELETE&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;DELETE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -516,45 +436,15 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://developmentnotepad.tistory.com/entry/02-MySQL-DML&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developmentnotepad.tistory.com/entry/02-MySQL-DML&quot;&gt;https://developmentnotepad.tistory.com/entry/02-MySQL-DML&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://kkamikoon.tistory.com/170&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://kkamikoon.tistory.com/170&quot;&gt;https://kkamikoon.tistory.com/170&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://www.edwith.org/boostcourse-web/lecture/16721/
+&lt;p&gt;&lt;a href=&quot;https://www.edwith.org/boostcourse-web/lecture/16721/&quot;&gt;https://www.edwith.org/boostcourse-web/lecture/16721/&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Sat, 11 Jan 2020 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>MySQL DDL 기본 사용법</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQLDDL.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h6&gt;&lt;a href=&quot;#ddl&quot;&gt;DDL&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#make_db&quot;&gt;Database 생성하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#find_db_and_use&quot;&gt;Database 조회하고, 사용하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#del_db&quot;&gt;Database 삭제하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#table&quot;&gt;Table&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#make_table&quot;&gt;Table 생성하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#del_table&quot;&gt;Table 삭제하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#modify_table&quot;&gt;Table 수정하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#make_table_zero&quot;&gt;Table 초기화&lt;/a&gt;&lt;/h6&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;ddl&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ddl-data-definition-language&quot;&gt;DDL (Data Definition Language)&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="MySQL" /><category term="Db" /><category term="BackEnd" /><summary type="html">DML(Data Manipulation Language)</summary></entry><entry><title type="html">MySQL DDL</title><link href="http://localhost:4000/mysql/db/backend/MySQLDDL/" rel="alternate" type="text/html" title="MySQL DDL" /><published>2020-01-09T00:00:00+09:00</published><updated>2020-01-09T00:00:00+09:00</updated><id>http://localhost:4000/mysql/db/backend/MySQLDDL</id><content type="html" xml:base="http://localhost:4000/mysql/db/backend/MySQLDDL/">&lt;h2 id=&quot;ddl-data-definition-language&quot;&gt;DDL (Data Definition Language)&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;데이터 정의어&lt;/li&gt;
@@ -566,10 +456,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;make_db&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;database-생성하기&quot;&gt;Database 생성하기&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Databse를 생성하는 명령어의 구조&lt;/li&gt;
@@ -597,10 +484,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;find_db_and_use&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;database-조회하고-사용하기&quot;&gt;Database 조회하고, 사용하기&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;현재 서버에 생성되어 있는 DB를 조회하고 싶다면 다음 명령어를 사용하면 된다.&lt;/li&gt;
@@ -632,11 +516,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;del_db&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;database-삭제하기&quot;&gt;Database 삭제하기&lt;/h2&gt;
-&lt;hr /&gt;
-
 &lt;ul&gt;
   &lt;li&gt;Databse를 삭제하는 명령어 구조&lt;/li&gt;
 &lt;/ul&gt;
@@ -656,10 +536,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;table&quot;&gt;Table&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/what_is_table.png&quot; alt=&quot;what_is_table&quot; /&gt;&lt;/p&gt;
 
@@ -685,9 +562,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
   &lt;li&gt;[ AUTO_INCREMENT] 따로 입력하지 않으면 자동으로 값이 1씩 증가하게 설정할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5&gt;datatype&lt;/h5&gt;
-&lt;hr /&gt;
-
+&lt;h3 id=&quot;datatype&quot;&gt;datatype&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;숫자
@@ -701,10 +576,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;make_table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;table-생성하기&quot;&gt;Table 생성하기&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_09/table.png&quot; alt=&quot;table&quot; /&gt;&lt;/p&gt;
 
@@ -716,10 +588,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;del_table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;table-삭제하기&quot;&gt;Table 삭제하기&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -730,15 +599,9 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;modify_table&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;table-수정하기&quot;&gt;Table 수정하기&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h5&gt;새로운 컬럼 추가&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;새로운-컬럼-추가&quot;&gt;새로운 컬럼 추가&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -754,8 +617,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;컬럼 구조 수정&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;컬럼-구조-수정&quot;&gt;컬럼 구조 수정&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODIFY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -771,8 +633,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;컬럼 삭제&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;컬럼-삭제&quot;&gt;컬럼 삭제&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COLUMN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -788,10 +649,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;make_table_zero&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;table-초기화&quot;&gt;Table 초기화&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;TRUNCATE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -805,40 +663,15 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://victorydntmd.tistory.com/136&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://victorydntmd.tistory.com/136&quot;&gt;https://victorydntmd.tistory.com/136&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://server-talk.tistory.com/159&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://server-talk.tistory.com/159&quot;&gt;https://server-talk.tistory.com/159&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://www.fun-coding.org/mysql_basic3.html
+&lt;p&gt;&lt;a href=&quot;https://www.fun-coding.org/mysql_basic3.html&quot;&gt;https://www.fun-coding.org/mysql_basic3.html&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>MySQL DCL 기본 사용법</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQL-DCL.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/09/MySQL-DCL.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h6&gt;&lt;a href=&quot;#DCL&quot;&gt;DCL&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#user_c_d_u&quot;&gt;사용자 추가, 삭제, 비밀번호 변경&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#grant&quot;&gt;GRANT (권한 부여)&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#revoke&quot;&gt;REVOKE (권한 해제)&lt;/a&gt;&lt;/h6&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;DCL&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dcldata-control-language&quot;&gt;DCL(Data Control Language)&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="MySQL" /><category term="Db" /><category term="BackEnd" /><summary type="html">DDL (Data Definition Language)</summary></entry><entry><title type="html">MySQL DCL</title><link href="http://localhost:4000/mysql/db/backend/MySQL-DCL/" rel="alternate" type="text/html" title="MySQL DCL" /><published>2020-01-09T00:00:00+09:00</published><updated>2020-01-09T00:00:00+09:00</updated><id>http://localhost:4000/mysql/db/backend/MySQL%20DCL</id><content type="html" xml:base="http://localhost:4000/mysql/db/backend/MySQL-DCL/">&lt;h2 id=&quot;dcldata-control-language&quot;&gt;DCL(Data Control Language)&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;데이터 제어어&lt;/li&gt;
@@ -849,15 +682,9 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;user_c_d_u&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;사용자-추가-삭제-비밀번호-변경&quot;&gt;사용자 추가, 삭제, 비밀번호 변경&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h5&gt;사용자 추가&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;사용자-추가&quot;&gt;사용자 추가&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;로컬에서만 사용 가능한 ID 생성&lt;/li&gt;
@@ -885,8 +712,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;사용자 삭제&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;사용자-삭제&quot;&gt;사용자 삭제&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;우선 사용자를 삭제하려면 root 계정으로 접속을 해야한다.&lt;/li&gt;
@@ -907,8 +733,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;비밀번호 변경&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;비밀번호-변경&quot;&gt;비밀번호 변경&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PASSWORD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FOR&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'userid'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;% &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(or) localhost'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'newpassword'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -917,10 +742,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;grant&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;grant-권한-부여&quot;&gt;GRANT (권한 부여)&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;GRANT 명령어는 mysql 버전에 따라 차이가 있을 수 있다.&lt;/li&gt;
@@ -963,7 +785,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;⭐️flush privileges&lt;/h5&gt;
+&lt;h3 id=&quot;️flush-privileges&quot;&gt;⭐️flush privileges&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;flush&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;privileges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -974,10 +796,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;revoke&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;revoke-권한-해제&quot;&gt;REVOKE (권한 해제)&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;REVOKE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ALL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tbname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'userid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -997,38 +816,14 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://www.fun-coding.org/mysql_basic5.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.fun-coding.org/mysql_basic5.html&quot;&gt;https://www.fun-coding.org/mysql_basic5.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://btyy.tistory.com/138&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://btyy.tistory.com/138&quot;&gt;https://btyy.tistory.com/138&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>MySQL 설치, 기본 사용법</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2020/01/08/MySql.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h6&gt;&lt;a href=&quot;#SQL&quot;&gt;SQL 이란?&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#install_mysql&quot;&gt;Mac에서 MySQL 설치하기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#how_to_use&quot;&gt;MySQL 간단 사용법&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#enter_db&quot;&gt;MySQL 로그인,로그아웃&lt;/a&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;SQL&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sqlstructured-query-language-이란&quot;&gt;SQL(Structured Query Language) 이란?&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="MySQL" /><category term="Db" /><category term="BackEnd" /><summary type="html">DCL(Data Control Language)</summary></entry><entry><title type="html">MySQL 설치, 기본 사용법</title><link href="http://localhost:4000/mysql/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/db/backend/MySql/" rel="alternate" type="text/html" title="MySQL 설치, 기본 사용법" /><published>2020-01-08T00:00:00+09:00</published><updated>2020-01-08T00:00:00+09:00</updated><id>http://localhost:4000/mysql/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/db/backend/MySql</id><content type="html" xml:base="http://localhost:4000/mysql/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/db/backend/MySql/">&lt;h2 id=&quot;sqlstructured-query-language-이란&quot;&gt;SQL(Structured Query Language) 이란?&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;SQL은 관계형 데이터베이스 관리 시스템의 데이터를 관리하기 위해 설계된 프로그래밍 언어이다.&lt;/li&gt;
@@ -1039,11 +834,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;install_mysql&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;-mac에서-mysql-설치하기&quot;&gt;💻 Mac에서 MySQL 설치하기&lt;/h2&gt;
-&lt;hr /&gt;
-
 &lt;ul&gt;
   &lt;li&gt;우선 HomeBrew가 있다면 MySQL 설치는 정말 쉽다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1059,18 +850,10 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;how_to_use&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;mysql-간단-사용법&quot;&gt;MySQL 간단 사용법&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4&gt;MySQL 실행하기&lt;h4&gt;
+&lt;h3 id=&quot;mysql-실행하기&quot;&gt;MySQL 실행하기&lt;/h3&gt;
 
-&lt;/h4&gt;&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_08/mysql_start.png&quot; alt=&quot;mysql_start&quot; /&gt;&lt;/p&gt;
@@ -1081,11 +864,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4&gt;MySQL 종료하기&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;mysql-종료하기&quot;&gt;MySQL 종료하기&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1096,13 +875,9 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4&gt;MySQL 데몬 실행하기&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;mysql-데몬-실행하기&quot;&gt;MySQL 데몬 실행하기&lt;/h3&gt;
 
-&lt;h6&gt;데몬 실행이란?&lt;/h6&gt;
+&lt;h4 id=&quot;데몬-실행이란&quot;&gt;데몬 실행이란?&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;처음 가동될 때 실행되는 백그라운드 프로세스의 일종&lt;/li&gt;
@@ -1125,11 +900,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4&gt;MySQL 데몬 재시작하기&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;mysql-데몬-재시작하기&quot;&gt;MySQL 데몬 재시작하기&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;services&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1140,11 +911,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4&gt;MySQL 데몬 종료하기&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;mysql-데몬-종료하기&quot;&gt;MySQL 데몬 종료하기&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;services&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt;
 
@@ -1158,13 +925,9 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;enter_db&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;mysql-로그인로그아웃&quot;&gt;MySQL 로그인,로그아웃&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;h5&gt;접속&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;접속&quot;&gt;접속&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uroot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;
 
@@ -1179,8 +942,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;종료&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;종료&quot;&gt;종료&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1191,10 +953,8 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;mysql-기본명령어&quot;&gt;MySQL 기본명령어&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;h5&gt;DB 조회&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;db-조회&quot;&gt;DB 조회&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SHOW&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;databases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1203,16 +963,14 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;DB 사용&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;db-사용&quot;&gt;DB 사용&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;USE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h5&gt;TABLE 조회&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;table-조회&quot;&gt;TABLE 조회&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;SHOW&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1231,51 +989,17 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2020_01_08/desc_tb.png&quot; alt=&quot;desc_tb&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://m.blog.naver.com/PostView.nhn?blogId=angkeloss&amp;amp;logNo=220070830538&amp;amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://m.blog.naver.com/PostView.nhn?blogId=angkeloss&amp;amp;logNo=220070830538&amp;amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F&quot;&gt;https://m.blog.naver.com/PostView.nhn?blogId=angkeloss&amp;amp;logNo=220070830538&amp;amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://ourcstory.tistory.com/30&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>JSON파일 파싱</title>
-        <link>/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20tips/2020/01/03/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0.html</link>
-        <guid isPermaLink="true">/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20tips/2020/01/03/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;ol&gt;
-    &lt;li&gt;&lt;a href=&quot;#JSON&quot;&gt;JSON 이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#parse_with_python&quot;&gt;JSON 파싱 with Python&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#make_json_with_python&quot;&gt;JSON 파일 만들기 Python&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#GSON&quot;&gt;Java로 JSON파싱 환경 설정하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#parse_with_java&quot;&gt;JSON 파싱하기 with Java&lt;/a&gt;&lt;/li&gt;
-
-
-
-
-&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;https://ourcstory.tistory.com/30&quot;&gt;https://ourcstory.tistory.com/30&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;JSON&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;json-javascript-object-notation-이란&quot;&gt;JSON (JavaScript Object NOtation) 이란?&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="MySQL" /><category term="개발 환경 구축" /><category term="Db" /><category term="BackEnd" /><summary type="html">SQL(Structured Query Language) 이란?</summary></entry><entry><title type="html">JSON파일 파싱</title><link href="http://localhost:4000/skill/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="JSON파일 파싱" /><published>2020-01-03T00:00:00+09:00</published><updated>2020-01-03T00:00:00+09:00</updated><id>http://localhost:4000/skill/Json%20%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/skill/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0/">&lt;h2 id=&quot;json-javascript-object-notation-이란&quot;&gt;JSON (JavaScript Object NOtation) 이란?&lt;/h2&gt;
 
 &lt;ul&gt;
 
@@ -1291,7 +1015,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4&gt;JSON 객체 &lt;/h4&gt;
+&lt;h3 id=&quot;json-객체&quot;&gt;JSON 객체&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;JSON 객체는 중괄호({})로 둘러 쌓아서 표현한다.&lt;/li&gt;
@@ -1330,7 +1054,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4&gt;JSON 배열 &lt;/h4&gt;
+&lt;h3 id=&quot;json-배열&quot;&gt;JSON 배열&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;JSON 배열은 대괄호([])로 둘러 쌓아서 표현한다.&lt;/li&gt;
@@ -1357,12 +1081,11 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;parse_with_python&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;json-파싱-with-python&quot;&gt;JSON 파싱 with Python&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;*파이썬에서 JSON 파싱은 너무 간단한 작업이다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;파이썬에서 JSON 파싱은 너무 간단한 작업이다.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;JSON은 아래의 예시로 하겠다.&lt;/p&gt;
 
@@ -1385,9 +1108,9 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Python 파싱 코드&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Python 파싱 코드&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;json&lt;/span&gt;
 
@@ -1400,18 +1123,17 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
-
-&lt;li&gt;간단하게 JSON파일은 python으로 파싱할시 dict형태로 파싱이 된다.&lt;/li&gt;
-&lt;li&gt;그러면 dict에서 값을 읽어오는것처럼 사용하면 된다.&lt;/li&gt;
-
+  &lt;li&gt;간단하게 JSON파일은 python으로 파싱할시 dict형태로 파싱이 된다.&lt;/li&gt;
+  &lt;li&gt;그러면 dict에서 값을 읽어오는것처럼 사용하면 된다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Example&lt;/p&gt;
-
-&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Example&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;skill의 2번째 값을 구하고 싶다&lt;/li&gt;
@@ -1426,10 +1148,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;make_json_with_python&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;json파일-만들기-python&quot;&gt;JSON파일 만들기 Python&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Python으로 Json 파일 생성역시 가능하다.&lt;/li&gt;
@@ -1447,13 +1166,14 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./test.json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;profile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
-&lt;li&gt;이렇게 하면 JSON파일이 생성이 된다. 마지막 indent=&quot;\t&quot;를 안해주게 되면 위의 내용들이 한줄에 출력되므로 꼭 써주자&lt;/li&gt;
-
-
-&lt;li&gt;⭐️주의할 점이 JSON파일은 항상 &quot;&quot; 큰따옴표다. 그러므로 항상 큰따옴표로 사용하자&lt;/li&gt;
-
+  &lt;li&gt;이렇게 하면 JSON파일이 생성이 된다. 마지막 indent=”\t”를 안해주게 되면 위의 내용들이 한줄에 출력되므로 꼭 써주자&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;주의할 점이 JSON파일은 항상 “” 큰따옴표다. 그러므로 항상 큰따옴표로 사용하자&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;c1&quot;&gt;//indent=&quot;\t&quot;를 했을 시&lt;/span&gt;
@@ -1475,17 +1195,15 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;GSON&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;json-파싱-with-java-gson-설치하기&quot;&gt;JSON 파싱 with Java (GSON 설치하기)&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
-
-&lt;li&gt;Java로도 역시 파싱은 가능하다 하지만 기본적으로 java에서 json을 파싱하기 위한 라이브러리는 없으므로 외부에서 가져와야한다. gson을 활용하여 파싱을 해보겠다.&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/&quot; target=&quot;_blank&quot;&gt;여기&lt;/a&gt;를 눌러 메이븐 저장소에 접속해준다.&lt;/li&gt;
-
+  &lt;li&gt;
+    &lt;p&gt;Java로도 역시 파싱은 가능하다 하지만 기본적으로 java에서 json을 파싱하기 위한 라이브러리는 없으므로 외부에서 가져와야한다. gson을 활용하여 파싱을 해보겠다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://mvnrepository.com/&quot; target=&quot;_blank&quot;&gt;여기&lt;/a&gt;를 눌러 메이븐 저장소에 접속해준다.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/programmingskill/2020_01_03/maven.png&quot; alt=&quot;mave_download&quot; /&gt;&lt;/p&gt;
@@ -1502,10 +1220,11 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;parse_with_java&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;json-파싱하기-with-java&quot;&gt;JSON 파싱하기 with Java&lt;/h2&gt;
-&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Java&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.google.gson.JsonArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.google.gson.JsonObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -1574,10 +1293,13 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
   &lt;li&gt;만약 저위에 skill 에서 특정 배열의 위치를 빼고 싶으면 .getAsJsonArray().get(위치); 를 해서 특정 값만 추출도 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;⭐️해당 key값이 객체면 getAsJsonObject 배열 이면 getAsJsonarray 로 추출하면 된다. 배열의 특수번째면 .get(“추출하고 싶은 번째”) 로 추출을 하면 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;해당 key값이 객체면 getAsJsonObject 배열 이면 getAsJsonarray 로 추출하면 된다. 배열의 특수번째면 .get(“추출하고 싶은 번째”) 로 추출을 하면 된다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Example&lt;/p&gt;
-&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Example&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;이상혁&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -1610,28 +1332,20 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://www.json.org/json-ko.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.json.org/json-ko.html&quot;&gt;https://www.json.org/json-ko.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://calyfactory.github.io/%EC%A0%9C%EC%9D%B4%EC%8A%A8%ED%8C%8C%EC%8B%B1/&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://calyfactory.github.io/%EC%A0%9C%EC%9D%B4%EC%8A%A8%ED%8C%8C%EC%8B%B1/&quot;&gt;https://calyfactory.github.io/%EC%A0%9C%EC%9D%B4%EC%8A%A8%ED%8C%8C%EC%8B%B1/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://opentutorials.org/course/1375/6844
-http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://opentutorials.org/course/1375/6844&quot;&gt;https://opentutorials.org/course/1375/6844&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://dpdpwl.tistory.com/60&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://tcpschool.com/json/json_basic_structure&quot;&gt;http://tcpschool.com/json/json_basic_structure&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://blog.azulpintor.io/entry/java-extract-value-for-jason-string-by-gson&lt;/p&gt;
-</description>
-        <pubDate>Fri, 03 Jan 2020 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>⭐️Python pop()에 관하여, Queue 사용법⭐️</title>
-        <link>/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20tips/2019/12/31/Python-Queue-%EB%AA%A8%EB%93%88.html</link>
-        <guid isPermaLink="true">/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20tips/2019/12/31/Python-Queue-%EB%AA%A8%EB%93%88.html</guid>
-        <description>&lt;h2 id=&quot;파이썬-pop-함수&quot;&gt;파이썬 pop() 함수&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;https://dpdpwl.tistory.com/60&quot;&gt;https://dpdpwl.tistory.com/60&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.azulpintor.io/entry/java-extract-value-for-jason-string-by-gson&quot;&gt;https://blog.azulpintor.io/entry/java-extract-value-for-jason-string-by-gson&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="Python" /><category term="Java" /><category term="Skill" /><category term="Json" /><category term="Parsing" /><summary type="html">JSON (JavaScript Object NOtation) 이란?</summary></entry><entry><title type="html">⭐️Python pop()에 관하여, Queue 사용법⭐️</title><link href="http://localhost:4000/skill/Python-Queue-%EB%AA%A8%EB%93%88/" rel="alternate" type="text/html" title="⭐️Python pop()에 관하여, Queue 사용법⭐️" /><published>2019-12-31T00:00:00+09:00</published><updated>2019-12-31T00:00:00+09:00</updated><id>http://localhost:4000/skill/Python%20Queue%20%EB%AA%A8%EB%93%88</id><content type="html" xml:base="http://localhost:4000/skill/Python-Queue-%EB%AA%A8%EB%93%88/">&lt;h2 id=&quot;파이썬-pop-함수&quot;&gt;파이썬 pop() 함수&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;파이썬의 list나 tuple을 이용하여 큐(queue)를 구현할때 l.pop(0)을 활용하는 경우가 많다. 물론 틀린 방법은 아니지만 효율적이지 않다.&lt;/li&gt;
@@ -1659,70 +1373,79 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;python-queue-모듈&quot;&gt;Python Queue 모듈&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;파이썬에 Queue라는 모듈이 존재한다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;우선 사용하기 위해서는 import queue를 사용해야 한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;queue.Queue(size)
-    &lt;ul&gt;
-      &lt;li&gt;FIFO  Queue 형태의 객체 생성&lt;/li&gt;
-      &lt;li&gt;size에 최대 사이즈를 추가한다.&lt;/li&gt;
-      &lt;li&gt;size를 비워두면 크기는 메모리 범위안에서 무한이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;queue.LifoQueue(size)
-    &lt;ul&gt;
-      &lt;li&gt;LIFO Stack 형태의 객체 생성&lt;/li&gt;
-      &lt;li&gt;stack은 그냥 list나 tuple에서 pop()으로 구현 가능하므로 패스&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;queue.PriorityQueue(size)
-    &lt;ul&gt;
-      &lt;li&gt;우선순위 큐 객체를 생성&lt;/li&gt;
-      &lt;li&gt;(priority, value)의 튜플로 입력된다.&lt;/li&gt;
-      &lt;li&gt;priority가 작을수록 높은 순위를 갖는다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;우선 사용하기 위해서는 import queue를 사용해야 한다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;queue.Queue(size)&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;FIFO  Queue 형태의 객체 생성&lt;/li&gt;
+    &lt;li&gt;size에 최대 사이즈를 추가한다.&lt;/li&gt;
+    &lt;li&gt;size를 비워두면 크기는 메모리 범위안에서 무한이다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;queue.LifoQueue(size)&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;LIFO Stack 형태의 객체 생성&lt;/li&gt;
+    &lt;li&gt;stack은 그냥 list나 tuple에서 pop()으로 구현 가능하므로 패스&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;queue.PriorityQueue(size)&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;우선순위 큐 객체를 생성&lt;/li&gt;
+    &lt;li&gt;(priority, value)의 튜플로 입력된다.&lt;/li&gt;
+    &lt;li&gt;priority가 작을수록 높은 순위를 갖는다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;python-queue-메소드&quot;&gt;Python Queue 메소드&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;qsize()
-    &lt;ul&gt;
-      &lt;li&gt;객체의 크기를 반환해준다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;put()
-    &lt;ul&gt;
-      &lt;li&gt;객체에 value를 넣어준다.&lt;/li&gt;
-      &lt;li&gt;Priority Queue는 put(순위,아이템) 이런식으로 사용하면 된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;get()
-    &lt;ul&gt;
-      &lt;li&gt;큐로 따지면 dequeue를 해주는 메소드&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;put_nowait()
-    &lt;ul&gt;
-      &lt;li&gt;블로킹 없이 객체에 value를 입력한다.&lt;/li&gt;
-      &lt;li&gt;크기를 지정해줬다면 queue.Full 예외 발생&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;get_nowait()
-    &lt;ul&gt;
-      &lt;li&gt;블로킹 없이 객체에 value를 반환한다.&lt;/li&gt;
-      &lt;li&gt;객체가 비어있다면 queue.Empty 예외 발생&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;qsize()&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;객체의 크기를 반환해준다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;put()&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;객체에 value를 넣어준다.&lt;/li&gt;
+    &lt;li&gt;Priority Queue는 put(순위,아이템) 이런식으로 사용하면 된다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;get()&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;큐로 따지면 dequeue를 해주는 메소드&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;put_nowait()&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;블로킹 없이 객체에 value를 입력한다.&lt;/li&gt;
+    &lt;li&gt;크기를 지정해줬다면 queue.Full 예외 발생&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;get_nowait()&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;블로킹 없이 객체에 value를 반환한다.&lt;/li&gt;
+    &lt;li&gt;객체가 비어있다면 queue.Empty 예외 발생&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1732,11 +1455,8 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;python-queue-모듈-사용법&quot;&gt;Python Queue 모듈 사용법&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3&gt;Queue 사용법&lt;/h3&gt;
+&lt;h3 id=&quot;queue-사용법&quot;&gt;Queue 사용법&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;queue&lt;/span&gt;
 
@@ -1762,7 +1482,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3&gt;Priority Queue&lt;/h3&gt;
+&lt;h3 id=&quot;priority-queue&quot;&gt;Priority Queue&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;queue&lt;/span&gt;
 
@@ -1785,39 +1505,14 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://wayhome25.github.io/python/2017/06/14/time-complexity/&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wayhome25.github.io/python/2017/06/14/time-complexity/&quot;&gt;https://wayhome25.github.io/python/2017/06/14/time-complexity/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://docs.python.org/3/library/queue.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/queue.html&quot;&gt;https://docs.python.org/3/library/queue.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://medium.com/@shuangzizuobh2/how-well-do-you-code-python-9bec36bbc322&lt;/p&gt;
-</description>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>BFS 너비 우선 탐색, DFS 깊이 우선 탐색</title>
-        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html</link>
-        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@shuangzizuobh2/how-well-do-you-code-python-9bec36bbc322&quot;&gt;https://medium.com/@shuangzizuobh2/how-well-do-you-code-python-9bec36bbc322&lt;/a&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-    &lt;li&gt;&lt;a href=&quot;#BFS&quot;&gt;BFS 너비 우선 탐색&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#bfs_with_python&quot;&gt;BFS 구현 코드&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#how_bfs_works&quot;&gt;BFS 수행 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#DFS&quot;&gt;DFS 깊이 우선 탐색&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#dfs_with_python&quot;&gt;DFS 구현 코드&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#how_dfs_works&quot;&gt;DFS 수행 원리&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;BFS&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;bfsbreadth-first-search-너비-우선-탐색&quot;&gt;BFS(Breadth First Search) 너비 우선 탐색&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="Python" /><category term="Skill" /><category term="Queue" /><summary type="html">파이썬 pop() 함수</summary></entry><entry><title type="html">알고리즘 - BFS,DFS</title><link href="http://localhost:4000/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/dfs_bfs/" rel="alternate" type="text/html" title="알고리즘 - BFS,DFS" /><published>2019-12-31T00:00:00+09:00</published><updated>2019-12-31T00:00:00+09:00</updated><id>http://localhost:4000/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/dfs_bfs</id><content type="html" xml:base="http://localhost:4000/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/dfs_bfs/">&lt;h2 id=&quot;bfsbreadth-first-search-너비-우선-탐색&quot;&gt;BFS(Breadth First Search) 너비 우선 탐색&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_lib/2019_12_31/BFS.gif&quot; alt=&quot;bfs&quot; /&gt;&lt;/p&gt;
 
@@ -1828,23 +1523,22 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;/ul&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;BFS 수행 방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;시작 정점 방문한다&lt;/li&gt;
-  &lt;li&gt;정점의 인접 정점중에서 방문하지 않은 정점은 Queue에 저장한다.&lt;/li&gt;
-  &lt;li&gt;Queue를 dequeue하여 그값이 시작 정점이 되고 1을 반복한다.&lt;/li&gt;
-  &lt;li&gt;Queue가 Null이 되면 종료한다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;BFS 수행 방법&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;시작 정점 방문한다&lt;/li&gt;
+    &lt;li&gt;정점의 인접 정점중에서 방문하지 않은 정점은 Queue에 저장한다.&lt;/li&gt;
+    &lt;li&gt;Queue를 dequeue하여 그값이 시작 정점이 되고 1을 반복한다.&lt;/li&gt;
+    &lt;li&gt;Queue가 Null이 되면 종료한다.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;bfs_with_python&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;bfs-구현-코드&quot;&gt;BFS 구현 코드&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Python&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;visit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
@@ -1871,10 +1565,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;how_bfs_works&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;bfs-수행-원리&quot;&gt;BFS 수행 원리&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_lib/2019_12_31/how_bfs_works.gif&quot; alt=&quot;how_bfs_works&quot; /&gt;&lt;/p&gt;
 
@@ -1889,10 +1580,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;DFS&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;dfsdepth-first-search-깊이-우선-탐색&quot;&gt;DFS(Depth First Search) 깊이 우선 탐색&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_lib/2019_12_31/DFS.gif&quot; alt=&quot;dfs&quot; /&gt;&lt;/p&gt;
 
@@ -1903,23 +1591,22 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;/ul&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;BFS 수행 방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;시작 정점 방문한다&lt;/li&gt;
-  &lt;li&gt;정점의 인접 정점중에서 방문하지 않은 정점은 Stack에 저장한다.&lt;/li&gt;
-  &lt;li&gt;Stack을 pop하여 그 값이 시작 정점이 되고 1을 반복한다.&lt;/li&gt;
-  &lt;li&gt;Stack이 Null이 되면 종료한다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;BFS 수행 방법&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;시작 정점 방문한다&lt;/li&gt;
+    &lt;li&gt;정점의 인접 정점중에서 방문하지 않은 정점은 Stack에 저장한다.&lt;/li&gt;
+    &lt;li&gt;Stack을 pop하여 그 값이 시작 정점이 되고 1을 반복한다.&lt;/li&gt;
+    &lt;li&gt;Stack이 Null이 되면 종료한다.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;dfs_with_python&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;dfs-구현-코드&quot;&gt;DFS 구현 코드&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Python&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;visit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
@@ -1943,10 +1630,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;how_dfs_works&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;dfs-수행-원리&quot;&gt;DFS 수행 원리&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/al_lib/2019_12_31/how_dfs_works.gif&quot; alt=&quot;how_dfs_works&quot; /&gt;&lt;/p&gt;
 
@@ -1959,40 +1643,14 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://blog.ilkyu.kr/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89Breadth-First-Search%EA%B3%BC-%EA%B5%AC%ED%98%84-%EB%B0%A9%EB%B2%95&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.ilkyu.kr/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89Breadth-First-Search%EA%B3%BC-%EA%B5%AC%ED%98%84-%EB%B0%A9%EB%B2%95&quot;&gt;https://blog.ilkyu.kr/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89Breadth-First-Search%EA%B3%BC-%EA%B5%AC%ED%98%84-%EB%B0%A9%EB%B2%95&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://kingpodo.tistory.com/48&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://kingpodo.tistory.com/48&quot;&gt;https://kingpodo.tistory.com/48&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4&gt;혹시 제가 잘못 알고 있는 부분이나 궁금하신게 있다면 댓글을 남겨주세요! &lt;/h4&gt;
-</description>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>자료구조-그래프(Graph)</title>
-        <link>/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/30/graph.html</link>
-        <guid isPermaLink="true">/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/30/graph.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-    &lt;li&gt;&lt;a href=&quot;#what_is_graph&quot;&gt;그래프란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#graph_word&quot;&gt;그래프 용어&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#graph_characteristic&quot;&gt;그래프의 특징&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#differ_tree_graph&quot;&gt;그래프, 트리의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#graph_type&quot;&gt;그래프 종류&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#how_to_make_graph&quot;&gt;그래프 구현&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#graph_search&quot;&gt;그래프 탐색&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;what_is_graph&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;그래프란&quot;&gt;그래프란?&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="알고리즘" /><category term="Algorithm" /><category term="그래프" /><category term="Graph" /><summary type="html">BFS(Breadth First Search) 너비 우선 탐색</summary></entry><entry><title type="html">자료구조-그래프(Graph)</title><link href="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/graph/" rel="alternate" type="text/html" title="자료구조-그래프(Graph)" /><published>2019-12-30T00:00:00+09:00</published><updated>2019-12-30T00:00:00+09:00</updated><id>http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/graph</id><content type="html" xml:base="http://localhost:4000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/graph/">&lt;h2 id=&quot;그래프란&quot;&gt;그래프란?&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;그래프는 노드(Node,Vertex)와 간선(Edge,Arc)으로 나타내는 자료구조이다.&lt;/li&gt;
@@ -2001,19 +1659,19 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/graph_1.png&quot; alt=&quot;graph&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;그래프는 연결되어 있는 Node 간의 관계를 표현한 자료구조이다.
-    &lt;ul&gt;
-      &lt;li&gt;Ex) 지도, 지하철 노선도, 선수과목, 가족 관계도, 회사 관계도 등&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;그래프는 연결되어 있는 Node 간의 관계를 표현한 자료구조이다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Example&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;지도, 지하철 노선도, 선수과목, 가족 관계도, 회사 관계도 등&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;graph_word&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;그래프-용어&quot;&gt;그래프 용어&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;정점&lt;/strong&gt; : Node 혹은 Vertex&lt;/li&gt;
@@ -2030,10 +1688,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;graph_characteristic&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;그래프의-특징&quot;&gt;그래프의 특징&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;node간의 여러개의 Edge가 존재할 수 있다.&lt;/li&gt;
@@ -2044,21 +1699,15 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;differ_tree_graph&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;그래프-트리의-차이&quot;&gt;그래프, 트리의 차이&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/graph_vs_tree.png&quot; alt=&quot;graphvstree&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;graph_type&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;그래프의-종류&quot;&gt;그래프의 종류&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;h4&gt;1.방향그래프 무방향 그래프 (Directed Graph, Undirected Graph)&lt;/h4&gt;
+&lt;h3 id=&quot;방향그래프-무방향-그래프-directed-graph-undirected-graph&quot;&gt;방향그래프 무방향 그래프 (Directed Graph, Undirected Graph)&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/direct_undirect.png&quot; alt=&quot;direct_undirect&quot; /&gt;&lt;/p&gt;
 
@@ -2079,7 +1728,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4&gt;2. 가중치 그래프(Weighted Graph)&lt;/h4&gt;
+&lt;h3 id=&quot;가중치-그래프weighted-graph&quot;&gt;가중치 그래프(Weighted Graph)&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/weighted_graph.png&quot; alt=&quot;weighted_graph&quot; /&gt;&lt;/p&gt;
 
@@ -2095,7 +1744,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4&gt;3. 완전 그래프(Complete Graph)&lt;/h4&gt;
+&lt;h3 id=&quot;완전-그래프complete-graph&quot;&gt;완전 그래프(Complete Graph)&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/ds/graph/complete_graph.png&quot; alt=&quot;complete_graph&quot; /&gt;&lt;/p&gt;
 
@@ -2106,10 +1755,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;how_to_make_graph&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;그래프-구현&quot;&gt;그래프 구현&lt;/h2&gt;
-&lt;hr /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;구현 자체는 너무 쉽다. linkedlist 혹은 array를 활용하여 연결된 리스트를 저장해주면 된다.&lt;/li&gt;
@@ -2121,23 +1767,23 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
   &lt;li&gt;위의 그래프를 파이썬의 dict을 이용하여 구현 해보겠다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+&lt;blockquote&gt;
+  &lt;p&gt;Python&lt;/p&gt;
+  &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
 &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
 &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
 &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
 &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;정말 간단하게 구현 할 수 있다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;graph_search&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;그래프-탐색&quot;&gt;그래프 탐색&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;h4&gt;1. 깊이 우선 탐색 (Depth First Search(DFS)) &lt;/h4&gt;
+&lt;h3 id=&quot;깊이-우선-탐색-depth-first-searchdfs&quot;&gt;깊이 우선 탐색 (Depth First Search(DFS))&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -2145,7 +1791,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h4&gt;2. 너비 우선 탐색 (Breadth First Search(BFS)) &lt;/h4&gt;
+&lt;h3 id=&quot;너비-우선-탐색-breadth-first-searchbfs&quot;&gt;너비 우선 탐색 (Breadth First Search(BFS))&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -2153,35 +1799,16 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;p&gt;https://kamang-it.tistory.com/entry/AlgorithmData-StructureGraph%EA%B7%B8%EB%9E%98%ED%94%84%EC%9D%B4%EB%A1%A0%EA%B3%BC-%EA%B7%B8%EB%9E%98%ED%94%84-%EA%B5%AC%ED%98%84&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://kamang-it.tistory.com/entry/AlgorithmData-StructureGraph%EA%B7%B8%EB%9E%98%ED%94%84%EC%9D%B4%EB%A1%A0%EA%B3%BC-%EA%B7%B8%EB%9E%98%ED%94%84-%EA%B5%AC%ED%98%84&quot;&gt;https://kamang-it.tistory.com/entry/AlgorithmData-StructureGraph%EA%B7%B8%EB%9E%98%ED%94%84%EC%9D%B4%EB%A1%A0%EA%B3%BC-%EA%B7%B8%EB%9E%98%ED%94%84-%EA%B5%AC%ED%98%84&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://www.zerocho.com/category/Algorithm/post/584b9033580277001862f16c&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zerocho.com/category/Algorithm/post/584b9033580277001862f16c&quot;&gt;https://www.zerocho.com/category/Algorithm/post/584b9033580277001862f16c&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html&lt;/p&gt;
-</description>
-        <pubDate>Mon, 30 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>Eclipse, Tomcat 연동</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/28/Eclipse.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/28/Eclipse.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html&quot;&gt;https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;h6&gt;&lt;a href=&quot;#make_wp&quot;&gt;Eclipse로 web project 만들기&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#servlet&quot;&gt;Servlet 등록후 구동&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#https_method&quot;&gt;https 메소드들&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#error&quot;&gt;실행중 에러목록&lt;/a&gt;&lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;make_wp&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;eclipse로-web-project-만들기&quot;&gt;Eclipse로 web project 만들기&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="DataStructure" /><category term="자료구조" /><category term="그래프" /><category term="Graph" /><summary type="html">그래프란?</summary></entry><entry><title type="html">Eclipse, Tomcat 연동</title><link href="http://localhost:4000/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/Eclipse/" rel="alternate" type="text/html" title="Eclipse, Tomcat 연동" /><published>2019-12-28T00:00:00+09:00</published><updated>2019-12-28T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/Eclipse</id><content type="html" xml:base="http://localhost:4000/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/Eclipse/">&lt;h2 id=&quot;eclipse로-web-project-만들기&quot;&gt;Eclipse로 web project 만들기&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;우선 Eclipse를 실행 시켜보자&lt;/li&gt;
@@ -2230,12 +1857,9 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;servlet&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;servlet-등록후-구동&quot;&gt;Servlet 등록후 구동&lt;/h2&gt;
-&lt;hr /&gt;
 
-&lt;h5&gt;- Servlet 이란?&lt;/h5&gt;
+&lt;h3 id=&quot;servlet-이란&quot;&gt;Servlet 이란?&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;url 요청을 처리하는 프로그램&lt;/p&gt;
@@ -2253,10 +1877,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;간단하게 설명하자면 doGet 메소드는 Get으로 오는 요청들을 받아주는 메소드고 doPost는 Post로 오는 요청들을 받아주는 메소드 이다. 그밖에도 doPut 등등 많지만 일단 지금은 doGet만 사용해보자.&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;https_method&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h5&gt;⭐️http 메서드⭐️&lt;/h5&gt;
-&lt;hr /&gt;
+&lt;h3 id=&quot;️http-메소드️&quot;&gt;⭐️http 메소드⭐️&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;GET
@@ -2280,8 +1901,6 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -2339,14 +1958,7 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;error&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;요류-목록&quot;&gt;요류 목록&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;span id=&quot;error_1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_28/error_1.png&quot; alt=&quot;error&quot; /&gt;&lt;/p&gt;
 
@@ -2383,715 +1995,4 @@ http://tcpschool.com/json/json_basic_structure&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>Java 웹 개발 환경 구축</title>
-        <link>/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html</link>
-        <guid isPermaLink="true">/%EB%B0%B1%EC%97%94%EB%93%9C/2019/12/27/Java-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95.html</guid>
-        <description>&lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h6&gt;&lt;a href=&quot;#jdk_install&quot;&gt;JDK 설치&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#eclipse_install&quot;&gt;Eclipse 설치&lt;/a&gt;&lt;/h6&gt;
-&lt;h6&gt;&lt;a href=&quot;#tomcat_install&quot;&gt;Tomcat 설치&lt;/a&gt;&lt;/h6&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;jdk_install&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;jdk-설치&quot;&gt;JDK 설치&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;우선 Eclipse에서 자바를 개발을 하려면 개발 환경을 구상해야 된다. 개발 환경을 구상하는 첫번째 단추는 JDK를 설치하는 것이다. &lt;a href=&quot;https://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;오라클 홈페이지&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/jdk_install_1.png&quot; alt=&quot;jdk홈페이지&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Java SE(Java Platform Standard Edition)
-    &lt;ul&gt;
-      &lt;li&gt;가장 일반적으로 사용된다.&lt;/li&gt;
-      &lt;li&gt;JDBC나 기본적인 기능이 모두 포함되어 Android 개발을 할 때 주로 SE를 사용한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Java EE(Java Platform EnterPrise Edition)
-    &lt;ul&gt;
-      &lt;li&gt;서버측 개발을 위한 플랫폼이다.&lt;/li&gt;
-      &lt;li&gt;기존 SE에서 서버에서 동작하는 &lt;strong&gt;분산 멀티미디어&lt;/strong&gt;를 제공하는 기능을 추가했다.&lt;/li&gt;
-      &lt;li&gt;기존 SE의 기능이 포함된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Java ME(Java Platform Micro Edition)
-    &lt;ul&gt;
-      &lt;li&gt;임베디드를 위한 자바 플랫폼이다.&lt;/li&gt;
-      &lt;li&gt;휴대전화, PDA, 세탑 박스에서 자바를 지원하기 위해 만들어진 플랫폼이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;서버 개발 환경을 구축하므로 EE를 설치하는게 맞지만, 우선은 간단한 웹 서버를 하므로 Java SE를 설치하도록 하자. 추후에 Java EE를 설치하자&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/jdk_install_2.png&quot; alt=&quot;jdk설치&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Accept 를 한후 각자 OS에 맞는 버전을 설치하고 계속 다음을 눌러준다.&lt;/p&gt;
-
-&lt;p&gt;설치가 완료가 되면 자바 환경 변수를 설정해주자.&lt;/p&gt;
-
-&lt;p&gt;터미널에 아래와 같이 입력을 해준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/java_env_1.png&quot; alt=&quot;java환경변수설정&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;그러면 jdk-13.0.1.jdk 폴더를 확인할 수 있다. 폴더를 확인한 후&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//bash 쉘이면&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;vi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bash_profile&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//zsh 쉘이면&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;vi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;zshrc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;에 접속하여&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/java_env_2.png&quot; alt=&quot;java환경변수설정&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;JavaVirtualMachines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jdk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;13.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jdk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Contents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;**jdk-13.0.1.jdk &amp;lt;= 이부분은 사람마다 다를 수 있다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;vim에서 이렇게 입력후 esc -&amp;gt; :wq!를 입력 한다. (저장 후 종료)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/java_version.png&quot; alt=&quot;java버전확인&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이렇게 뜨면 성공!😊&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;eclipse_install&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;eclipse-설치&quot;&gt;Eclipse 설치&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;그 다음 Eclipse를 설치를 해보자 설치는 &lt;a href=&quot;https://www.eclipse.org&quot;&gt;Eclipse 홈페이지&lt;/a&gt;에서 할 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;여기서 파일을 다운로드 받고 설치 파일 실행!
-&lt;img src=&quot;/assets/img/back_end/2019_12_27/eclipse_install_1.png&quot; alt=&quot;eclipse설치&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Eclipse IDE for Enterprise Java Developers 버전을 설치해준다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;이유 : 웹 개발을 위해서!!&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/eclipse_install_2.png&quot; alt=&quot;eclipse설치2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;install을 누른후 쭉 쭉 설치를 해 준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/eclipse.png&quot; alt=&quot;eclipse&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;이렇게 정상적으로 실행이 되면 성공.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span id=&quot;tomcat_install&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tomcat-설치&quot;&gt;TomCat 설치&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h5&gt;- Apache Tomcat이란?&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;세계에서 가장 많이 사용되는 WAS(Web Application Server).&lt;/li&gt;
-  &lt;li&gt;자바로 작성된 웹 애플리케이션은 WAS가 있어야 동작.&lt;/li&gt;
-  &lt;li&gt;오픈소스로 누구나 무료로 사용 가능.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5&gt;그럼 설치를 시작 해볼까용&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&quot;http://tomcat.apache.org/&quot;&gt;Tomcat 홈페이지&lt;/a&gt;에 접속하여 Tomcat 9버전 설치&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_1.png&quot; alt=&quot;tomcat&quot; /&gt;
-Tomcat 9을 클릭.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_2.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;mac은 tar.gz 다운로드 후 압축해제&lt;/li&gt;
-  &lt;li&gt;윈도우는 zip 일꺼야 아마두~&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h5&gt;맥북 사용자 기준&lt;/h5&gt;
-
-&lt;p&gt;1&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Downloads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tomcat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;9.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위에 명령어를 순서대로 입력해준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_3.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;그러면 이렇게 파일이 이동된 것을 확인 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;2&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/*.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;쉘 확장자(.sh)를 가진 파일들에게 실행권한을 준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_4.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;쉘 확장자(.sh)파일 권한 부분에 -x 가 있다면 성공.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;실행!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/back_end/2019_12_27/tomcat_5.png&quot; alt=&quot;tomcat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;localhost:8080 로 접속 했을때 위와 같이 뜨면 Tomcat 설치 return &lt;strong&gt;True!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/h5&gt;
-</description>
-        <pubDate>Fri, 27 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>2019년도 카카오 코딩테스트 오픈 채팅방</title>
-        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/18/2019%EB%85%84-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-1%EB%B2%88%EB%AC%B8%EC%A0%9C.html</link>
-        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/18/2019%EB%85%84-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-1%EB%B2%88%EB%AC%B8%EC%A0%9C.html</guid>
-        <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다.
-신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다. 채팅방에 누군가 들어오면 다음 메시지가 출력된다.
-[닉네임]님이 들어왔습니다.
-채팅방에서 누군가 나가면 다음 메시지가 출력된다.
-[닉네임]님이 나갔습니다.
-채팅방에서 닉네임을 변경하는 방법은 다음과 같이 두 가지이다.&lt;/p&gt;
-&lt;ol&gt;
-    &lt;li&gt;채팅방을 나간 후, 새로운 닉네임으로 다시 들어간다.&lt;/li&gt;
-    &lt;li&gt;채팅방에서 닉네임을 변경한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;닉네임을 변경할 때는 기존에 채팅방에 출력되어 있던 메시지의 닉네임도 전부 변경된다.
-예를 들어, 채팅방에 Muzi와 Prodo라는 닉네임을 사용하는 사람이 순서대로 들어오면 채팅방에는 다음과 같이 메시지가 출력된다.
-Muzi님이 들어왔습니다.
-Prodo님이 들어왔습니다.
-채팅방에 있던 사람이 나가면 채팅방에는 다음과 같이 메시지가 남는다.
-Muzi님이 들어왔습니다.
-Prodo님이 들어왔습니다.
-Muzi님이 나갔습니다.
-Muzi가 나간후 다시 들어올 때, Prodo 라는 닉네임으로 들어올 경우 기존에 채팅방에 남아있던 Muzi도 Prodo로 다음과 같이 변경된다.
-Prodo님이 들어왔습니다.
-Prodo님이 들어왔습니다.
-Prodo님이 나갔습니다.
-Prodo님이 들어왔습니다.
-채팅방은 중복 닉네임을 허용하기 때문에, 현재 채팅방에는 Prodo라는 닉네임을 사용하는 사람이 두 명이 있다. 이제, 채팅방에 두 번째로 들어왔던 Prodo가 Ryan으로 닉네임을 변경하면 채팅방 메시지는 다음과 같이 변경된다.
-Prodo님이 들어왔습니다.
-Ryan님이 들어왔습니다.
-Prodo님이 나갔습니다.
-Prodo님이 들어왔습니다.
-채팅방에 들어오고 나가거나, 닉네임을 변경한 기록이 담긴 문자열 배열 record가 매개변수로 주어질 때, 모든 기록이 처리된 후, 최종적으로 방을 개설한 사람이 보게 되는 메시지를 문자열 배열 형태로 return 하도록 solution 함수를 완성하라.&lt;/p&gt;
-
-&lt;h2 id=&quot;문제링크&quot;&gt;문제링크&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42888&quot;&gt;문제링크&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;제한사항&quot;&gt;제한사항&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;record는 다음과 같은 문자열이 담긴 배열이며, 길이는 1 이상 100,000 이하이다.&lt;/li&gt;
-    &lt;li&gt;array의 각 원소는 1 이상 100 이하입니다.&lt;/li&gt;
-    &lt;li&gt;commands의 길이는 1 이상 50 이하입니다.&lt;/li&gt;
-    &lt;li&gt;commands의 각 원소는 길이가 3입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 입력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;record = [&quot;Enter uid1234 Muzi&quot;, &quot;Enter uid4567 Prodo&quot;,&quot;Leave uid1234&quot;,&quot;Enter uid1234 Prodo&quot;,&quot;Change uid4567 Ryan&quot;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 출력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;result = [&quot;Prodo님이 들어왔습니다.&quot;, &quot;Ryan님이 들어왔습니다.&quot;, &quot;Prodo님이 나갔습니다.&quot;, &quot;Prodo님이 들어왔습니다.&quot;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;간단히 구현 할 수 있어서 스킵!&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Enter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Leave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Leave'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;님이 들어왔습니다.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;님이 나갔습니다.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;좀더-나은-풀이&quot;&gt;좀더 나은 풀이&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Enter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'님이 들어왔습니다.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Leave'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'님이 나갔습니다.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;rr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Enter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Change'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Change'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;카카오 2019년도 1번문제는 생각보다 많이 쉬웠다. 하지만 3번 4번 점점 갈수록 많이 어려워진다. 기본적인거 공부 빨리 끝내고 트리, 그래프 문제들도 풀어봐야겠다.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>⭐️⭐️백준 9935 문자열 폭발⭐️⭐️</title>
-        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C.html</link>
-        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C.html</guid>
-        <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;상근이는 문자열에 폭발 문자열을 심어 놓았다. 폭발 문자열이 폭발하면 그 문자는 문자열에서 사라지며, 남은 문자열은 합쳐지게 된다.&lt;/p&gt;
-
-&lt;p&gt;폭발은 다음과 같은 과정으로 진행된다.&lt;/p&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;문자열이 폭발 문자열을 포함하고 있는 경우에, 모든 폭발 문자열이 폭발하게 된다. 남은 문자열을 순서대로 이어 붙여 새로운 문자열을 만든다.&lt;/li&gt;
-    &lt;li&gt;새로 생긴 문자열에 폭발 문자열이 포함되어 있을 수도 있다.&lt;/li&gt;
-    &lt;li&gt;폭발은 폭발 문자열이 문자열에 없을 때까지 계속된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;상근이는 모든 폭발이 끝난 후에 어떤 문자열이 남는지 구해보려고 한다. 남아있는 문자가 없는 경우가 있다. 이때는 “FRULA”를 출력한다.&lt;/p&gt;
-
-&lt;p&gt;폭발 문자열은 같은 문자를 두 개 이상 포함하지 않는다.&lt;/p&gt;
-
-&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;첫째 줄에 문자열이 주어진다. 문자열의 길이는 1보다 크거나 같고, 1,000,000보다 작거나 같다.&lt;/p&gt;
-
-&lt;p&gt;둘째 줄에 폭발 문자열이 주어진다. 길이는 1보다 크거나 같고, 36보다 작거나 같다.&lt;/p&gt;
-
-&lt;p&gt;두 문자열은 모두 알파벳 소문자와 대문자, 숫자 0, 1, …, 9로만 이루어져 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;첫째 줄에 모든 폭발이 끝난 후 남은 문자열을 출력한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 입력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mirkovC4nizCC44
-C4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 출력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mirkovniz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 입력 2&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;12ab112ab2ab
-12ab
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 출력 2&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FRULA
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#하나씩 스택에 넣어준다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#ans와 bomb의 길이가 같으면
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#뒤에서 부터 검사 왜냐하면 앞에서부터 하면 112ab고 12ab일때 일치 하지 않기때문
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;checkcount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;same&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;#하나라도 다르면 false
-&lt;/span&gt;                &lt;span class=&quot;n&quot;&gt;same&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;same&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;#bomb의 길이만큼 pop
-&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#길이가 0이면 FRULA
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FRULA&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;구동원리&quot;&gt;구동원리&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon9935.gif&quot; alt=&quot;구현계획&quot; /&gt;
-이런식으로 구동이 된다.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;유용한-기법&quot;&gt;유용한 기법&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bomb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;list와 list를 비교 할때 꼭 index 0에서부터 비교할려고 하지 말자. 특수한 경우지만 뒤에서부터 비교를 해야 되는 상황이 올때도 있다는걸 명심하자.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;어려웠던점&quot;&gt;어려웠던점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;우선 앞에서 부터 비교를 할려고 했다. 하지만 bomb이 12ab고 text는 112ab 일때 이때 정말 어떻게 구현할지 고민을 많이 했다. 항상 앞에서 비교를 하자 이 틀 때문에 문제를 어렵게 생각했고 dict을 이용해서 index값을 value로 넣자,, 등 정말 너무 어렵게 풀려고 했다. 하지만 뒤에서 부터 검사하면 정말 쉽게 풀 수 있는 문제였다. 이렇게 스택과 bomb을 비교할때 어떻게 구현하지가 가장 어려웠다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;요 근래 풀었던 문제중에서 가장 어려었던 문제였다. 가장 쉽고 기본적인 구조 스택을 사용하는데 간단한 원리이며 간단한 기술을 사용하는데도 생각해내기엔 다소 어려웠다. 이걸 dict으로 풀려했던 내 모습을 반성하게 된다. &lt;h5&gt;&lt;strong&gt;쉽고 간단하지만 생각해내기 어려운 기술&lt;/strong&gt;&lt;/h5&gt;들을 이런 문제들을 많이 풀면서 생각해내기 쉽게 만들어야겠다.그리고 너무 어렵게 풀려고 하지말고 쉽게 쉽게 풀려고 하자!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>백준 1764 듣보잡</title>
-        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-1764-%EB%93%A3%EB%B3%B4%EC%9E%A1.html</link>
-        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/13/%EB%B0%B1%EC%A4%80-1764-%EB%93%A3%EB%B3%B4%EC%9E%A1.html</guid>
-        <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;김진영이 듣도 못한 사람의 명단과, 보도 못한 사람의 명단이 주어질 때, 듣도 보도 못한 사람의 명단을 구하는 프로그램을 작성하시오.&lt;/p&gt;
-
-&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;첫째 줄에 듣도 못한 사람의 수 N, 보도 못한 사람의 수 M이 주어진다. 이어서 둘째 줄부터 N개의 줄에 걸쳐 듣도 못한 사람의 이름과, N+2째 줄부터 보도 못한 사람의 이름이 순서대로 주어진다. 이름은 띄어쓰기 없이 영어 소문자로만 이루어지며, 그 길이는 20 이하이다. N, M은 500,000 이하의 자연수이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;듣보잡의 수와 그 명단을 사전순으로 출력한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 입력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 4
-ohhenrie
-charlie
-baesangwook
-obama
-baesangwook
-ohhenrie
-clinton
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 출력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2
-baesangwook
-ohhenrie
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;dict을 이용하면 쉽게 풀 수 있는 문제라 말로 설명&lt;/p&gt;
-
-&lt;h3&gt;듣도 못한 사람에서&lt;br /&gt;&lt;/h3&gt;
-&lt;h4&gt;key : 이름&lt;br /&gt;
-value : true
-&lt;/h4&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3&gt;보도 못한 사람에서&lt;br /&gt;&lt;/h3&gt;
-&lt;h4&gt; 이름이 dict에 있으면 정답 리스트에 추가
-&lt;/h4&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;testa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#듣도 못한사람
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#key는 이름 value는 true
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#보도 못한사람    
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#이미 있는 이름일 때
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#true면 듣도보도 만한 사람
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#정렬
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#출력
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;dict의 대단함을 느꼈다. 요번 문제는 dict을 이용하여 쉽게 풀 수 있었다. 패스!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-      <item>
-        <title>백준 3613 Java vs C++</title>
-        <link>/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/10/%EB%B0%B1%EC%A4%80-Java-vs-C++.html</link>
-        <guid isPermaLink="true">/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/2019/12/10/%EB%B0%B1%EC%A4%80-Java-vs-C++.html</guid>
-        <description>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;Java 예찬론자 김동규와 C++ 옹호가 김동혁은 서로 어떤 프로그래밍 언어가 최고인지 몇 시간동안 토론을 하곤 했다. 동규는 Java가 명확하고 에러가 적은 프로그램을 만든다고 주장했고, 동혁이는 Java는 프로그램이 느리고, 긴 소스 코드를 갖는 점과 제네릭 배열의 인스턴스화의 무능력을 비웃었다.&lt;/p&gt;
-
-&lt;p&gt;또, 김동규와 김동혁은 변수 이름을 짓는 방식도 서로 달랐다. Java에서는 변수의 이름이 여러 단어로 이루어져있을 때, 다음과 같은 방법으로 변수명을 짓는다.&lt;/p&gt;
-
-&lt;p&gt;첫 단어는 소문자로 쓰고, 다음 단어부터는 첫 문자만 대문자로 쓴다. 또, 모든 단어는 붙여쓴다. 따라서 Java의 변수명은 javaIdentifier, longAndMnemonicIdentifier, name, bAEKJOON과 같은 형태이다.&lt;/p&gt;
-
-&lt;p&gt;반면에 C++에서는 변수명에 소문자만 사용한다. 단어와 단어를 구분하기 위해서 밑줄(‘_‘)을 이용한다. C++ 변수명은 c_identifier, long_and_mnemonic_identifier, name, b_a_e_k_j_o_o_n과 같은 형태이다.&lt;/p&gt;
-
-&lt;p&gt;이 둘의 싸움을 부질없다고 느낀 재원이는 C++형식의 변수명을 Java형식의 변수명으로, 또는 그 반대로 바꿔주는 프로그램을 만들려고 한다. 각 언어의 변수명 형식의 위의 설명을 따라야 한다.&lt;/p&gt;
-
-&lt;p&gt;재원이의 프로그램은 가장 먼저 변수명을 입력으로 받은 뒤, 이 변수명이 어떤 언어 형식인지를 알아내야 한다. 그 다음, C++형식이라면 Java형식으로, Java형식이라면 C++형식으로 바꾸면 된다. 만약 C++형식과 Java형식 둘 다 아니라면, 에러를 발생시킨다. 변수명을 변환할 때, 단어의 순서는 유지되어야 한다.&lt;/p&gt;
-
-&lt;p&gt;재원이는 프로그램을 만들려고 했으나, 너무 귀찮은 나머지 이를 문제를 읽는 사람의 몫으로 맡겨놨다.&lt;/p&gt;
-
-&lt;p&gt;재원이가 만들려고 한 프로그램을 대신 만들어보자.&lt;/p&gt;
-
-&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;첫째 줄에 변수명이 주어진다. 영어 알파벳과 밑줄(‘_‘)로만 이루어져 있고, 길이는 100을 넘지 않는다.&lt;/p&gt;
-
-&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;입력으로 주어진 변수명이 Java형식이면, C++형식으로 출력하고, C++형식이라면 Java형식으로 출력한다. 둘 다 아니라면 “Error!”를 출력한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 입력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;long_and_mnemonic_identifier
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3&gt;예제 출력 1&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;longAndMnemonicIdentifier
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;간단한-구현-계획&quot;&gt;간단한 구현 계획&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon3613.jpg&quot; alt=&quot;구현계획&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;우선 위의 경우대로 하면 실패가 뜬다. 그이유는 &lt;strong&gt;“__”&lt;/strong&gt;을 확인을 안해줬다. 이와 같이 이런 사소한 예외 사항도 잘 고려 해야겠다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이-with-python&quot;&gt;풀이 with python&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#java로 변환
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tojava&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#첫번째 or 마지막 문자가 _일때 __가 있을때
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Error!&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;    
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#대문자 일때
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Error!&quot;&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;
-        
-&lt;span class=&quot;c1&quot;&gt;#c++로 변환
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#첫 문자가 대문자 일때
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Error!&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#대문자 일때
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;
-
-
-&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tojava&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;python-skill&quot;&gt;Python Skill&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# A -&amp;gt; a
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# B -&amp;gt; b
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 97
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# a
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;문자열 관련 문제들은 아스키코드를 많이 사용하므로 기본적인 것들은 알아 두면 좋을 것 같다.&lt;br /&gt;&lt;/p&gt;
-&lt;h3&gt;A - Z = 65~90&lt;br /&gt;
-a - z = 97~122&lt;/h3&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;느낀-점&quot;&gt;느낀 점&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/al_prob/baekjoon3613_1.png&quot; alt=&quot;틀린거&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;문제 자체의 난이도는 높은것 같지 않다. 다만 예외 사항이 생각보다 많아서 정답률이 낮은 것 같다. 2번의 실패 후 성공! 문제를 푸는데 있어서 이러한 예외 사항을 꼼꼼히 잘 따져야겠다. 그리고 파이썬 for문 간편하게!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
-      </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;strong&gt;혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!&lt;/strong&gt;&lt;/p&gt;</content><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><category term="TomCat" /><category term="Eclipse" /><category term="개발 환경 구축" /><summary type="html">Eclipse로 web project 만들기</summary></entry></feed>

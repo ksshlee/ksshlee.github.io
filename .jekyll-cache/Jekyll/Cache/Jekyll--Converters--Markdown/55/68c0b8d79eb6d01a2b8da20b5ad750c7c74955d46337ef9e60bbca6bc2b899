@@ -1,0 +1,178 @@
+I"�<h2 id="sqlstructured-query-language-이란">SQL(Structured Query Language) 이란?</h2>
+
+<ul>
+  <li>SQL은 관계형 데이터베이스 관리 시스템의 데이터를 관리하기 위해 설계된 프로그래밍 언어이다.</li>
+  <li>SQL로 데이터베이스에 질의를 보낼 수 있다.</li>
+  <li>데이터베이스로부터 데이터를 조회,수정,삭제 할 수 있다.</li>
+  <li>새로운 데이터베이스를 생성할 수 있다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="-mac에서-mysql-설치하기">💻 Mac에서 MySQL 설치하기</h2>
+<ul>
+  <li>우선 HomeBrew가 있다면 MySQL 설치는 정말 쉽다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/back_end/2020_01_08/install_mysql.png" alt="install_mysql" /></p>
+
+<ul>
+  <li>이렇게 실행하고 오류가 없었다면 정상적으로 설치가 된 것이다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="mysql-간단-사용법">MySQL 간단 사용법</h2>
+
+<h3 id="mysql-실행하기">MySQL 실행하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span><span class="o">.</span><span class="n">server</span> <span class="n">start</span>
+</code></pre></div></div>
+<p><img src="/assets/img/back_end/2020_01_08/mysql_start.png" alt="mysql_start" /></p>
+
+<ul>
+  <li>이런 창이 뜬다면 실행 성공 너무 간단하다.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="mysql-종료하기">MySQL 종료하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span><span class="o">.</span><span class="n">server</span> <span class="n">stop</span>
+</code></pre></div></div>
+
+<ul>
+  <li>명령어로 MySQL을 종료시킬 수 있다.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="mysql-데몬-실행하기">MySQL 데몬 실행하기</h3>
+
+<h4 id="데몬-실행이란">데몬 실행이란?</h4>
+
+<ul>
+  <li>처음 가동될 때 실행되는 백그라운드 프로세스의 일종</li>
+  <li>
+    <p>메모리에 상주하다가 요청이 오면 대응 할 수 있게 항상 대기 중인 프로세스</p>
+  </li>
+  <li>데몬으로 실행하기</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">services</span> <span class="n">start</span> <span class="n">mysql</span>
+
+<span class="n">brew</span> <span class="n">services</span> <span class="nb">list</span>
+</code></pre></div></div>
+
+<ul>
+  <li>brew services list는 현재 데몬으로 구동중인 서비스들 목록을 확인 할 수 있는 명령어이다.</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/damon_start.png" alt="damon_start" /></p>
+
+<p><br /></p>
+
+<h3 id="mysql-데몬-재시작하기">MySQL 데몬 재시작하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">services</span> <span class="n">restart</span> <span class="n">mysql</span>
+</code></pre></div></div>
+
+<ul>
+  <li>위의 명령어를 통하여 재실행이 가능하다.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="mysql-데몬-종료하기">MySQL 데몬 종료하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">brew</span> <span class="n">services</span> <span class="n">stop</span> <span class="n">mysql</span>
+
+
+<span class="n">brew</span> <span class="n">services</span> <span class="nb">list</span>
+</code></pre></div></div>
+
+<ul>
+  <li>마지막 명령어로 제대로 종료되었는지 확인할수 있다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="mysql-로그인로그아웃">MySQL 로그인,로그아웃</h2>
+
+<h3 id="접속">접속</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span>
+
+<span class="n">password</span> <span class="p">:</span> <span class="n">enter</span>
+</code></pre></div></div>
+<ul>
+  <li>명령어로 로그인 수 있다.</li>
+  <li>하지만 현재는 최초접속할 때에만 그렇다 추후 DCL을 통하여 여러계정으로 로그인이 가능하다.</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/enter_db.png" alt="enter_db" /></p>
+
+<p><br /></p>
+
+<h3 id="종료">종료</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
+</code></pre></div></div>
+<ul>
+  <li>exit이란 명령어로 로그아웃 할수 있다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="mysql-기본명령어">MySQL 기본명령어</h2>
+
+<h3 id="db-조회">DB 조회</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SHOW</span> <span class="n">databases</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/back_end/2020_01_08/show_db.png" alt="show_db" /></p>
+
+<p><br /></p>
+
+<h3 id="db-사용">DB 사용</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">USE</span> <span class="n">dbname</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="table-조회">TABLE 조회</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SHOW</span> <span class="n">tables</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>현재 있는 Table을 조회할때</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/show_tb.png" alt="show_tb" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">desc</span> <span class="n">tbname</span><span class="p">;</span>
+</code></pre></div></div>
+<ul>
+  <li>해당 테이블을 좀더 자세하게 확인하고 싶을때</li>
+</ul>
+
+<p><img src="/assets/img/back_end/2020_01_08/desc_tb.png" alt="desc_tb" /></p>
+
+<p><br /><br /></p>
+
+<h2 id="출처">출처</h2>
+
+<p><a href="https://m.blog.naver.com/PostView.nhn?blogId=angkeloss&amp;logNo=220070830538&amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F">https://m.blog.naver.com/PostView.nhn?blogId=angkeloss&amp;logNo=220070830538&amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F</a></p>
+
+<p><a href="https://ourcstory.tistory.com/30">https://ourcstory.tistory.com/30</a></p>
+
+<p><br /><br /></p>
+
+<p><strong>혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!</strong></p>
+:ET

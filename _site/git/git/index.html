@@ -1,0 +1,1243 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Git 기초 - Hyuk의 기술블로그</title>
+<meta name="description" content="Git 이란? ">
+
+
+  <meta name="author" content="이상혁 (Sang Hyuk Lee)">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Hyuk의 기술블로그">
+<meta property="og:title" content="Git 기초">
+<meta property="og:url" content="http://localhost:4000/git/git/">
+
+
+  <meta property="og:description" content="Git 이란? ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-01-16T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/git/git/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Hyuk의 기술블로그",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Hyuk의 기술블로그 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+<meta name="google-site-verification" content="jHu-VjqjfKVSGsaH8ovxMIg4rzlEVCZ8SFVtk3Sd8lI" />
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hyuk의 기술블로그
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477" >About me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Category</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/bio-photo.jpg" alt="이상혁 (Sang Hyuk Lee)" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">이상혁 (Sang Hyuk Lee)</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Junior Developer</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Yongin/Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://ksshlee.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/ksshlee" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:ksshlee@gmail.com">
+            <meta itemprop="email" content="ksshlee@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Git 기초">
+    <meta itemprop="description" content="Git 이란?">
+    <meta itemprop="datePublished" content="2020-01-16T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Git 기초
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#git-이란">Git 이란?</a></li>
+  <li><a href="#git-저장소-생성">Git 저장소 생성</a></li>
+  <li><a href="#git-기본-명령어-working-directory---local-repository">Git 기본 명령어 (Working Directory -&gt; Local repository)</a>
+    <ul>
+      <li><a href="#git-status">git status</a></li>
+      <li><a href="#git-add">git add</a></li>
+      <li><a href="#git-rm">git rm</a></li>
+      <li><a href="#git-commit">git commit</a></li>
+      <li><a href="#git-mv">git mv</a></li>
+    </ul>
+  </li>
+  <li><a href="#git-기본-명령어-local-repository---remote-repository">Git 기본 명령어 (Local repository -&gt; Remote repository)</a>
+    <ul>
+      <li><a href="#remote-저장소-조회">remote 저장소 조회</a></li>
+      <li><a href="#remote-저장소-추가">remote 저장소 추가</a></li>
+      <li><a href="#remote-저장소-이름-변경삭제">remote 저장소 이름 변경,삭제</a></li>
+      <li><a href="#remote-저장소에-pushpull">remote 저장소에 push,pull</a></li>
+    </ul>
+  </li>
+  <li><a href="#git-기본-명령어-git-diff">Git 기본 명령어 (git diff)</a></li>
+  <li><a href="#git-기본-명령어history-조회">Git 기본 명령어(History 조회)</a></li>
+  <li><a href="#git-기본-명령어add-commit-push-취소하기">Git 기본 명령어(add, commit, push 취소하기)</a>
+    <ul>
+      <li><a href="#add-취소하기">add 취소하기</a></li>
+      <li><a href="#commit-취소하기">commit 취소하기</a></li>
+      <li><a href="#commit-message-변경">commit message 변경</a></li>
+      <li><a href="#push-취소하기">push 취소하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#출처">출처</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="git-이란">Git 이란?</h2>
+
+<ul>
+  <li>소스코드를 효율적으로 관리하기 위한 도구</li>
+  <li>개발자가 프로젝트의 버전 관리를 용이하게 해주는 도구</li>
+</ul>
+
+<p><img src="/assets/img/programmingskill/2020_01_16/git1.png" alt="git" /></p>
+
+<ul>
+  <li>간략하게 이런식으로 정리할 수 있다.</li>
+  <li>Git 설치는 건너뛰겠다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="git-저장소-생성">Git 저장소 생성</h2>
+
+<p><strong>기존 디렉토리 -&gt; Git 저장소</strong></p>
+
+<ul>
+  <li>
+    <p>그림에서 Working directory 즉 작업공간을 생성해보자</p>
+  </li>
+  <li>
+    <p>원하는 디렉토리를 들어간다.</p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git init
+</code></pre></div></div>
+
+<ul>
+  <li>해당 명령어를 입력하면 해당 디렉토리는 깃의 작업 공간이 된다.</li>
+</ul>
+
+<p><img src="/assets/img/programmingskill/2020_01_16/git2.png" alt="git2" /></p>
+
+<p><strong>기존 Git 저장소 -&gt; 기존 디렉토리</strong></p>
+
+<blockquote>
+  <p>일반적인 Clone</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone &lt;url&gt;
+</code></pre></div>  </div>
+  <blockquote>
+    <p>Example</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/ksshlee/git_study.git
+</code></pre></div>    </div>
+    <ul>
+      <li>remote 레파지토리에 git_study 라는 레파지토리를 복제해오는 명령어다.</li>
+      <li>그러면 디렉토리에 git_study라는 폴더가 생성이되고 그 폴더는 작업 공간이 된다.</li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <p>변경된 이름으로 Clone</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone &lt;url&gt; name
+</code></pre></div>  </div>
+  <blockquote>
+    <p>Example</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/ksshlee/git_study.git git
+</code></pre></div>    </div>
+    <ul>
+      <li>디렉토리 이름이 git이라는것 빼고 앞선 명령어와 똑같은 결과가 나온다.</li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="git-기본-명령어-working-directory---local-repository">Git 기본 명령어 (Working Directory -&gt; Local repository)</h2>
+<h3 id="git-status">git status</h3>
+
+<ul>
+  <li>현재 작업 공간에서 git과 파일들의 상태를 알려주는 명령어다.</li>
+</ul>
+
+<blockquote>
+  <p><em>Untracked files</em></p>
+</blockquote>
+
+<ul>
+  <li>git에 등록되지 않은 파일들</li>
+  <li>Untracked file들은 staging을 하기전까지 계속 Untracked file</li>
+  <li>수정이 되도 Untracked file 이다.</li>
+  <li>즉 최초로 생성됬거나, stage에서 취소된 파일들</li>
+  <li>git add 명령어로 staging 가능</li>
+</ul>
+
+<blockquote>
+  <p><em>Changes to be comitted</em></p>
+</blockquote>
+
+<ul>
+  <li>Staging이 완료된 파일들</li>
+  <li>Local repository에 등록이 준비된 파일들</li>
+  <li>git commit -m 으로 커밋 가능</li>
+  <li>new file
+    <ul>
+      <li>새로운 파일</li>
+    </ul>
+  </li>
+  <li>modified
+    <ul>
+      <li>변경된 파일</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><em>Changes not staged for commit</em></p>
+</blockquote>
+
+<ul>
+  <li>commit 전에 바뀐 파일들</li>
+  <li>modified는 변경된 파일들
+    <ul>
+      <li>git add 명령어로 다시 staging 해줘야한다.</li>
+    </ul>
+  </li>
+  <li>deleted는 삭제된 파일들
+    <ul>
+      <li>git rm으로 stage 상태에서 내려줘야한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="/assets/img/programmingskill/2020_01_16/git3.png" alt="git3" /></p>
+<ul>
+  <li>간단하게 요약하면 이런 그림이 나온다.</li>
+</ul>
+
+<hr />
+
+<h3 id="git-add">git add</h3>
+
+<ul>
+  <li>작업 공간에서 작업이 끝난 파일을 commit하기전 stage에 올린다.</li>
+  <li>이 작업을 스테이징이라고 말한다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add &lt;filename&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>Example</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add Readme.md
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="git-rm">git rm</h3>
+
+<ul>
+  <li>Stage 상태에서 unstage 상태로 내리는 작업이다.</li>
+  <li>Stage에 올린후 파일을 삭제했을 경우에도 사용된다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git rm --cached filename
+</code></pre></div></div>
+
+<ul>
+  <li>위의 명령어는 파일은 untracked 상태로 돌리기위한 명령어다.</li>
+  <li>파일은 삭제되지 않는다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git rm -f filename
+</code></pre></div></div>
+
+<ul>
+  <li>위의 명령어는 파일을 삭제하면서 untracked 상태로 돌리는 명령어다.</li>
+  <li>파일은 삭제된다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git rm filename
+</code></pre></div></div>
+
+<ul>
+  <li>위 명령어는 stage된 상태에서 파일이 삭제되었을때 사용하는 명령어다.</li>
+  <li>파일은 이미 삭제되어진 상태이다.</li>
+</ul>
+<hr />
+
+<h3 id="git-commit">git commit</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "commit message"
+</code></pre></div></div>
+
+<ul>
+  <li>stage된 파일들을 local repository에 올리는 작업이다.</li>
+  <li>stage된 파일들이 없으면 commit이 안된다.</li>
+  <li>커밋 메시지는 개발자들간의 약속인 약간의 형태가 있다.</li>
+</ul>
+
+<blockquote>
+  <p>Staging 건너뛰기</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m "commit message"
+</code></pre></div></div>
+
+<ul>
+  <li>staging을 건너뛴 명령어다.</li>
+  <li>-a 명령어는 모든 파일들을 staging 시키는 명령어다.</li>
+  <li>각각의 파일이 아닌 모든 파일을 staging할때 유용한 명령어다.</li>
+</ul>
+
+<hr />
+
+<h3 id="git-mv">git mv</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git mv file_from file_to
+</code></pre></div></div>
+
+<ul>
+  <li>파일의 이름을 변경하고 싶을때 사용하는 명령어다.</li>
+</ul>
+
+<blockquote>
+  <p>Example</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git mv hello.txt hello
+</code></pre></div></div>
+<ul>
+  <li>hello.txt 파일이 hello 파일로 renamed 됬다고 뜬다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="git-기본-명령어-local-repository---remote-repository">Git 기본 명령어 (Local repository -&gt; Remote repository)</h2>
+
+<ul>
+  <li>
+    <p>commit 까지 완료한 파일들을 Remote repository(원격 저장소)로 옮기는 과정이다.</p>
+  </li>
+  <li>
+    <p>Github 홈페이지에서 Remote repository를 생성할 수 있다. 이 작업은 너무 간단하니 건너 뛰겠다.</p>
+  </li>
+</ul>
+
+<h3 id="remote-저장소-조회">remote 저장소 조회</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+</code></pre></div></div>
+<ul>
+  <li>remote 저장소의 이름, 주소 정도만 조회한다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote show &lt;remote name&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>remote name의 구체적인 정보를 확인할 수 있다.(branch)와 같은 정보들을 확인할 수 있다.</li>
+</ul>
+
+<h3 id="remote-저장소-추가">remote 저장소 추가</h3>
+
+<ul>
+  <li>git clone 으로 받아진 저장소는 기본적으로 origin이라는 remote 저장소가 등록된다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add [remote name] [url] 
+</code></pre></div></div>
+
+<blockquote>
+  <p>Example</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://github.com/ksshlee/git_study.git
+</code></pre></div>  </div>
+</blockquote>
+
+<ul>
+  <li>origin 이라는 이름으로 url을 remote 저장소로 지정한다.</li>
+  <li>꼭 origin이 아니여도 된다.</li>
+</ul>
+
+<h3 id="remote-저장소-이름-변경삭제">remote 저장소 이름 변경,삭제</h3>
+
+<blockquote>
+  <p>이름 변경</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote rename original_name changed_name
+</code></pre></div></div>
+
+<ul>
+  <li>original_name에 원래 이름 changed_name에 변경된 이름</li>
+</ul>
+
+<blockquote>
+  <p>삭제</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote remove name
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="remote-저장소에-pushpull">remote 저장소에 push,pull</h3>
+
+<blockquote>
+  <p>push</p>
+  <ul>
+    <li>이작업을 해야지 local -&gt; remote 저장소로 저장이된다.
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push &lt;remote name&gt; &lt;branch name&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>branch는 추후에 자세하게 설명을 하겠다.
+      <blockquote>
+        <p>Example</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+    <li>master 브렌치에 push를 하겠다 라는 명령어이다.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+
+<blockquote>
+  <p>pull</p>
+  <ul>
+    <li>pull 명령어는 remote 저장소에 모든 데이터를 가져오고, local과 merge 까지 시킨다.</li>
+    <li>merge에 대해선 <a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EC%99%80-Merge-%EC%9D%98-%EA%B8%B0%EC%B4%88">여기</a>를 참고
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull &lt;remote name&gt; &lt;branch name&gt;
+</code></pre></div>      </div>
+    </li>
+  </ul>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="git-기본-명령어-git-diff">Git 기본 명령어 (git diff)</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff
+</code></pre></div></div>
+
+<ul>
+  <li>git status는 파일의 상태(untracked, stage)등을 확인할수 있다면 diff는 정확하게 차이점을 확인할 수 있다.</li>
+</ul>
+
+<p><strong>local의 branch간 비교</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff &lt;branch&gt; &lt;branch&gt;
+</code></pre></div></div>
+
+<p><strong>local과 remote branch간 비교</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff &lt;branch&gt; origin/&lt;branch&gt;
+</code></pre></div></div>
+
+<p><strong>commit 간 비교</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff &lt;commit hash&gt; &lt;commit hash&gt;
+</code></pre></div></div>
+
+<p><strong>working directory와 stage간 비교</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff
+</code></pre></div></div>
+<ul>
+  <li>stage된 파일이 수정이 되면 stage된 파일과 unstage된 같은이름의 2개의 파일이 존재한다.</li>
+  <li>git diff로 이 둘의 차이를 비교할 수 있다.</li>
+</ul>
+
+<p><strong>stage와 HEAD 비교</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --staged
+
+or
+
+git diff --cached
+</code></pre></div></div>
+
+<p><strong>HEAD와 Working directory 비교</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff HEAD
+</code></pre></div></div>
+
+<ul>
+  <li>git diff –staged와의 차이점을 잘 확인하자</li>
+</ul>
+
+<p><img src="/assets/img/programmingskill/2020_01_16/git5.png" alt="git5" /></p>
+
+<blockquote>
+  <p>Example</p>
+</blockquote>
+
+<p><img src="/assets/img/programmingskill/2020_01_16/git4.png" alt="git4" /></p>
+
+<ul>
+  <li>이런식으로 변경된 부분을 확인할 수 있다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="git-기본-명령어history-조회">Git 기본 명령어(History 조회)</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log
+</code></pre></div></div>
+
+<ul>
+  <li>가장 최근의 커밋(HEAD) 부터 출력이된다. (위에가 가장 최근)</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log -p -2
+</code></pre></div></div>
+
+<ul>
+  <li>-p 명령어:git log를 diff 결과와 함께 보여준다.</li>
+  <li>-2 명령어:최근 2개의 결과만 보여준다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --stat
+</code></pre></div></div>
+<ul>
+  <li>통계 정보를 조회한다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="git-기본-명령어add-commit-push-취소하기">Git 기본 명령어(add, commit, push 취소하기)</h2>
+
+<h3 id="add-취소하기">add 취소하기</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset HEAD filename
+</code></pre></div></div>
+
+<ul>
+  <li>위의 명령어로 stage 된 파일을 unstage 상태로 돌릴수 있다.</li>
+  <li>filename을 입력하지 않으면 전체 파일을 unstage로 바꾼다.</li>
+</ul>
+
+<hr />
+
+<h3 id="commit-취소하기">commit 취소하기</h3>
+
+<p><strong>soft</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --soft HEAD^
+</code></pre></div></div>
+<ul>
+  <li>–soft 는 commit취소 -&gt; 해당파일을 <strong>staged</strong> 상태로 유지</li>
+</ul>
+
+<p><strong>mixed</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --mixed HEAD^
+</code></pre></div></div>
+<ul>
+  <li>이 명령어가 Default 이다.</li>
+  <li>–mixed 는 commit취소 -&gt; 해당파일을 <strong>unstaged</strong> 상태로 유지</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset HEAD^
+</code></pre></div></div>
+
+<ul>
+  <li>위와 동일한 명령어</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset HEAD~3
+</code></pre></div></div>
+
+<ul>
+  <li>마지막 3개의 commit 취소</li>
+</ul>
+
+<p><strong>hard</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard HEAD^
+</code></pre></div></div>
+<ul>
+  <li>–hard 는 commit취소 -&gt; 해당파일을 <strong>삭제</strong></li>
+</ul>
+
+<h3 id="commit-message-변경">commit message 변경</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit --amend
+</code></pre></div></div>
+
+<ul>
+  <li>amend 메시지로 commit message 수정 가능하다.</li>
+</ul>
+
+<h3 id="push-취소하기">push 취소하기</h3>
+
+<ul>
+  <li>해당 명령어는 돌아가는 시점 이후의 모든 commit 정보가 사라진다.</li>
+  <li><strong>Local 내용을 Remote에 덮는 명령어다.</strong></li>
+  <li>reset후 push를 하면 local과 remote가 맞지 않아서 오류가 뜬다</li>
+  <li>그때 강제로 push를 하므로 위험한 명령어다.</li>
+</ul>
+
+<blockquote>
+  <p>Example</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset [commit hash]
+</code></pre></div></div>
+
+<ul>
+  <li>되돌아가고 싶은 commit의 hash 값을 입력한다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "commit message"
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>되돌아간후 원하는 파일들을 커밋해준다.</p>
+  </li>
+  <li>
+    <p>이후 push를 하면 오류가 뜬다.</p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin +[branch name]
+</code></pre></div></div>
+<ul>
+  <li>강제로 푸쉬를 해준다.</li>
+  <li>이 과정은 local의 파일을 remote파일 그대로 덮으므로 이점 유의하자</li>
+</ul>
+
+<p><strong>TIPS</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin +[branch name]
+</code></pre></div></div>
+
+<ul>
+  <li>위의 명령어는 push 경고를 무시하고 강제로 push 해주는 명령어다.</li>
+</ul>
+
+<h2 id="출처">출처</h2>
+<p><a href="https://git-scm.com/">https://git-scm.com/</a></p>
+
+<p><a href="https://icons8.com/icons/set/server">https://icons8.com/icons/set/server</a></p>
+
+<p><a href="https://www.opentutorials.org/module/2676/15202">https://www.opentutorials.org/module/2676/15202</a></p>
+
+<p><a href="https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html">https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html</a></p>
+
+<p><strong>혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사겠습니다!</strong></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#git" class="page__taxonomy-item" rel="tag">Git</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#git" class="page__taxonomy-item" rel="tag">Git</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-01-16T00:00:00+09:00">January 16, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Git+%EA%B8%B0%EC%B4%88%20http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fgit%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fgit%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fgit%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/backend/Servlet/" class="pagination--pager" title="Servlet 이란?
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/backend/Servlet/" rel="permalink">Servlet 이란?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Servlet 이란?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQL-DML/" rel="permalink">MySQL DML
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DML(Data Manipulation Language)
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQLDDL/" rel="permalink">MySQL DDL
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DDL (Data Definition Language)
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQL-DCL/" rel="permalink">MySQL DCL
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DCL(Data Control Language)
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/ksshlee" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Hyuk의 기술블로그. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'GA0GNDBUGF',
+  apiKey: '8469a51e88cd63467dd78125a6f496cc',
+  indexName: 'dev_hyuk',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/git/git/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/git/git"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ksshlee.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

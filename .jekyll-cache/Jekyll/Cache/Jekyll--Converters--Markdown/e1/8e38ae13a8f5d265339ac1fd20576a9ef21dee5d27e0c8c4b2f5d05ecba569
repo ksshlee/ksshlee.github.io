@@ -1,0 +1,23 @@
+I"�<ul class="toc__menu">
+  <li><a href="#ddl-data-definition-language">DDL (Data Definition Language)</a></li>
+  <li><a href="#database-생성하기">Database 생성하기</a></li>
+  <li><a href="#database-조회하고-사용하기">Database 조회하고, 사용하기</a></li>
+  <li><a href="#database-삭제하기">Database 삭제하기</a></li>
+  <li><a href="#table">Table</a>
+    <ul>
+      <li><a href="#datatype">datatype</a></li>
+    </ul>
+  </li>
+  <li><a href="#table-생성하기">Table 생성하기</a></li>
+  <li><a href="#table-삭제하기">Table 삭제하기</a></li>
+  <li><a href="#table-수정하기">Table 수정하기</a>
+    <ul>
+      <li><a href="#새로운-컬럼-추가">새로운 컬럼 추가</a></li>
+      <li><a href="#컬럼-구조-수정">컬럼 구조 수정</a></li>
+      <li><a href="#컬럼-삭제">컬럼 삭제</a></li>
+    </ul>
+  </li>
+  <li><a href="#table-초기화">Table 초기화</a></li>
+  <li><a href="#출처">출처</a></li>
+</ul>
+:ET

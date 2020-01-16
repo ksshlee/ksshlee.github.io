@@ -1,0 +1,98 @@
+I"�<h2 id="문제">문제</h2>
+
+<p>상근이는 세계적인 소프트웨어 회사 기글에서 일한다. 이 회사의 가장 큰 특징은 자유로운 출퇴근 시간이다. 따라서, 직원들은 반드시 9시부터 6시까지 회사에 있지 않아도 된다.</p>
+
+<p>각 직원은 자기가 원할 때 출근할 수 있고, 아무때나 퇴근할 수 있다.</p>
+
+<p>상근이는 모든 사람의 출입카드 시스템의 로그를 가지고 있다. 이 로그는 어떤 사람이 회사에 들어왔는지, 나갔는지가 기록되어져 있다. 로그가 주어졌을 때, 현재 회사에 있는 모든 사람을 구하는 프로그램을 작성하시오.</p>
+
+<h2 id="입력">입력</h2>
+
+<p>첫째 줄에 로그에 기록된 출입 기록의 수 n이 주어진다. (2 ≤ n ≤ 106) 다음 n개의 줄에는 출입 기록이 순서대로 주어지며, 각 사람의 이름이 주어지고 “enter”나 “leave”가 주어진다. “enter”인 경우는 출근, “leave”인 경우는 퇴근이다.</p>
+
+<p>회사에는 동명이인이 없으며, 대소문자가 다른 경우에는 다른 이름이다. 사람들의 이름은 알파벳 대소문자로 구성된 5글자 이하의 문자열이다.</p>
+
+<h2 id="출력">출력</h2>
+
+<p>현재 회사에 있는 사람의 이름을 사전 순의 역순으로 한 줄에 한 명씩 출력한다.</p>
+
+<blockquote>
+  <p>예제 입력 1</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+Baha enter
+Askar enter
+Baha leave
+Artem enter
+</code></pre></div></div>
+
+<blockquote>
+  <p>예제 출력 1</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Askar
+Artem
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<h2 id="간단한-구현-계획">간단한 구현 계획</h2>
+
+<p><img src="/assets/img/al_prob/baekjoon7785.jpg" alt="구현계획" /></p>
+
+<p><br /><br /></p>
+
+<h2 id="풀이-with-python">풀이 with python</h2>
+<blockquote>
+  <p>Python</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#input 속도 가속을 위해서
+</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">input</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+
+<span class="n">working</span><span class="o">=</span><span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
+    <span class="n">text</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'enter'</span><span class="p">:</span>
+        <span class="n">working</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">=</span><span class="bp">True</span>
+    <span class="k">elif</span> <span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'leave'</span><span class="p">:</span>
+        <span class="n">working</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">=</span><span class="bp">False</span>
+
+<span class="n">ans</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="c1">#True인 애들만 모음
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">working</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">working</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="bp">True</span><span class="p">:</span>
+        <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1">#내림차순 정렬
+</span><span class="n">ans</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ans</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><br /><br /></p>
+
+<h2 id="python-skill">Python Skill</h2>
+<blockquote>
+  <p>Python</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">input</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+
+</code></pre></div></div>
+<p>위에 코드 처럼하면 input 속도가 많이 향상된다고 한다.
+이유는 <a href="https://www.acmicpc.net/board/view/855" target="_blank">링크</a>에서 확인해보자.<br />
+앞으로 그냥 input()보다는 위 코드처럼 선언하고 사용하는 습관을 들이자.</p>
+
+<p><br /><br /></p>
+
+<h2 id="느낀-점">느낀 점</h2>
+
+<p>이번 문제는 생각보다 어렵지 않았다. 이렇게 dict으로 true와 false를 응용하여 풀어서 쉽게 풀 수 있었다. 비슷한 유형의 문제들도 이렇게 풀면 될것 같다.</p>
+:ET

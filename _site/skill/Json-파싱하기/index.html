@@ -1,0 +1,1045 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>JSON파일 파싱 - Hyuk의 기술블로그</title>
+<meta name="description" content="JSON (JavaScript Object NOtation) 이란?    ">
+
+
+  <meta name="author" content="이상혁 (Sang Hyuk Lee)">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Hyuk의 기술블로그">
+<meta property="og:title" content="JSON파일 파싱">
+<meta property="og:url" content="http://localhost:4000/skill/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0/">
+
+
+  <meta property="og:description" content="JSON (JavaScript Object NOtation) 이란?    ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-01-03T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/skill/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Hyuk의 기술블로그",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Hyuk의 기술블로그 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+<meta name="google-site-verification" content="jHu-VjqjfKVSGsaH8ovxMIg4rzlEVCZ8SFVtk3Sd8lI" />
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hyuk의 기술블로그
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://www.notion.so/ksshlee/Sang-Hyuk-Lee-d0d25ccd294146588514095fadc7f477" >About me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Category</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/bio-photo.jpg" alt="이상혁 (Sang Hyuk Lee)" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">이상혁 (Sang Hyuk Lee)</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Junior Developer</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Yongin/Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://ksshlee.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/ksshlee" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:ksshlee@gmail.com">
+            <meta itemprop="email" content="ksshlee@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="JSON파일 파싱">
+    <meta itemprop="description" content="JSON (JavaScript Object NOtation) 이란?">
+    <meta itemprop="datePublished" content="2020-01-03T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">JSON파일 파싱
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#json-javascript-object-notation-이란">JSON (JavaScript Object NOtation) 이란?</a>
+    <ul>
+      <li><a href="#json-객체">JSON 객체</a></li>
+      <li><a href="#json-배열">JSON 배열</a></li>
+    </ul>
+  </li>
+  <li><a href="#json-파싱-with-python">JSON 파싱 with Python</a></li>
+  <li><a href="#json파일-만들기-python">JSON파일 만들기 Python</a></li>
+  <li><a href="#json-파싱-with-java-gson-설치하기">JSON 파싱 with Java (GSON 설치하기)</a></li>
+  <li><a href="#json-파싱하기-with-java">JSON 파싱하기 with Java</a></li>
+  <li><a href="#출처">출처</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="json-javascript-object-notation-이란">JSON (JavaScript Object NOtation) 이란?</h2>
+
+<ul>
+
+<li>JSON은 간단하게 말해 사람이 읽고 쓰기에 용이하고, 기계가 분석하고 생성함에도 용이한 문자 기반의 데이터 포맷이다.</li>
+<br />
+
+<li>원래는 JavaScript 언어로부터 파생되었다.</li>
+<br />
+
+<li>JSON은 프로그래밍 언어와 운영체제에서 독립적이다.</li>
+
+</ul>
+
+<p><br /></p>
+
+<h3 id="json-객체">JSON 객체</h3>
+
+<ul>
+  <li>JSON 객체는 중괄호({})로 둘러 쌓아서 표현한다.</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이상혁</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">hobby</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">programming</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">job</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">student</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>객체 안에 객체도 가능하다.</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이상혁</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">hobby</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">programming</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">job</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">student</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">father</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">mother</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">김00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">sister</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">skill</span><span class="dl">"</span> <span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Java</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Python</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Git</span><span class="dl">"</span><span class="p">]</span>
+    
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="json-배열">JSON 배열</h3>
+
+<ul>
+  <li>JSON 배열은 대괄호([])로 둘러 쌓아서 표현한다.</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">skills</span><span class="dl">"</span><span class="p">:[</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Java</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">level</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Python</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">level</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">JavaScript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">level</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="p">]</span>
+
+
+<span class="nx">or</span>
+
+<span class="dl">"</span><span class="s2">skills</span><span class="dl">"</span><span class="p">:[</span>
+    <span class="dl">"</span><span class="s2">Java</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Python</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">JavaScript</span><span class="dl">"</span>
+<span class="p">]</span>
+
+
+
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<h2 id="json-파싱-with-python">JSON 파싱 with Python</h2>
+
+<ul>
+  <li>파이썬에서 JSON 파싱은 너무 간단한 작업이다.</li>
+</ul>
+
+<p>JSON은 아래의 예시로 하겠다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이상혁</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">hobby</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">programming</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">job</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">student</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">father</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">mother</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">김00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">sister</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">skill</span><span class="dl">"</span> <span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Java</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Python</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Git</span><span class="dl">"</span><span class="p">]</span>
+    
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Python 파싱 코드</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'json파일의 위치'</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+
+    <span class="n">json_value</span> <span class="o">=</span> <span class="n">json_data</span><span class="p">[</span><span class="s">'key값'</span><span class="p">]</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">json_value</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>간단하게 JSON파일은 python으로 파싱할시 dict형태로 파싱이 된다.</li>
+  <li>그러면 dict에서 값을 읽어오는것처럼 사용하면 된다.</li>
+</ul>
+
+<p><br /></p>
+
+<blockquote>
+  <p>Example</p>
+</blockquote>
+
+<ul>
+  <li>skill의 2번째 값을 구하고 싶다</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">json_value</span> <span class="o">=</span> <span class="n">json_data</span><span class="p">[</span><span class="s">'skill'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>이런식으로 간단하게 파싱을 할 수 있다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="json파일-만들기-python">JSON파일 만들기 Python</h2>
+
+<ul>
+  <li>Python으로 Json 파일 생성역시 가능하다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+
+
+<span class="n">profile</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="n">profile</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Sang Hyuk Lee"</span>
+<span class="n">profile</span><span class="p">[</span><span class="s">"age"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">profile</span><span class="p">[</span><span class="s">"hobby"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"soccer"</span><span class="p">,</span><span class="s">"programming"</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./test.json'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">profile</span><span class="p">,</span><span class="n">json_file</span><span class="p">,</span><span class="n">indent</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>이렇게 하면 JSON파일이 생성이 된다. 마지막 indent=”\t”를 안해주게 되면 위의 내용들이 한줄에 출력되므로 꼭 써주자</li>
+</ul>
+
+<blockquote>
+  <p><strong>주의할 점이 JSON파일은 항상 “” 큰따옴표다. 그러므로 항상 큰따옴표로 사용하자</strong></p>
+</blockquote>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">//indent="\t"를 했을 시</span>
+
+<span class="p">{</span>
+	<span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sang Hyuk Lee</span><span class="dl">"</span><span class="p">,</span>
+	<span class="dl">"</span><span class="s2">age</span><span class="dl">"</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+	<span class="dl">"</span><span class="s2">hobby</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+		<span class="dl">"</span><span class="s2">soccer</span><span class="dl">"</span><span class="p">,</span>
+		<span class="dl">"</span><span class="s2">programming</span><span class="dl">"</span>
+	<span class="p">]</span>
+<span class="p">}</span>
+
+
+<span class="c1">//indent="\t"를 안했을 시</span>
+<span class="p">{</span><span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sang Hyuk Lee</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="dl">"</span><span class="s2">hobby</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">soccer</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">programming</span><span class="dl">"</span><span class="p">]}</span>
+
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<h2 id="json-파싱-with-java-gson-설치하기">JSON 파싱 with Java (GSON 설치하기)</h2>
+
+<ul>
+  <li>
+    <p>Java로도 역시 파싱은 가능하다 하지만 기본적으로 java에서 json을 파싱하기 위한 라이브러리는 없으므로 외부에서 가져와야한다. gson을 활용하여 파싱을 해보겠다.</p>
+  </li>
+  <li>
+    <p><a href="https://mvnrepository.com/" target="_blank">여기</a>를 눌러 메이븐 저장소에 접속해준다.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/programmingskill/2020_01_03/maven.png" alt="mave_download" /></p>
+
+<ul>
+
+<li>여기서 검색창에 gson을 검색하여 첫번째 있는걸 다운로드 해준다. 버전은 왠만하면 최신중에서 Usages가 많은 걸로 한다.</li>
+
+
+<li> 다운로드 완료후 해당 jar 파일을 eclipse에서 외부 라이브러리에 추가를 해준다. 방법은 <a href="" target="_blank">여기</a></li>
+
+
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="json-파싱하기-with-java">JSON 파싱하기 with Java</h2>
+
+<blockquote>
+  <p>Java</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.google.gson.JsonArray</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonParser</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JsonParse</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">String</span> <span class="n">json</span><span class="o">=</span><span class="s">"{
+        \"name\" : \"이상혁\", 
+        \"age\" : 24, 
+        \"hobby\" : \"programming\", 
+        \"job\" : \"student\", 
+        \"father\" : { \"name\" : \"이00\" }, 
+        \"mother\" : { \"name\" : \"김00\" }, 
+        \"sister\" : { \"name\" : \"이00\" }, 
+        \"skill\" : [\"Java\",\"Python\",\"Git\"]}"</span><span class="o">;</span>
+		
+		
+		<span class="nc">JsonParser</span> <span class="n">jsonParser</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JsonParser</span><span class="o">();</span>
+		
+		<span class="nc">JsonObject</span> <span class="n">jsonObject</span> <span class="o">=</span> <span class="o">(</span><span class="nc">JsonObject</span><span class="o">)</span> <span class="n">jsonParser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jsonObject</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"skill"</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jsonObject</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>이런식으로 추출이 가능하다. 물론 skill 출력이 가능하다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.google.gson.JsonArray</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonParser</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JsonParse</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">String</span> <span class="n">json</span><span class="o">=</span><span class="s">"{
+        \"name\" : \"이상혁\", 
+        \"age\" : 24, 
+        \"hobby\" : \"programming\",
+        \"job\" : \"student\", 
+        \"father\" : { \"name\" : \"이00\" }, 
+        \"mother\" : { \"name\" : \"김00\" }, 
+        \"sister\" : { \"name\" : \"이00\" }, 
+        \"skill\" : [\"Java\",\"Python\",\"Git\"]}"</span><span class="o">;</span>
+		
+		
+		<span class="nc">JsonParser</span> <span class="n">jsonParser</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JsonParser</span><span class="o">();</span>
+		
+		<span class="nc">JsonObject</span> <span class="n">jsonObject</span> <span class="o">=</span> <span class="o">(</span><span class="nc">JsonObject</span><span class="o">)</span> <span class="n">jsonParser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jsonObject</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"skill"</span><span class="o">).</span><span class="na">getAsJsonArray</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+		
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>만약 저위에 skill 에서 특정 배열의 위치를 빼고 싶으면 .getAsJsonArray().get(위치); 를 해서 특정 값만 추출도 가능하다.</li>
+</ul>
+
+<blockquote>
+  <p><strong>해당 key값이 객체면 getAsJsonObject 배열 이면 getAsJsonarray 로 추출하면 된다. 배열의 특수번째면 .get(“추출하고 싶은 번째”) 로 추출을 하면 된다.</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>Example</p>
+</blockquote>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이상혁</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">hobby</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">programming</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">job</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">student</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">father</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">mother</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">김00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">sister</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">이00</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">skill</span><span class="dl">"</span> <span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Java</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Python</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Git</span><span class="dl">"</span><span class="p">]</span>
+    
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+
+<li>위에서 skill 을 추출하고 싶다 근데 skill은 객체 안에 감싸져 있으므로 skill을 꺼내기 위해선 .getAsJsonObject() 이다</li>
+
+<li>skill 안에서 Java를 꺼내고 싶다. Java는 배열 안에 감싸져 있으므로 .getAsJsonArray() 하고 .get("번째") 로 추출을 한다.</li>
+
+<li>하지만 위에 코드 예시에선 이미 jsonObject를 선언하고 skill을 추출을 하기 때문에 .getAsJsonObject()는 생략을 한 것이다.</li>
+
+</ul>
+
+<p><br /><br /></p>
+
+<h2 id="출처">출처</h2>
+
+<p><a href="https://www.json.org/json-ko.html">https://www.json.org/json-ko.html</a></p>
+
+<p><a href="https://calyfactory.github.io/%EC%A0%9C%EC%9D%B4%EC%8A%A8%ED%8C%8C%EC%8B%B1/">https://calyfactory.github.io/%EC%A0%9C%EC%9D%B4%EC%8A%A8%ED%8C%8C%EC%8B%B1/</a></p>
+
+<p><a href="https://opentutorials.org/course/1375/6844">https://opentutorials.org/course/1375/6844</a></p>
+
+<p><a href="http://tcpschool.com/json/json_basic_structure">http://tcpschool.com/json/json_basic_structure</a></p>
+
+<p><a href="https://dpdpwl.tistory.com/60">https://dpdpwl.tistory.com/60</a></p>
+
+<p><a href="https://blog.azulpintor.io/entry/java-extract-value-for-jason-string-by-gson">https://blog.azulpintor.io/entry/java-extract-value-for-jason-string-by-gson</a></p>
+
+<p><strong>혹시 제가 잘못 알고 있거나 오타, 궁금한점 있으시면 댓글 남겨주시면 감사하겠습니다!</strong></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#java" class="page__taxonomy-item" rel="tag">Java</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#json" class="page__taxonomy-item" rel="tag">Json</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#parsing" class="page__taxonomy-item" rel="tag">Parsing</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#skill" class="page__taxonomy-item" rel="tag">Skill</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#skill" class="page__taxonomy-item" rel="tag">Skill</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-01-03T00:00:00+09:00">January 3, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=JSON%ED%8C%8C%EC%9D%BC+%ED%8C%8C%EC%8B%B1%20http%3A%2F%2Flocalhost%3A4000%2Fskill%2FJson-%25ED%258C%258C%25EC%258B%25B1%25ED%2595%2598%25EA%25B8%25B0%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fskill%2FJson-%25ED%258C%258C%25EC%258B%25B1%25ED%2595%2598%25EA%25B8%25B0%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fskill%2FJson-%25ED%258C%258C%25EC%258B%25B1%25ED%2595%2598%25EA%25B8%25B0%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/skill/Python-Queue-%EB%AA%A8%EB%93%88/" class="pagination--pager" title="⭐️Python pop()에 관하여, Queue 사용법⭐️
+">이전</a>
+    
+    
+      <a href="/mysql/%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95/db/backend/MySql/" class="pagination--pager" title="MySQL 설치, 기본 사용법
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/git/git/" rel="permalink">Git 기초
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Git 이란?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/backend/Servlet/" rel="permalink">Servlet 이란?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Servlet 이란?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQL-DML/" rel="permalink">MySQL DML
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DML(Data Manipulation Language)
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mysql/db/backend/MySQLDDL/" rel="permalink">MySQL DDL
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DDL (Data Definition Language)
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/ksshlee" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Hyuk의 기술블로그. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'GA0GNDBUGF',
+  apiKey: '8469a51e88cd63467dd78125a6f496cc',
+  indexName: 'dev_hyuk',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/skill/Json-%ED%8C%8C%EC%8B%B1%ED%95%98%EA%B8%B0/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/skill/Json 파싱하기"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ksshlee.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

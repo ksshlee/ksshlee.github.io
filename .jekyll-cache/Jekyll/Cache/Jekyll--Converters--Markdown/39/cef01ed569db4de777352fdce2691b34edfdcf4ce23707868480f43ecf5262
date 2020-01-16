@@ -1,0 +1,32 @@
+I"<ul class="toc__menu">
+  <li><a href="#sqlstructured-query-language-이란">SQL(Structured Query Language) 이란?</a></li>
+  <li><a href="#-mac에서-mysql-설치하기">💻 Mac에서 MySQL 설치하기</a></li>
+  <li><a href="#mysql-간단-사용법">MySQL 간단 사용법</a>
+    <ul>
+      <li><a href="#mysql-실행하기">MySQL 실행하기</a></li>
+      <li><a href="#mysql-종료하기">MySQL 종료하기</a></li>
+      <li><a href="#mysql-데몬-실행하기">MySQL 데몬 실행하기</a>
+        <ul>
+          <li><a href="#데몬-실행이란">데몬 실행이란?</a></li>
+        </ul>
+      </li>
+      <li><a href="#mysql-데몬-재시작하기">MySQL 데몬 재시작하기</a></li>
+      <li><a href="#mysql-데몬-종료하기">MySQL 데몬 종료하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#mysql-로그인로그아웃">MySQL 로그인,로그아웃</a>
+    <ul>
+      <li><a href="#접속">접속</a></li>
+      <li><a href="#종료">종료</a></li>
+    </ul>
+  </li>
+  <li><a href="#mysql-기본명령어">MySQL 기본명령어</a>
+    <ul>
+      <li><a href="#db-조회">DB 조회</a></li>
+      <li><a href="#db-사용">DB 사용</a></li>
+      <li><a href="#table-조회">TABLE 조회</a></li>
+    </ul>
+  </li>
+  <li><a href="#출처">출처</a></li>
+</ul>
+:ET

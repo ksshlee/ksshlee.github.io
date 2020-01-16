@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-17T02:59:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hyuk의 기술블로그</title><subtitle>Hyuk의 기술블로그 입니다!</subtitle><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><entry><title type="html">Git 기초</title><link href="http://localhost:4000/git/git/" rel="alternate" type="text/html" title="Git 기초" /><published>2020-01-16T00:00:00+09:00</published><updated>2020-01-16T00:00:00+09:00</updated><id>http://localhost:4000/git/git</id><content type="html" xml:base="http://localhost:4000/git/git/">&lt;h2 id=&quot;git-이란&quot;&gt;Git 이란?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-17T03:01:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hyuk의 기술블로그</title><subtitle>Hyuk의 기술블로그 입니다!</subtitle><author><name>이상혁 (Sang Hyuk Lee)</name><email>ksshlee@gmail.com</email></author><entry><title type="html">Git 기초</title><link href="http://localhost:4000/git/git/" rel="alternate" type="text/html" title="Git 기초" /><published>2020-01-16T00:00:00+09:00</published><updated>2020-01-16T00:00:00+09:00</updated><id>http://localhost:4000/git/git</id><content type="html" xml:base="http://localhost:4000/git/git/">&lt;h2 id=&quot;git-이란&quot;&gt;Git 이란?&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;소스코드를 효율적으로 관리하기 위한 도구&lt;/li&gt;
@@ -2327,7 +2327,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;h3 id=&quot;깊이-우선-탐색-depth-first-searchdfs&quot;&gt;깊이 우선 탐색 (Depth First Search(DFS))&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/dfs_bfs/&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -2335,7 +2335,7 @@ EX) UPDATE tbname SET age=’24’ WHERE name=’이상혁’;&lt;/li&gt;
 
 &lt;h3 id=&quot;너비-우선-탐색-breadth-first-searchbfs&quot;&gt;너비 우선 탐색 (Breadth First Search(BFS))&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/2019/12/31/dfs_bfs.html&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;자세한 내용은 &lt;a href=&quot;https://ksshlee.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/dfs_bfs/&quot; target=&quot;_blank&quot;&gt;여기를 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;

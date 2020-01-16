@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://ksshlee.github.io/sitemap.xml

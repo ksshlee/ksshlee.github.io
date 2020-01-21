@@ -264,10 +264,12 @@ public class Driver{
   - 이름이 intel인 빈 객체 생성/ Intel객체 생성
     - property->
       - brand라는 property에 intel 값 대입 (set 함수가 존재해야됨)
+      - setter 함수를 사용하여 초기값 설정
 
 - constructor->
   - mainboard인 빈객체 생성 / MainBoard객체 생성
     - intel이라는 객체 삽입
+    - 생성자를 사용하여 초기값 설정
     - **객체를 삽입할때는 ref, String을 삽입할때는 value**
 
 

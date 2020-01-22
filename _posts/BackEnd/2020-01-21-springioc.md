@@ -115,7 +115,7 @@ public class MainBoard{
 ```
 
 
-**3. Fiel Injection**
+**3. Field Injection**
 
 ```java
 public class MainBoard{
@@ -274,6 +274,26 @@ public class Driver{
 
 
 <br><br>
+
+
+
+IoC(Inversion of Control)
+--
+
+- IoC는 **컨테이너다**
+- 제어의 역전
+- 즉 프로그래머가 작성한 코드를 대신 관리해준다.
+- 제어권이 넘어옴으로써 DI, AOP등이 가능하다.
+- 여기서 DI는 @Autowired를 사용하여 Bean을 자동주입하는 DI이다.
+- 즉 제어권이 없었다면은 위에와 같은 자동으로 의존성 주입을 할 수 없을 것이다.
+
+
+
+<br><br>
+
+
+
+
 
 
 출처

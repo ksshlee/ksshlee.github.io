@@ -160,10 +160,10 @@ Spring DI 사용
 >CPU 클래스
 
 ```java
-package com.computerpart;
+package com.study.testfordi;
 
-public class Cpu{
-    public void model();
+public interface Cpu {
+	public void showBrand();
 }
 ```
 
@@ -172,68 +172,80 @@ public class Cpu{
 ```java
 //1
 
-package com.computerpart;
+package com.study.testfordi;
 
-public class Intel implements Cpu{
-    String brand;
-    
-    public void setBrand(String brand){
-        this.brand = brand;
-    }
+public class model1 implements Cpu{
+	String brand;
+	
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	
+	public void showBrand() {
+		System.out.println(brand);
+	}
 
-    public void model(){
-        System.out.println(brand + "i7");
-    }
 }
 
 //2
 
-package com.computerpart;
+package com.study.testfordi;
 
-public class Amd implements Cpu{
-    String brand;
-    
-    public void setBrand(String brand){
-        this.brand = brand;
-    }
+public class model2 implements Cpu{
+		String brand;
 
-    public void model(){
-        System.out.println(brand + "ryzen");
-    }
+		public void setBrand(String brand) {
+			this.brand = brand;
+		}
+		
+		public void showBrand() {
+			System.out.println(brand);
+		}
+		
 }
 ```
 
 >MainBoard 클래스
 
 ```java
-package com.computerpart;
+package com.study.testfordi;
 
-public class MainBoard{
-    public Cpu cpu;
-
-    public MainBoard(Cpu cpu){
-        this.cpu = cpu;
-    }
-
-    public void modelname(){
-        cpu.model();
-    }
+public class MainBoard {
+	public Cpu cpu;
+	
+	
+	public MainBoard(Cpu cpu) {
+		this.cpu = cpu;
+	}
+	
+	public void modelname() {
+		cpu.showBrand();
+	}
 }
 ```
 
 >Driver
 
 ```java
-package com.computerpart;
+package com.study.testfordi;
+
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Driver{
-    public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("com/computerpart/beans/computerpart.xml");
+public class Driver {
 
-        Mainboard m = context.getBean("mainBoard");
-        m.modelname();
-        context.close();
+	public static void main(String[] args) {
+
+
+		ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+		
+		
+		
+		MainBoard m = (MainBoard) ac.getBean("mainboard");
+		m.modelname();
+		
+	}
+
 }
 ```
 
@@ -246,15 +258,15 @@ public class Driver{
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <bean id="intel" class="com.computerpart.Intel">
+    <bean id="intel" class="com.study.testfordi.model1">
         <property name="brand" value="intel"></property>
     </bean>
 
-    <bean id="cat" class="com.computerpart.Amd">
+    <bean id="amd" class="com.study.testfordi.model2">
         <property name="brand" value="amd"></property>
     </bean>
 
-    <bean id="mainboard" class="com.computerpart.MainBoard">
+    <bean id="mainboard" class="com.study.testfordi.MainBoard">
         <constructor-arg ref="intel"></constructor-arg>
     </bean>
 </beans>

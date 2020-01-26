@@ -1,0 +1,6 @@
+# git ignore
+
+
+#blog cache
+/_site/
+/.jekyll-cache/

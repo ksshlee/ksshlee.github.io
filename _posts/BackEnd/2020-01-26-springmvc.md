@@ -13,7 +13,7 @@ MVC(Model-View-Controller)란?
 
 **Model**
 - 클라이언트가 원하는 정보를 제공하는 역할을 한다.
-- DAO, JAVA BEAN 등을 Model이라고 한다.
+- VO, DTO, JAVA BEAN 등을 Model이라고 한다.
 
 
 **View**

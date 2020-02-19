@@ -62,6 +62,17 @@ git checkout "branch name"
 ```
 git checkout -b "branch name"
 ```
+- 현재 branch에서 생성후 전환
+
+```
+git checkout -b "branch name" branch from
+
+ex)
+git checkout -b "hotfix-0.2 master
+```
+
+- branch from : 어느 branch가 기반이 될것인지
+- branch name : 생성하고자 하는 branch 이름
 
 ### branch merge
 

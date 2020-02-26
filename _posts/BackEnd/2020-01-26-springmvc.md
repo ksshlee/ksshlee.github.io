@@ -1,6 +1,6 @@
 ---
-title: Spring MVC
-categories : [Spring]
+title: Spring MVC, Spring Boot
+categories : [Spring, SpringBoot]
 tags: [Spring, Web, BackEnd,DesignPattern]
 toc: true
 toc_sticky: true
@@ -91,6 +91,26 @@ Spring MVC
 - 기본적으로 Model2와 비슷한 구조다.
 
 <br><br>
+
+
+Spring Boot
+--
+
+- Spring boot와 Spring Framework는 서로 다른게 **아니다**.
+- Spring을 사용하면서 해줘야하는 설정들을 Spring boot에서는 매우 쉽게 가능하다.
+- 서버를 내장하고 있다.
+  - Tomcat을 추가로 설정할 필요가 없다.
+- 프로젝트 설정할때 XML 코드가 필요 없다.
+- Spring MVC를 사용할때 설정해줘야할 (web.xml, rootcontext.xml) 등등의 파일들을 SpringBoot 에선 (application.yml or application.properties) 이 파일 하나에 전부다 관리할 수 있다.
+- Spring Boot 는 /src/main/resources/ 디렉터리를 기본 **classpath**로 가지고 있다.
+
+
+
+<br><br>
+
+
+**개인적인 의견으로 Spring MVC로 진행하다 Spring Boot로 넘어오면 너무 편하다. 하지만 그렇다고 Spring Boot를 처음부터 하면 왜 편한지 이해가 안갈수도 있다. 그러므로 Spring MVC로 충분히 Spring 설정등을 익히고 Spring Boot로 넘어가서 공부하는것을 추천한다.**
+
 
 
 출처

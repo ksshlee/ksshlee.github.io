@@ -146,6 +146,15 @@ git merge feature
 
 - rebase에 성공한것을 확인할 수 있다.
 
+
+
+
+**주의사항**
+
+- Git rebase 과정에서 pull은 **절대**로 하면 안된다.
+- pull을 하게 되면 rebase를 하는 이유가 없다.
+
+
 <br><br>
 
 

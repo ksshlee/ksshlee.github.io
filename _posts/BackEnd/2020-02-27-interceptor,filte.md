@@ -236,7 +236,7 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
 
 ```java
 @Configuration
-public class WebConfig extends WebMvcConfigurerAdapter {
+public class WebConfig extends WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TestInterceptor())

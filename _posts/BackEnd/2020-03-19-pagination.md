@@ -1,7 +1,7 @@
 ---
-title: Pagination (Offset based ,Cursor based Pagination)
-categories : []
-tags: []
+title: ⭐️Pagination (Offset based ,Cursor based Pagination)⭐️
+categories : [Spring, Spring Boot, BackEnd]
+tags: [Pagination, Skill]
 toc: true
 toc_sticky: true
 toc_label: "목차"

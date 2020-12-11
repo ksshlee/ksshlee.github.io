@@ -7,18 +7,18 @@ toc_sticky: true
 toc_label: "목차"
 ---
 
-도커
--
+# 도커
+-----
 ![docker](/assets/img/back_end/2020_12_07/docker.png)
 
 
-### 💿 도커 이미지 명령어
+## 💿 도커 이미지 명령어
 
-**이미지 pull**
+
+이미지 pull
 ```
 docker pull [image]:[tag]
 ```
-
 - 원격 저장소에서 이미지를 pull한다.
   - [여기](https://hub.docker.com/?ref=login)가 docker hub
   - 기본적으로 github와 비슷하다.
@@ -31,90 +31,83 @@ docker pull [image]:[tag]
     ```
 
 
-**이미지 검색**
-
+이미지 검색
 ```
 docker search [option] [keyWord]
 ```
-
 - 옵션
   - --automated=true : automated Build 만 표시
   - --starts=N : N개 이상의 star 만 표시
 - 옵션은 생략 가능하다.
 
 
-**이미지 목록**
-
+이미지 목록
 ```
 docker images
 ```
-
 - 로컬에 저장된 이미지 목록들을 확인
 
 
 
-**이미지 삭제**
-
+이미지 삭제
 ```
 docker rmi [option] [image id]
 ```
-
 - 옵션
   - -f : 컨테이너도 강제 삭제
 - image id를 가진 이미지 삭제
 
-### 📦 도커 컨테이너 명령어
+## 📦 도커 컨테이너 명령어
 
-**컨테이너 목록**
+컨테이너 목록
 ```
 docker ps [option]
 ```
-
 - 옵션
   - -a : 모든 컨테이너 목록 (종료된 컨테이너도 출력)
   - -s : 컨테이너의 디스크 사용량
 - 현재 구동중인 컨테이너 목록 출력
 
 
-**컨테이너 명령어 사용**
+컨테이너 명령어 사용
 ```
 docker exec -it [id || name] [command]
 ```
 - command 에 원하는 명령어를 치면 컨테이너에서 해당 명령어가 실행이 된다.
 
 
-**컨테이너 시작**
+컨테이너 시작
 ```
 docker start [id || name]
 ```
 
-**컨테이너 정지**
+컨테이너 정지
 ```
 docker stop [id || name]
 ```
 
-**컨테이너 재시작**
+컨테이너 재시작
 ```
 docker restart [id || name]
 ```
 
-**컨테이너 삭제**
+컨테이너 삭제
 ```
 docker rm [id || name]
 ```
 
-**모든 컨테이너 삭제**
+모든 컨테이너 삭제
 ```
 docker rm `docker ps -a -q`
 ```
 
 
-### 🐳 도커 Run
+## 🐳 도커 Run
 
 ```
 docker run [option] [image]:[tag] [command] [args]
 ```
-**옵션**
+옵션
 - -d : detached 모드 실행으로 백그라운드에서 실행을 하게 해주는 옵션이다.
 - -it : -i, -t 명령어를 합친 것으로 주로 같이 쓰인다. 컨테이너를 종료하지 않은 상태로, 터미널에 입력을 계속하게 하기 위한 명령어다.
   - cli 를 자주 사용하는 컨테이너에서 주로 사용된다.
@@ -137,8 +130,8 @@ docker run [option] [image]:[tag] [command] [args]
 
 
 
-출처
--
+# 출처
+-----
 
 [https://velog.io/@wlsdud2194/-Docker-%EB%8F%84%EC%BB%A4-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C](https://velog.io/@wlsdud2194/-Docker-%EB%8F%84%EC%BB%A4-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C)
 

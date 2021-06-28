@@ -27,8 +27,7 @@ toc_label: "목차"
 - MongoDB 4.x 버전 부터 transaction을 지원한다!!
 - 개발, 운영하는데 있어서 DB 의 Transaction 은 정말 필수중에 필수중에 필수다.
 - **Transaction 기능을 사용하려면 반드시 replica set 을 구성해야한다.**
-  - 스포일러를 하자면 replica set 은 write, read 노드가 따로 존재한다.
-  - 이때 write 를 진행한 primary 에서 replication 을 해야 read 를 진행하는 secondary 에서 추가, 수정된 데이터를 읽을 수 있다. (replication 을 하는 시점은 transaction 이 끝나는 시점 or session이 끝나는 시점)
+  - replication 을 하는 시점은 transaction 이 끝나는 시점 or session이 끝나는 시점
 - 즉 mongoDB 로 운영까지 하려면 replica set은 옵션이 아닌 필수다.
 
 
@@ -38,10 +37,7 @@ toc_label: "목차"
 
 ![rs1](/assets/img/back_end/2020_12_25/rs1.png)
 
-- **Primary**는 쓰기 담당 **Secondary**는 읽기 담당을 하고 있다.
-  - 이때 **Primary는 단 1개** 밖에 존재할 수 없다.
-
-- Client(Server) 에서 데이터 조회를 요청을 하면 Secondary 에서 수행을 하고 쓰기,삭제,수정을 요청하면 Primary 에서 수행을 한다.
+- **Primary는 단 1개** 밖에 존재할 수 없다.
 - 쓰기, 삭제, 수정이 수행이 되면 Primary 는 Replication 을 통해 Secondary 에도 정보를 변경한다. (동일성)
 
 
